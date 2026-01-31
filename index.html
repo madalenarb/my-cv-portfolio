@@ -28,6 +28,49 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+    /* Glass Card Effect */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05); /* Transparent background */
+      backdrop-filter: blur(5px); /* Blur effect */
+      border-radius: 15px; /* Slightly round */
+      padding: 20px;
+      box-shadow: -8px 8px 15px rgba(0, 0, 0, 0.3); /* Shadow on the left-bottom */
+      transition: all 0.3s ease; /* Smooth transition */
+    }
+
+    .glass-card:hover {
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Shadow disappears on hover */
+      transform: translate(-2px, 2px); /* Slight movement */
+    }
+
+    /* Spotlight Effect */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.06), transparent 40%);
+      pointer-events: none; /* Allows clicking through the spotlight */
+      z-index: 9999;
+      opacity: 0; /* Hidden by default */
+      transition: opacity 0.3s ease;
+    }
+
+    body.spotlight-active::before {
+      opacity: 1; /* Visible when active */
+    }
+
+    /* Reset inner backgrounds for Contact section when inside glass-card */
+    .glass-card .info-wrap,
+    .glass-card .php-email-form {
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+  </style>
+
   <!-- =======================================================
   * Template Name: DevFolio
   * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
@@ -115,19 +158,19 @@
     <!-- About Section -->
     <section id="about" class="about section">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container glass-card" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row gy-4">
           <div class="col-md-6">
 
             <div class="row justify-content-between gy-4">
               <div class="col-lg-5">
-                <img src="assets/img/profile-img-mada.jpg" class="img-fluid" alt="">
+                <img src="assets/img/profile-img-mada.jpg" class="img-fluid w-100 rounded" alt="">
               </div>
               <div class="col-lg-7 about-info">
                 <p><strong>Name: </strong> <span class="my-name"></span></p>
-                <p><strong>Profile: </strong> <span>full stack developer</span></p>
-                <p><strong>Email: </strong> <span class="my-email"></span></p>
+                <p><strong>Profile: </strong> <span>Electrical and Computer Engineer</span></p>
+                <p><strong>Email: </strong> <span><a href="mailto:mariamadalenarob@gmail.com">mariamadalenarob@gmail.com</a></span></p>
                 <p><strong>Github: </strong> <span><a href="https://github.com/madalenarb" target="_blank">https://github.com/madalenarb</a></span></p>
               </div>
             </div>
@@ -137,30 +180,45 @@
               <h5>Skills</h5>
 
               <div class="progress">
-                <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
+                <span class="skill"><span>Python</span> <i class="val">85%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->              
+
+              <div class="progress">
+                <span class="skill"><span>C/C++</span> <i class="val">80%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div><!-- End Skills Item -->
 
               <div class="progress">
-                <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
+                <span class="skill"><span>Java</span> <i class="val">70%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div><!-- End Skills Item -->
 
               <div class="progress">
-                <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
+                <span class="skill"><span>Quantum Computing Simulators (Qiskit/CUDAQ/qulacs)</span> <i class="val">65%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+
+
+              <div class="progress">
+                <span class="skill"><span>HTML/CSS/JavaScript</span> <i class="val">60%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div><!-- End Skills Item -->
 
               <div class="progress">
-                <span class="skill"><span>Photoshop</span> <i class="val">55%</i></span>
+                <span class="skill"><span>Parallel & Performance Computing (CPU)</span> <i class="val">50%</i></span>
                 <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div><!-- End Skills Item -->
 
@@ -171,13 +229,13 @@
             <div class="about-me">
               <h4>About me</h4>
               <p>
-                Hi, My name is Madalena Barros! &#11088; 
+                Hi, my name is Madalena Barros! &#11088; 
               </p>
               <p>
                 I am a 23 years old university student. I'm finishing my Masters in Electrical and Computer Engineering at Instituto Superior Técnico.
               </p>
               <p>
-                Currently, I am writing my thesis, which focuses on accelerating quantum simulators using different protocols (OpenMP) or GPUs. I am also working with a HPC system (Deucalion), which enables multinodal benchmarking. 
+                Currently, I am writing my thesis, which focuses on accelerating quantum simulators using different protocols (OpenMP) or GPUs. I am also working with a HPC system (<a href="https://rnca.fccn.pt/en/deucalion/" target="_blank">Deucalion</a>), which enables multinodal benchmarking. 
               </p>
               <p>
                 When I am not benchmarking quantum simulators, I'm interning at TripGoGo, building RAG pipelines and doing a bit of quality assurance to ensure the model's outputs are realistic and reliable. 
@@ -202,7 +260,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Resume</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>Here is my summary of my experience, mainly throughout my academic journey.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -210,31 +268,30 @@
         <div class="row">
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Sumary</h3>
-
-            <div class="resume-item pb-0">
-              <h4>Brandon Johnson</h4>
-              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
-              <ul>
-                <li>Portland par 127,Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
             <h3 class="resume-title">Education</h3>
             <div class="resume-item">
-              <h4>Master of Fine Arts &amp; Graphic Design</h4>
-              <h5>2015 - 2016</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
+              <h4>MSc, Electrical and Computer Engineering</h4>
+              <p><em>Instituto Superior Técnico, University of Lisbon</em></p>
+              <ul>
+                <li><b>Specialisation</b>: Control, Artificial Intelligence, and Robotics</li>
+                <li><b>Minor:</b> Contemporary Physics (Quantum Mechanics; Intro Particle &amp; Nuclear Physics; Astrophysics)</li>
+                <li><b>Thesis:</b> Accelerating Quantum Circuit Simulation with NVIDIA GPUs (HPC focus on <a href="https://rnca.fccn.pt/en/deucalion/" target="_blank">Deucalion</a>: CPU/GPU parallelization and performance benchmarking)</li>
+              </ul>
+
+
+              <!---<p>I am currently finishing my Master's thesis, which focuses on accelerating quantum simulators using different protocols (OpenMP) or GPUs. I am also working with a HPC system (Deucalion), which enables multinodal benchmarking.</p>
+              <p>I really like physics, so I chose to minor in Contemporary Physics, where I studied Quantum Mechanics, had an introductory course for particle and nuclear phyics, as well as studied astrophysics</p>
+              <p>For my masters I had some courses in AI and data science, for instance big data analyssi and machine learning. I also had OOP where I learned how to think about a programming project even better: how the differnt parts of the code should be decoupled, etc</p>-->
             </div><!-- Edn Resume Item -->
 
             <div class="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
+              <h4>BSc, Electrical and Computer Engineering</h4>
+                <p><em>Instituto Superior Técnico, University of Lisbon</em></p>
+                <ul>
+                  <li><b>Relevant Coursework:</b> Electronics, control, embedded systems, and software fundamentals</li>
+                  <li>Academic Merit Diploma (2022/2023)</li>
+                </ul>
+
             </div><!-- Edn Resume Item -->
 
           </div>
@@ -770,7 +827,7 @@
         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
       </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container glass-card" data-aos="fade-up" data-aos-delay="100">
 
         <div class="info-wrap" data-aos="fade-up" data-aos-delay="200">
           <div class="row gy-5">
@@ -800,7 +857,7 @@
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h3>Email Us</h3>
-                  <p>info@example.com</p>
+                  <p><a class="my-email"></a></p>
                 </div>
               </div>
             </div><!-- End Info Item -->

@@ -13,4 +13,4 @@ server.watch('assets/css/*.css')
 server.watch('assets/js/*.js')
 
 # Serve the website on http://localhost:8000
-server.serve(root='.', port=8000, open_url_delay=1)
+server.serve(root='.', port=8000)

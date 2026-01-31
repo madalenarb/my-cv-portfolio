@@ -94,9 +94,9 @@
    */
   function aosInit() {
     AOS.init({
-      duration: 600,
+      duration: 1000,
       easing: 'ease-in-out',
-      once: true,
+      once: false,
       mirror: false
     });
   }
@@ -121,18 +121,25 @@
   /**
    * Animate the skills items on reveal
    */
-  let skillsAnimation = document.querySelectorAll('.skills-animation');
-  skillsAnimation.forEach((item) => {
-    new Waypoint({
-      element: item,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = item.querySelectorAll('.progress .progress-bar');
-        progress.forEach(el => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%';
-        });
+  const progressBars = document.querySelectorAll('.progress-bar');
+  progressBars.forEach(bar => bar.style.width = '0%');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const bar = entry.target;
+      if (entry.isIntersecting) {
+        bar.style.transition = 'width 2s ease-in-out';
+        void bar.offsetWidth; // Force a reflow to ensure animation triggers
+        bar.style.width = bar.getAttribute('aria-valuenow') + '%';
+      } else {
+        bar.style.transition = 'none';
+        bar.style.width = '0%';
       }
     });
+  }, { threshold: 0.1 });
+
+  progressBars.forEach(bar => {
+    observer.observe(bar);
   });
 
   /**
