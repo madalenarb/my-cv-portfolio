@@ -36,3 +36,7 @@ If VS Code shows "Import 'livereload' could not be resolved":
 1. Press Ctrl+Shift+P (or F1) in VS Code.
 2. Type "Python: Select Interpreter".
 3. Select the environment named 'venv' (ensure you have run `pip install livereload` inside it).
+
+website: https://madalenarb.github.io/my-cv-portfolio/
+
+
