@@ -32,7 +32,7 @@ body.dark-mode {
   --heading-color: #ffffff;
   --surface-color: #252525;
   --contrast-color: #ffffff;
-  background: radial-gradient(circle at var(--cursor-x, 50%) var(--cursor-y, 50%), #2a2a2a 0%, #060606 100%);
+  background: radial-gradient(circle at var(--cursor-x, 50%) var(--cursor-y, 50%), #2a2a2a 0%, #060606 40%);
   background-attachment: fixed;
 }
 
