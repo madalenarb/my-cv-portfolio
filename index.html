@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -36,7 +37,7 @@
   ======================================================== -->
 </head>
 
-<body class="index-page">
+<body class="index-page dark-mode">
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
@@ -44,7 +45,7 @@
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">DevFolio</h1>
+        <h1 class="sitename">My Portfolio</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -87,7 +88,26 @@
 
       <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
         <h2>I am <span class="my-name"></span></h2>
-        <p><span class="typed" data-typed-items="Electrical Engineer, Web Developer, AI and Data Engineer"></span></p>
+        <div class="hero-carousel swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "direction": "vertical",
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 2000,
+                "disableOnInteraction": false
+              },
+              "slidesPerView": 1,
+              "allowTouchMove": false
+            }
+          </script>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Electrical Engineer</div>
+            <div class="swiper-slide">Web Developer</div>
+            <div class="swiper-slide">AI and Data Engineer</div>
+          </div>
+        </div>
       </div>
 
     </section><!-- /Hero Section -->
@@ -108,7 +128,7 @@
                 <p><strong>Name: </strong> <span class="my-name"></span></p>
                 <p><strong>Profile: </strong> <span>full stack developer</span></p>
                 <p><strong>Email: </strong> <span class="my-email"></span></p>
-                <p><strong>Phone: </strong> <span class="my-phone"></span></p>
+                <p><strong>Github: </strong> <span><a href="https://github.com/madalenarb" target="_blank">https://github.com/madalenarb</a></span></p>
               </div>
             </div>
 
@@ -151,7 +171,7 @@
             <div class="about-me">
               <h4>About me</h4>
               <p>
-                Hi! My name is Madalena Barros, I am 23 years old.
+                Hi! My name is Madalena Barros, I am 23 years old and I am very interested in quantum computing simulation, and hardware acceleration of it. 
               </p>
               <p>
                 Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis
@@ -883,6 +903,10 @@
     </div>
 
   </footer>
+
+
+  <!-- Theme Toggle -->
+  <a href="#" id="theme-toggle" class="theme-toggle d-flex align-items-center justify-content-center"><i class="bi bi-moon"></i></a>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
