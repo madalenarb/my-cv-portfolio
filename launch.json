@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Dev Server",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/dev_server.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}
