@@ -938,6 +938,28 @@ section,
   border: 2px solid var(--accent-color);
 }
 
+/* Resume Item Link Styles */
+.resume-item-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.resume-item.hover-box {
+  transition: all 0.3s ease;
+}
+
+.resume-item.hover-box:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding-right: 10px;
+}
+
+.resume-item.hover-box:hover h4 {
+  color: var(--accent-color);
+}
+
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
@@ -2282,4 +2304,21 @@ body:not(.dark-mode) .editor-content::-webkit-scrollbar-thumb:hover {
   .research-buttons .btn {
     width: 100%;
   }
+}
+
+.list-compact {
+  list-style: none;   /* removes bullets */
+  padding-left: 0;    /* removes left indent */
+  margin: 0;          /* removes ul outside spacing */
+}
+
+.list-compact li {
+  margin: 0;          /* removes paragraph-like gaps */
+  padding: 0;         /* removes extra spacing */
+  line-height: 1.4;   /* adjust if you want tighter/looser */
+}
+
+/* optional: add a tiny separation between items (very subtle) */
+.list-compact li + li {
+  margin-top: 0.25rem;
 }
