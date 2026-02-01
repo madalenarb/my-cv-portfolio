@@ -1709,3 +1709,577 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/*--------------------------------------------------------------
+# Glass Card Effect
+--------------------------------------------------------------*/
+.glass-card {
+  background: rgba(255, 255, 255, 0.05); /* Transparent background */
+  backdrop-filter: blur(5px); /* Blur effect */
+  border-radius: 15px; /* Slightly round */
+  padding: 20px;
+  box-shadow: -8px 8px 15px rgba(0, 0, 0, 0.3); /* Shadow on the left-bottom */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.glass-card:hover {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Shadow disappears on hover */
+  transform: translate(-2px, 2px); /* Slight movement */
+}
+
+/*--------------------------------------------------------------
+# Spotlight Effect
+--------------------------------------------------------------*/
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.06), transparent 40%);
+  pointer-events: none; /* Allows clicking through the spotlight */
+  z-index: 9999;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease;
+}
+
+body.spotlight-active::before {
+  opacity: 1; /* Visible when active */
+}
+
+/* Reset inner backgrounds for Contact section when inside glass-card */
+.glass-card .info-wrap,
+.glass-card .php-email-form {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Fix for long text in skills section */
+.skills-content .progress {
+  height: auto !important;
+  display: block !important;
+  overflow: visible !important;
+  background: transparent !important;
+}
+
+/*--------------------------------------------------------------
+# Code Editor Style
+--------------------------------------------------------------*/
+.code-editor {
+  background: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  font-family: 'Courier New', 'Consolas', monospace;
+  font-size: 0.85rem;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  max-height: 600px;
+}
+
+/* Light mode code editor */
+body:not(.dark-mode) .code-editor {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.editor-header {
+  background: #252526;
+  border-bottom: 1px solid #3e3e42;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  gap: 12px;
+}
+
+/* Light mode header */
+body:not(.dark-mode) .editor-header {
+  background: #f5f5f5;
+  border-bottom-color: #e0e0e0;
+}
+
+.editor-buttons {
+  display: flex;
+  gap: 6px;
+  padding: 10px 12px;
+  border-right: 1px solid #3e3e42;
+}
+
+.editor-tabs {
+  display: flex;
+  flex: 1;
+  gap: 4px;
+  padding-left: 4px;
+  overflow-x: auto;
+}
+
+.editor-tab {
+  padding: 8px 16px;
+  background: #2d2d30;
+  border-right: 1px solid #3e3e42;
+  color: #cccccc;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.editor-tab.active {
+  background: #1e1e1e;
+  color: #ffffff;
+  border-bottom-color: #007acc;
+}
+
+/* Light mode editor tab */
+body:not(.dark-mode) .editor-tab {
+  background: #f3f3f3;
+  border-right-color: #e0e0e0;
+  color: #333333;
+}
+
+body:not(.dark-mode) .editor-tab.active {
+  background: #ffffff;
+  color: #333333;
+  border-bottom-color: #0078d4;
+}
+
+.editor-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.editor-line-numbers {
+  background: #1e1e1e;
+  color: #858585;
+  padding: 12px 8px;
+  text-align: right;
+  user-select: none;
+  border-right: 1px solid #3e3e42;
+  min-width: 45px;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* Light mode line numbers */
+body:not(.dark-mode) .editor-line-numbers {
+  background: #f5f5f5;
+  color: #999999;
+  border-right-color: #e0e0e0;
+}
+
+.editor-line-numbers span {
+  display: block;
+  height: 1.6em;
+}
+
+.editor-content pre {
+  flex: 1;
+  margin: 0;
+  padding: 12px 15px;
+  color: #d4d4d4;
+  overflow-x: auto;
+  overflow-y: auto;
+  background: #1e1e1e;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Light mode pre */
+body:not(.dark-mode) .editor-content pre {
+  background: #ffffff;
+  color: #333333;
+  border-top: 1px solid #e0e0e0;
+}
+
+.editor-content code {
+  font-family: 'Courier New', 'Consolas', monospace;
+  white-space: pre-wrap;
+}
+
+/* Scrollbar styling for editor */
+.editor-content::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.editor-content::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+/* Light mode scrollbar */
+body:not(.dark-mode) .editor-content::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.editor-content::-webkit-scrollbar-thumb {
+  background: #464647;
+  border-radius: 4px;
+}
+
+/* Light mode scrollbar thumb */
+body:not(.dark-mode) .editor-content::-webkit-scrollbar-thumb {
+  background: #cccccc;
+}
+
+body:not(.dark-mode) .editor-content::-webkit-scrollbar-thumb:hover {
+  background: #999999;
+}
+
+.editor-content::-webkit-scrollbar-thumb:hover {
+  background: #5a5a5a;
+}
+
+/*--------------------------------------------------------------
+# Terminal Card (Legacy)
+--------------------------------------------------------------*/
+
+
+.dot { 
+  width: 10px; 
+  height: 10px; 
+  border-radius: 50%; 
+}
+
+.dot.red { 
+  background: #ff5555; 
+}
+
+.dot.yellow { 
+  background: #f1fa8c; 
+}
+
+.dot.green { 
+  background: #50fa7b; 
+}
+
+.terminal-card pre { 
+  margin: 0; 
+  padding: 15px; 
+  color: #f8f8f2; 
+  font-family: 'Courier New', monospace; 
+}
+
+/*--------------------------------------------------------------
+# Hero Section Text Sizing
+--------------------------------------------------------------*/
+.hero-carousel .swiper-slide {
+  font-size: 3rem;
+}
+
+.hero p.fst-italic {
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
+/*--------------------------------------------------------------
+# Research Modal
+--------------------------------------------------------------*/
+.research-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  overflow-y: auto;
+  animation: fadeIn 0.3s ease;
+}
+
+/*--------------------------------------------------------------
+# Research Details Page
+--------------------------------------------------------------*/
+.page-title {
+  padding: 80px 0 60px 0;
+  position: relative;
+}
+
+.page-title h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.page-title p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.page-title .breadcrumbs {
+  margin-top: 20px;
+}
+
+.page-title .breadcrumbs ol {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 10px;
+}
+
+.page-title .breadcrumbs ol li {
+  display: flex;
+  align-items: center;
+}
+
+.page-title .breadcrumbs ol li + li::before {
+  content: "/";
+  margin-right: 10px;
+  opacity: 0.6;
+}
+
+.page-title .breadcrumbs ol li a {
+  color: var(--default-color);
+  opacity: 0.7;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.page-title .breadcrumbs ol li a:hover {
+  opacity: 1;
+}
+
+.page-title .breadcrumbs ol li.current {
+  opacity: 1;
+  font-weight: 500;
+}
+
+.section-header h2 {
+  color: var(--accent-color);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+.research-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.research-list li {
+  padding: 12px 0;
+  padding-left: 30px;
+  position: relative;
+  font-size: 1.05rem;
+}
+
+.research-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-size: 1.2rem;
+}
+
+.pdf-preview {
+  margin-top: 30px;
+}
+
+.pdf-container {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+.pdf-container iframe {
+  width: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.alert {
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-color);
+}
+
+/* Keep existing modal styles but hide them since we're not using modal anymore */
+
+.research-modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content-wrapper {
+  background: var(--surface-color, #1a1a1a);
+  border-radius: 12px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { 
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-header-custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.modal-tab {
+  background: transparent;
+  border: none;
+  color: var(--default-color, #fff);
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+
+.modal-tab:hover {
+  opacity: 0.8;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.modal-tab.active {
+  opacity: 1;
+  background: var(--accent-color);
+  color: var(--contrast-color, #fff);
+}
+
+.modal-close {
+  background: transparent;
+  border: none;
+  color: var(--default-color, #fff);
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(90deg);
+}
+
+.modal-body-custom {
+  padding: 30px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.modal-section {
+  display: none;
+}
+
+.modal-section.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-section h3 {
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.modal-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.modal-section ul li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+}
+
+.modal-section ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+}
+
+.pdf-viewer {
+  margin-top: 20px;
+}
+
+.pdf-viewer iframe {
+  width: 100%;
+  min-height: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.research-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .modal-content-wrapper {
+    max-height: 95vh;
+    margin: 10px;
+  }
+  
+  .modal-body-custom {
+    padding: 20px;
+  }
+  
+  .modal-tabs {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .research-buttons {
+    flex-direction: column;
+  }
+  
+  .research-buttons .btn {
+    width: 100%;
+  }
+}

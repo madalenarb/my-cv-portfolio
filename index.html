@@ -28,57 +28,6 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <style>
-    /* Glass Card Effect */
-    .glass-card {
-      background: rgba(255, 255, 255, 0.05); /* Transparent background */
-      backdrop-filter: blur(5px); /* Blur effect */
-      border-radius: 15px; /* Slightly round */
-      padding: 20px;
-      box-shadow: -8px 8px 15px rgba(0, 0, 0, 0.3); /* Shadow on the left-bottom */
-      transition: all 0.3s ease; /* Smooth transition */
-    }
-
-    .glass-card:hover {
-      box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Shadow disappears on hover */
-      transform: translate(-2px, 2px); /* Slight movement */
-    }
-
-    /* Spotlight Effect */
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.06), transparent 40%);
-      pointer-events: none; /* Allows clicking through the spotlight */
-      z-index: 9999;
-      opacity: 0; /* Hidden by default */
-      transition: opacity 0.3s ease;
-    }
-
-    body.spotlight-active::before {
-      opacity: 1; /* Visible when active */
-    }
-
-    /* Reset inner backgrounds for Contact section when inside glass-card */
-    .glass-card .info-wrap,
-    .glass-card .php-email-form {
-      background: transparent !important;
-      box-shadow: none !important;
-    }
-
-    /* Fix for long text in skills section */
-    .skills-content .progress {
-      height: auto !important;
-      display: block !important;
-      overflow: visible !important;
-      background: transparent !important;
-    }
-  </style>
-
   <!-- =======================================================
   * Template Name: DevFolio
   * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
@@ -103,7 +52,12 @@
         <ul>
           <li><a href="#hero" class="active">Home<br></a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#services">Projects</a></li>
+          <li class="dropdown"><a href="#services"><span>Projects</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#services">Projects Overview</a></li>
+              <li><a href="research-details.html">My thesis</a></li>
+            </ul>
+          </li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
@@ -159,6 +113,7 @@
             <div class="swiper-slide">AI and Data Engineer</div>
           </div>
         </div>
+        <p class="fst-italic fw-light mt-3" style="font-size: 1.4rem;">Bridging the gap between High-Performance Computing and User Experience.</p>
       </div>
 
     </section><!-- /Hero Section -->
@@ -182,53 +137,40 @@
               </div>
             </div>
 
-            <div class="skills-content skills-animation">
-
-              <h5>Skills</h5>
-
-              <div class="progress">
-                <span class="skill"><span>Python</span> <i class="val">85%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="skills-content">
+              <div class="code-editor">
+                <div class="editor-header">
+                  <div class="editor-buttons">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                  </div>
+                  <div class="editor-tabs">
+                    <div class="editor-tab active">skills.js</div>
+                  </div>
                 </div>
-              </div><!-- End Skills Item -->              
-
-              <div class="progress">
-                <span class="skill"><span>C/C++</span> <i class="val">80%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="editor-content">
+                  <div class="editor-line-numbers">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                  </div>
+                  <pre><code><span style="color: #6272a4">// Madalena's Technical Stack</span>
+<span style="color: #ff79c6">const</span> <span style="color: #50fa7b">core_foundations</span> = {
+  <span style="color: #8be9fd">hpc_parallel_computing</span>: [<span style="color: #f1fa8c">"C/C++"</span>, <span style="color: #f1fa8c">"CUDA"</span>, <span style="color: #f1fa8c">"SIMD"</span>, <span style="color: #f1fa8c">"MPI"</span>, <span style="color: #f1fa8c">"OpenMP"</span>, <span style="color: #f1fa8c">"Performance optimization"</span>, <span style="color: #f1fa8c">"Profiling & analysis"</span>],
+  <span style="color: #8be9fd">quantum_simulations</span>: [<span style="color: #f1fa8c">"Qiskit"</span>, <span style="color: #f1fa8c">"CUDA-Q"</span>, <span style="color: #f1fa8c">"Qulacs"</span>, <span style="color: #f1fa8c">"Statevector simulation"</span>, <span style="color: #f1fa8c">"Tensor networks"</span>, <span style="color: #f1fa8c">"Noise models"</span>, <span style="color: #f1fa8c">"GPU backends"</span>, <span style="color: #f1fa8c">"Circuit benchmarking"</span>],
+  <span style="color: #8be9fd">ai_data_engineering</span>: [<span style="color: #f1fa8c">"Python"</span>, <span style="color: #f1fa8c">"Vector databases"</span>, <span style="color: #f1fa8c">"Embedding pipelines"</span>, <span style="color: #f1fa8c">"RAG architectures"</span>, <span style="color: #f1fa8c">"Retrieval evaluation"</span>, <span style="color: #f1fa8c">"LLM fine-tuning"</span>],
+  <span style="color: #8be9fd">frontend_design</span>: [<span style="color: #f1fa8c">"React"</span>, <span style="color: #f1fa8c">"JavaScript"</span>, <span style="color: #f1fa8c">"Figma"</span>, <span style="color: #f1fa8c">"API integration"</span>, <span style="color: #f1fa8c">"UI/UX prototyping"</span>]
+};</code></pre>
                 </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Java</span> <i class="val">70%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Quantum Computing Simulators (Qiskit/CUDAQ/qulacs)</span> <i class="val">65%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
-
-              <div class="progress">
-                <span class="skill"><span>HTML/CSS/JavaScript</span> <i class="val">60%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <!-- <div class="progress">
-                <span class="skill"><span>Parallel & Performance Computing (CPU)</span> <i class="val">50%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>--><!-- End Skills Item -->
-
+              </div>
             </div>
           </div>
 
@@ -242,7 +184,7 @@
                 I am a 23 years old university student. I'm finishing my Masters in Electrical and Computer Engineering at Instituto Superior Técnico.
               </p>
               <p>
-                Currently, I am writing my thesis, which focuses on accelerating quantum simulators using different protocols (OpenMP) or GPUs. I am also working with a HPC system (<a href="https://rnca.fccn.pt/en/deucalion/" target="_blank">Deucalion</a>), which enables multinodal benchmarking. 
+                Currently, I am writing my thesis, which focuses on accelerating quantum simulators using different protocols (OpenMP) or GPUs. (See <strong>Featured Research</strong> below).
               </p>
               <p>
                 When I am not benchmarking quantum simulators, I'm interning at TripGoGo, building RAG pipelines and doing a bit of quality assurance to ensure the model's outputs are realistic and reliable. 
@@ -257,6 +199,33 @@
       </div>
 
     </section><!-- /About Section -->
+
+    <!-- Featured Research Section -->
+    <section id="featured-research" class="featured-research section accent-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>My Master's thesis</h2>
+        <p>High-Performance Computing & Quantum Simulation</p>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-10">
+            <div class="glass-card text-center">
+              <h3>Accelerating Quantum Circuit Simulation</h3>
+              <p class="fst-italic mt-2">Leveraging the <strong>Deucalion</strong> HPC System</p>
+              <p class="mt-3">
+                My thesis focuses on accelerating quantum circuit simulators using hybrid parallelism (MPI/OpenMP) and GPU offloading. 
+                Working with the <strong>Deucalion</strong> supercomputer enables multi-node benchmarking to study scaling limits, memory bottlenecks, 
+                and performance/accuracy trade-offs across simulation backends.
+              </p>
+              <div class="research-buttons mt-4">
+                <a href="research-details.html" class="btn btn-primary me-2">See more</a>
+                <a href="https://rnca.fccn.pt/en/deucalion/" target="_blank" class="btn btn-link text-light mt-2 mt-sm-0" style="font-size: 0.9rem;">Deucalion specs <i class="bi bi-box-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Resume Section -->
     <section id="resume" class="resume section">

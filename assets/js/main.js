@@ -302,3 +302,70 @@
   });
 
 })();
+
+/**
+ * Research Modal Functions
+ */
+function openResearchModal(section) {
+  const modal = document.getElementById('researchModal');
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  
+  // Switch to the requested section
+  switchModalSection(section);
+}
+
+function closeResearchModal() {
+  const modal = document.getElementById('researchModal');
+  modal.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function switchModalSection(sectionId) {
+  // Update tabs
+  const tabs = document.querySelectorAll('.modal-tab');
+  tabs.forEach(tab => {
+    if (tab.dataset.section === sectionId) {
+      tab.classList.add('active');
+    } else {
+      tab.classList.remove('active');
+    }
+  });
+  
+  // Update sections
+  const sections = document.querySelectorAll('.modal-section');
+  sections.forEach(section => {
+    if (section.id === sectionId + '-section') {
+      section.classList.add('active');
+    } else {
+      section.classList.remove('active');
+    }
+  });
+}
+
+// Modal tab click handlers
+document.addEventListener('DOMContentLoaded', function() {
+  const modalTabs = document.querySelectorAll('.modal-tab');
+  modalTabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+      switchModalSection(this.dataset.section);
+    });
+  });
+  
+  // Close modal on backdrop click
+  const modal = document.getElementById('researchModal');
+  if (modal) {
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        closeResearchModal();
+      }
+    });
+  }
+  
+  // Close modal on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeResearchModal();
+    }
+  });
+});
