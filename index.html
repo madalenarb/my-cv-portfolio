@@ -69,6 +69,14 @@
       background: transparent !important;
       box-shadow: none !important;
     }
+
+    /* Fix for long text in skills section */
+    .skills-content .progress {
+      height: auto !important;
+      display: block !important;
+      overflow: visible !important;
+      background: transparent !important;
+    }
   </style>
 
   <!-- =======================================================
@@ -169,7 +177,6 @@
               </div>
               <div class="col-lg-7 about-info">
                 <p><strong>Name: </strong> <span class="my-name"></span></p>
-                <p><strong>Profile: </strong> <span>Electrical and Computer Engineer</span></p>
                 <p><strong>Email: </strong> <span><a href="mailto:mariamadalenarob@gmail.com">mariamadalenarob@gmail.com</a></span></p>
                 <p><strong>Github: </strong> <span><a href="https://github.com/madalenarb" target="_blank">https://github.com/madalenarb</a></span></p>
               </div>
@@ -215,12 +222,12 @@
                 </div>
               </div><!-- End Skills Item -->
 
-              <div class="progress">
+              <!-- <div class="progress">
                 <span class="skill"><span>Parallel & Performance Computing (CPU)</span> <i class="val">50%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-              </div><!-- End Skills Item -->
+              </div>--><!-- End Skills Item -->
 
             </div>
           </div>
@@ -242,9 +249,6 @@
               </p>
               <p>
                 I also have a background in frontend development through my work at KPMG and NEECIST. These experiences taught me how to bridge real-world requirements with web design. A key example was my work at KPMG, where I built a custom user interface for an internal AI chatbot to streamline employee workflows.
-              </p>
-              <p>
-                When I'm not debugging, I enjoy playing guitar (regardless of what my neighbors might think of my skills). &#127928
               </p>
             </div>
           </div>
