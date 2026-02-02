@@ -27,13 +27,16 @@
 }
 
 body.dark-mode {
-  --background-color: #060606;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #252525;
+  --background-color: #0b1220;
+  --default-color: #e6eef8;
+  --heading-color: #eaf2ff;
+  --surface-color: #0f1724;
   --contrast-color: #ffffff;
-  background: radial-gradient(circle at var(--cursor-x, 50%) var(--cursor-y, 50%), #2a2a2a 0%, #060606 40%);
+  background: radial-gradient(circle at var(--cursor-x, 50%) var(--cursor-y, 50%), rgba(20,30,55,0.6) 0%, #0b1220 40%);
   background-attachment: fixed;
+  --nav-dropdown-background-color: var(--surface-color);
+  --nav-dropdown-color: var(--default-color);
+  --nav-mobile-background-color: var(--surface-color);
 }
 
 .dark-mode .theme-toggle {
@@ -94,22 +97,22 @@ body.dark-mode .section {
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #4e4e4e; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #0a090f; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #8284f5; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #fbfbfd; /* soft off-white base */
+  --default-color: #374151; /* slate gray for body copy */
+  --heading-color: #0f1724; /* near-black bluish for headings */
+  --accent-color: #8284f5; /* keep existing accent color */
+  --surface-color: #ffffff; /* card/surface color */
+  --contrast-color: #ffffff; /* used for text/icons on accent backgrounds */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #ffffff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #0078ff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #ffffff;  /* main navmenu links (dark in light mode) */
+  --nav-hover-color: var(--accent-color); /* hover uses accent */
+  --nav-mobile-background-color: #ffffff; /* mobile menu background */
+  --nav-dropdown-background-color: #ffffff; /* dropdown background */
+  --nav-dropdown-color: #212529; /* dropdown link color */
+  --nav-dropdown-hover-color: var(--accent-color);
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -127,6 +130,14 @@ body.dark-mode .section {
   --contrast-color: #e2e2e2;
 }
 
+body:not(.dark-mode) .dark-background {
+  --background-color: #f5f5f5;
+  --default-color: #0a090f;
+  --heading-color: #0a090f;
+  --surface-color: #e8e8e8;
+  --contrast-color: #2c2c2c;
+}
+
 .accent-background {
   --background-color: #0078ff;
   --default-color: #ffffff;
@@ -134,6 +145,15 @@ body.dark-mode .section {
   --accent-color: #ffffff;
   --surface-color: #3393ff;
   --contrast-color: #ffffff;
+}
+
+body:not(.dark-mode) .accent-background {
+  --background-color: #f5f5f5;
+  --default-color: #0a090f;
+  --heading-color: #8284f5;
+  --accent-color: #8284f5;
+  --surface-color: #e8e8e8;
+  --contrast-color: #0a090f;
 }
 
 /* Smooth scroll */
@@ -261,7 +281,7 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
-@media (min-width: 1200px) {
+@media (min-width: 800px) {
   .navmenu {
     padding: 0;
   }
@@ -747,6 +767,10 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
+  --background-color: #060606;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  color: var(--default-color);
 }
 
 .hero img {
@@ -1959,6 +1983,20 @@ body:not(.dark-mode) .editor-content::-webkit-scrollbar-thumb:hover {
   background: #5a5a5a;
 }
 
+/* Code Syntax Highlighting - Light Mode (Default) */
+.code-comment { color: #6a737d; } /* Gray */
+.code-keyword { color: #d73a49; } /* Red */
+.code-variable { color: #6f42c1; } /* Purple */
+.code-key { color: #005cc5; } /* Blue */
+.code-string { color: #032f62; } /* Dark Blue */
+
+/* Code Syntax Highlighting - Dark Mode */
+body.dark-mode .code-comment { color: #6272a4; } /* Dracula Comment */
+body.dark-mode .code-keyword { color: #ff79c6; } /* Dracula Pink */
+body.dark-mode .code-variable { color: #50fa7b; } /* Dracula Green */
+body.dark-mode .code-key { color: #8be9fd; } /* Dracula Cyan */
+body.dark-mode .code-string { color: #f1fa8c; } /* Dracula Yellow */
+
 /*--------------------------------------------------------------
 # Terminal Card (Legacy)
 --------------------------------------------------------------*/
@@ -2026,6 +2064,10 @@ body:not(.dark-mode) .editor-content::-webkit-scrollbar-thumb:hover {
   position: relative;
 }
 
+body.dark-mode .page-title {
+  background-color: rgba(59, 59, 59, 0.2);
+}
+
 .page-title h1 {
   font-size: 3rem;
   font-weight: 700;
@@ -2085,6 +2127,11 @@ body:not(.dark-mode) .editor-content::-webkit-scrollbar-thumb:hover {
 .section-header p {
   font-size: 1.1rem;
   opacity: 0.8;
+  color: var(--accent-color);
+}
+
+body.dark-mode .section-header p {
+  color: #ffffff !important;
 }
 
 .research-list {
@@ -2107,6 +2154,17 @@ body:not(.dark-mode) .editor-content::-webkit-scrollbar-thumb:hover {
   font-size: 1.2rem;
 }
 
+/* Ensure PIC section matches thesis header and uses accent bullets explicitly */
+#pic .section-header h2 {
+  color: var(--accent-color);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+#pic .research-list li::before {
+  color: var(--accent-color);
+}
+
 .pdf-preview {
   margin-top: 30px;
 }
@@ -2120,9 +2178,16 @@ body:not(.dark-mode) .editor-content::-webkit-scrollbar-thumb:hover {
 
 .pdf-container iframe {
   width: 100%;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  height: 800px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Light mode adjustments for PDF iframe */
+body:not(.dark-mode) .pdf-container iframe {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .alert {
