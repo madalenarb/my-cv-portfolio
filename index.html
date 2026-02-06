@@ -263,10 +263,47 @@
                 <li>Integrated API access into the web interface to connect the UI with Generative AI capabilities and support deployment.</li>
                 <li>Worked with international teams, iterating quickly based on feedback, testing, and stakeholder requirements.</li>
               </ul>
-            </div><!-- Edn Resume Item -->
 
+              
+            </div><!-- Edn Resume Item -->
           </div>
 
+        </div>
+
+        <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="300">
+          <button type="button" class="btn btn-lg rounded-pill px-4 py-2 me-2" style="background-color: var(--accent-color); color: #fff;" data-bs-toggle="modal" data-bs-target="#cvModal">
+            <i class="bi bi-eye me-2"></i>View CV
+          </button>
+          <a href="assets/CV_2026_madalenab.pdf" class="btn btn-lg rounded-pill px-4 py-2" style="background-color: var(--accent-color); color: #fff;" download>
+            <i class="bi bi-download me-2"></i>Download CV
+          </a>
+        </div>
+
+        <!-- CV Modal -->
+        <style>
+          #cvModal .modal-dialog {
+            transform: scale(0.3);
+            opacity: 0;
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.2s ease;
+          }
+          #cvModal.show .modal-dialog {
+            transform: scale(1);
+            opacity: 1;
+          }
+          #cvModal .modal-dialog {
+            max-width: 95vw;
+            width: 95vw;
+          }
+        </style>
+        <div class="modal" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background: var(--surface-color); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 50px rgba(0,0,0,0.5); position: relative;">
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="position: absolute; top: 10px; right: 10px; z-index: 10;"></button>
+              <div class="modal-body p-0">
+                <iframe src="assets/CV_2026_madalenab.pdf" style="width: 100%; height: 85vh; border: none;"></iframe>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
