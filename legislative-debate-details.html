@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Legislative Debate Video Analytics - Portfolio Details</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo1.png" rel="icon">
+  <link href="assets/img/logo1.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo1.png" alt="">
+        <h1 class="sitename">My Portfolio</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Legislative Debate Video Analytics</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li class="current">Legislative Debate Video Analytics</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>Legislative Debate Video Analytics</h2>
+              <h4>Big Data Processing · Multimodal CV/NLP · Clustering &amp; Embeddings</h4>
+
+              <p>
+                I completed this project during the 2024 legislative elections in Portugal as part of the <strong>Big Data Processing</strong> course. The goal was to analyze video frames from televised election debates and extract structured signals—<strong>objects</strong>, <strong>facial emotions</strong>, and <strong>frame embeddings</strong>—to study content and attempt to <strong>separate identities and scenes via clustering</strong>. The debate used for the project featured André Ventura and Mariana Mortágua. Final grade: <strong>8/10</strong>.
+              </p>
+
+              <h3 class="mt-4">Problem &amp; Goal</h3>
+              <p>
+                Election debates contain repeating visual patterns (candidate close-ups, split screens, candidate + presenter shots). Our goal was to build a pipeline that:
+              </p>
+              <ul>
+                <li>Extracts <strong>frame-level features</strong> (detections, faces, text, emotion, embeddings)</li>
+                <li>Uses <strong>embeddings</strong> to group visually similar frames/faces</li>
+                <li>Applies clustering to separate <strong>candidates / presenter / mixed scenes</strong></li>
+                <li>Visualizes results to validate whether clusters match real debate structure</li>
+              </ul>
+
+              <h3 class="mt-4">Approach</h3>
+              <h4 class="mt-3">1) Multimodal frame extraction</h4>
+              <p>For each frame we extracted:</p>
+              <ul>
+                <li><strong>Object detections</strong> (e.g., person, tie, TV, laptop)</li>
+                <li><strong>Face crops + facial emotion recognition</strong> (FER categories like Neutral, Surprise, Sadness, etc.)</li>
+                <li><strong>OCR text</strong> (when available)</li>
+                <li><strong>Embeddings</strong> to represent frames/faces for clustering and retrieval</li>
+              </ul>
+
+              <h4 class="mt-3">2) Candidate/scene identification via embeddings + clustering</h4>
+              <p>
+                To estimate which frames correspond to which person/scene, we used embeddings and clustering.
+              </p>
+              <p><strong>Expected number of clusters:</strong> <strong>6</strong></p>
+              <p>Because debates typically contain recurring shot types:</p>
+              <ol>
+                <li>Candidate A alone</li>
+                <li>Candidate B alone</li>
+                <li>Presenter alone</li>
+                <li>Candidate A + presenter</li>
+                <li>Candidate B + presenter</li>
+                <li>Multi-person / “everyone” / split-screen shots</li>
+              </ol>
+
+              <h4 class="mt-3">3) Choosing K (Elbow Method)</h4>
+              <p>
+                We applied the <strong>elbow method</strong> to estimate a reasonable number of clusters for K-Means: we look for the point where increasing <em>k</em> yields diminishing returns in within-cluster distortion.
+              </p>
+
+              <figure class="mt-3">
+                <img src="assets/img/portfolio/elbow_topk_candidates.png" class="img-fluid" alt="Elbow method for K selection">
+                <figcaption class="mt-2">Elbow method curve used to estimate the number of clusters.</figcaption>
+              </figure>
+
+              <h4 class="mt-3">4) Clustering algorithms explored</h4>
+              <ul>
+                <li><strong>K-Means</strong> — used with the elbow method to pick the number of clusters</li>
+                <li><strong>Spectral Clustering</strong> — produced a strong, stable separation in practice</li>
+                <li><strong>DBSCAN</strong> — identified outliers (noise), but was sensitive to parameters and tended to create too many clusters</li>
+                <li><strong>Isolation Forest</strong> — used for outlier detection / preprocessing (not clustering itself), which affected downstream clustering outcomes</li>
+                <li><strong>t-SNE visualization</strong> — used to project high-dimensional embeddings to 2D for interpretability and qualitative validation of cluster structure</li>
+              </ul>
+
+              <h3 class="mt-4">Results &amp; Visual Diagnostics</h3>
+              <h4 class="mt-3">Emotion and object statistics</h4>
+
+              <figure class="mt-3">
+                <img src="assets/img/portfolio/13eda23a-bdb9-4d88-90e9-15286bef1be7.png" class="img-fluid" alt="Emotion pie chart">
+                <figcaption class="mt-2">Emotion distribution across detected faces in debate frames.</figcaption>
+              </figure>
+
+              <figure class="mt-4">
+                <img src="assets/img/portfolio/c05b9315-430a-41b2-82f7-47eb40442a3d.png" class="img-fluid" alt="Object detection histogram">
+                <figcaption class="mt-2">Histogram of detected objects across frames.</figcaption>
+              </figure>
+
+              <figure class="mt-4">
+                <img src="assets/img/portfolio/85bee57c-0bc2-42e1-8a1f-c9a95fccd131.png" class="img-fluid" alt="Example frame with emotion overlay">
+                <figcaption class="mt-2">Example frame annotated with emotion recognition overlay.</figcaption>
+              </figure>
+
+              <h4 class="mt-4">Spectral clustering (strong baseline)</h4>
+              <p>
+                Spectral clustering produced a <strong>reliable division</strong> of embeddings into visually consistent groups, aligning well with repeated debate shot patterns.
+              </p>
+
+              <figure class="mt-3">
+                <img src="assets/img/portfolio/imagecluster_with_images.png" class="img-fluid" alt="Spectral clustering with image grid">
+                <figcaption class="mt-2">Spectral clustering results with representative frame grids.</figcaption>
+              </figure>
+
+              <h4 class="mt-4">DBSCAN (best outlier handling, but over-clustered)</h4>
+              <p>
+                DBSCAN was <strong>even better at identifying outliers</strong> (noise points), but it <strong>over-segmented</strong> into too many clusters—likely requiring tighter parameter search (eps/min_samples) to match the expected debate structure.
+              </p>
+
+              <figure class="mt-3">
+                <img src="assets/img/portfolio/ClusterDBSCAN.png" class="img-fluid" alt="DBSCAN cluster visualization">
+                <figcaption class="mt-2">DBSCAN clustering visualization with noisy/outlier points.</figcaption>
+              </figure>
+
+              <h4 class="mt-4">Isolation Forest (outlier preprocessing, fewer clusters)</h4>
+              <p>
+                Isolation Forest helped detect outliers, but in our case it resulted in fewer clusters than expected (some shot types were merged). Despite that, the key candidates/scenes were still recognizable.
+              </p>
+
+              <figure class="mt-3">
+                <img src="assets/img/portfolio/clusterIsolationForest.png" class="img-fluid" alt="Isolation Forest clustering visualization">
+                <figcaption class="mt-2">Isolation Forest preprocessing with cluster visualization.</figcaption>
+              </figure>
+
+              <h3 class="mt-4">Conclusion</h3>
+              <p>
+                This project gave me hands-on experience building a <strong>multimodal data pipeline</strong>, using <strong>embeddings for unsupervised identification</strong>, and validating clustering quality through both <strong>quantitative heuristics</strong> (elbow method, parameter tuning) and <strong>visual diagnostics</strong> (t-SNE + cluster image grids).
+              </p>
+
+              <h4 class="mt-3">Qualitative identity check</h4>
+              <p>
+                Using embedding-based clustering, the system identified the two candidates correctly <strong>the majority of the time</strong>, especially in stable close-up shots.
+              </p>
+
+              <figure class="mt-3">
+                <img src="assets/img/portfolio/marianamort.png" class="img-fluid" alt="Mariana Mortágua candidate frames">
+                <figcaption class="mt-2">Mariana Mortágua frame cluster example showing consistent close-up shots.</figcaption>
+              </figure>
+
+              <figure class="mt-4">
+                <img src="assets/img/portfolio/andreven.png" class="img-fluid" alt="André Ventura candidate frames">
+                <figcaption class="mt-2">André Ventura frame cluster example highlighting stable identity grouping.</figcaption>
+              </figure>
+
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category</strong> Big Data Processing</li>
+                <li><strong>Methods</strong> Multimodal CV/NLP, Clustering, Embeddings</li>
+                <li><strong>Course</strong> Big Data Processing</li>
+                <li><strong>Year</strong> 2024</li>
+                <li>
+                  <a href="https://github.com/madalenarb/pbd-project" target="_blank" class="btn-visit align-self-start d-inline-flex align-items-center">
+                    <i class="bi bi-github me-2"></i>View on GitHub
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">My Portfolio</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Theme Toggle -->
+  <a href="#" id="theme-toggle" class="theme-toggle d-flex align-items-center justify-content-center"><i class="bi bi-moon"></i></a>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Global Menu File -->
+  <script src="assets/js/menu.js"></script>
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
