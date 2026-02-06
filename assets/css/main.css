@@ -32,17 +32,16 @@ body.dark-mode {
   --heading-color: #eaf2ff;
   --surface-color: #0f1724;
   --contrast-color: #ffffff;
-  background: radial-gradient(circle at var(--cursor-x, 50%) var(--cursor-y, 50%), rgba(20,30,55,0.6) 0%, #0b1220 40%);
-  background-attachment: fixed;
+  background: #0b1220;
+  background-attachment: scroll;
   --nav-dropdown-background-color: var(--surface-color);
   --nav-dropdown-color: var(--default-color);
   --nav-mobile-background-color: var(--surface-color);
 }
 
-@media (max-width: 900px), (hover: none) and (pointer: coarse) {
-  body.dark-mode {
-    background: #0b1220;
-  }
+body.dark-mode.has-cursor {
+  background: radial-gradient(circle at var(--cursor-x, 50%) var(--cursor-y, 50%), rgba(20,30,55,0.6) 0%, #0b1220 40%);
+  background-attachment: fixed;
 }
 
 .dark-mode .theme-toggle {
@@ -1828,7 +1827,7 @@ body::before {
   transition: opacity 0.3s ease;
 }
 
-body.spotlight-active::before {
+body.dark-mode.has-cursor.spotlight-active::before {
   opacity: 1; /* Visible when active */
 }
 

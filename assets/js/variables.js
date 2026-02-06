@@ -28,21 +28,3 @@ const phoneElements = document.querySelectorAll(".my-phone");
 phoneElements.forEach(element => element.textContent = window.projectData.phone);
 
 
-// Spotlight Effect Logic
-const spotlightBody = document.body;
-
-document.addEventListener('mousemove', (e) => {
-    spotlightBody.style.setProperty('--mouse-x', `${e.clientX}px`);
-    spotlightBody.style.setProperty('--mouse-y', `${e.clientY}px`);
-    
-    if (!spotlightBody.classList.contains('spotlight-active')) {
-        spotlightBody.classList.add('spotlight-active');
-    }
-});
-
-document.addEventListener('mouseout', (e) => {
-    // Check if the mouse left the window (relatedTarget is null)
-    if (!e.relatedTarget && !e.toElement) {
-        spotlightBody.classList.remove('spotlight-active');
-    }
-});

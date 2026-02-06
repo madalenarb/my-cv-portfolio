@@ -292,14 +292,55 @@
   /**
    * Spotlight Mouse Tracking
    */
-  document.addEventListener('mousemove', function(e) {
-    if (document.body.classList.contains('dark-mode')) {
-      const x = e.clientX;
-      const y = e.clientY;
-      document.body.style.setProperty('--cursor-x', x + 'px');
-      document.body.style.setProperty('--cursor-y', y + 'px');
+  const spotlightBody = document.body;
+  const finePointerQuery = window.matchMedia('(any-hover: hover) and (any-pointer: fine)');
+
+  function syncPointerCapability() {
+    if (!finePointerQuery.matches) {
+      spotlightBody.classList.remove('has-cursor');
+      spotlightBody.classList.remove('spotlight-active');
+      return;
+    }
+    spotlightBody.classList.add('has-cursor');
+  }
+
+  function updateSpotlightPosition(e) {
+    if (!spotlightBody.classList.contains('dark-mode') || !finePointerQuery.matches) return;
+
+    const x = e.clientX;
+    const y = e.clientY;
+
+    spotlightBody.style.setProperty('--cursor-x', x + 'px');
+    spotlightBody.style.setProperty('--cursor-y', y + 'px');
+    spotlightBody.style.setProperty('--mouse-x', x + 'px');
+    spotlightBody.style.setProperty('--mouse-y', y + 'px');
+    spotlightBody.classList.add('has-cursor');
+    spotlightBody.classList.add('spotlight-active');
+  }
+
+  syncPointerCapability();
+
+  if (typeof finePointerQuery.addEventListener === 'function') {
+    finePointerQuery.addEventListener('change', syncPointerCapability);
+  } else if (typeof finePointerQuery.addListener === 'function') {
+    finePointerQuery.addListener(syncPointerCapability);
+  }
+
+  document.addEventListener('mousemove', updateSpotlightPosition, { passive: true });
+  document.addEventListener('mouseleave', function() {
+    spotlightBody.classList.remove('spotlight-active');
+  });
+  document.addEventListener('mouseout', function(e) {
+    if (!e.relatedTarget && !e.toElement) {
+      spotlightBody.classList.remove('spotlight-active');
     }
   });
+  document.addEventListener('pointerdown', function(e) {
+    if (e.pointerType !== 'mouse') {
+      spotlightBody.classList.remove('spotlight-active');
+      spotlightBody.classList.remove('has-cursor');
+    }
+  }, { passive: true });
 
 })();
 
