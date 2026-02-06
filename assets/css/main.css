@@ -1312,6 +1312,8 @@ section,
 .testimonials {
   padding: 80px 0;
   position: relative;
+  height:auto;
+  align-items: flex-start;
 }
 
 .testimonials:before {
@@ -1340,6 +1342,7 @@ section,
 .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
   overflow: hidden;
+  transition: height 0.3s ease;
 }
 
 .testimonials .testimonial-item {
@@ -1402,6 +1405,7 @@ section,
 
 .testimonials .swiper-wrapper {
   height: auto;
+  align-items: flex-start;
 }
 
 .testimonials .swiper-pagination {
@@ -2039,8 +2043,16 @@ body.dark-mode .code-string { color: #f1fa8c; } /* Dracula Yellow */
 /*--------------------------------------------------------------
 # Hero Section Text Sizing
 --------------------------------------------------------------*/
+.hero-carousel {
+  height: clamp(40px, 6vh, 60px);
+}
+
 .hero-carousel .swiper-slide {
-  font-size: 3rem;
+  font-size: clamp(18px, 5vh, 3rem);
+  font-size: clamp(18px, min(5vh, 6vw), 3rem);
+  line-height: 1.1;
+  white-space: nowrap;
+  padding-inline: 0.5rem;
 }
 
 .hero p.fst-italic {
