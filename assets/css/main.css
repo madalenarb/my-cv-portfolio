@@ -553,6 +553,14 @@ h6 {
   margin-bottom: 0;
 }
 
+.dark-mode .footer {
+  background-color: #080a0f;
+}
+
+.dark-mode .footer .copyright p {
+  color: #c8c8c8;
+}
+
 .footer .social-links {
   margin-top: 20px;
 }
