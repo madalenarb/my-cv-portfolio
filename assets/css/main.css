@@ -553,7 +553,8 @@ h6 {
   margin-bottom: 0;
 }
 
-.dark-mode .footer {
+.dark-mode .footer.accent-background {
+  --background-color: #080a0f;
   background-color: #080a0f;
 }
 
