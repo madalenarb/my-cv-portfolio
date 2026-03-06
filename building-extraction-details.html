@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>IEEE BigData Cup Building Extraction - Portfolio Details</title>
+  <meta name="description" content="Building footprint extraction project using YOLOv8 instance segmentation on aerial imagery.">
+  <meta name="keywords" content="YOLOv8, building extraction, instance segmentation, computer vision, geospatial AI">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo1.png" rel="icon">
+  <link href="assets/img/logo1.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo1.png" alt="">
+        <h1 class="sitename">My Portfolio</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">IEEE BigData Cup Building Extraction</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li class="current">IEEE BigData Cup Building Extraction</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>Building Footprint Extraction using YOLOv8</h2>
+              <h4>Computer Vision · Instance Segmentation · Geospatial AI</h4>
+
+              <p>
+                This project focuses on extracting <strong>building footprints from aerial imagery</strong> for the <strong>IEEE BigData Cup 2024</strong>. The objective was to generate a single submission file where each image is matched with the polygons of every detected building, so the output captures not just location but also the building's shape.
+              </p>
+
+              <figure class="mt-4">
+                <img src="assets/img/portfolio/project_img_ai.png" class="img-fluid" alt="IEEE BigData Cup building extraction project cover image">
+                <figcaption class="mt-2">Project snapshot for the building footprint extraction pipeline.</figcaption>
+              </figure>
+
+              <h3 class="mt-4">Problem &amp; Goal</h3>
+              <p>
+                Each prediction had to follow the competition format:
+              </p>
+              <ul>
+                <li><strong>ImageID</strong> - the identifier of the test image</li>
+                <li><strong>Coordinates</strong> - a stringified list of polygon points representing the detected buildings</li>
+              </ul>
+              <p>
+                That makes this a combined <strong>object detection + instance segmentation</strong> task. Detecting a building with a box was not enough; the model needed to trace each footprint accurately enough to create usable polygons.
+              </p>
+
+              <h3 class="mt-4">Model Choice &amp; Justification</h3>
+              <p>
+                I selected <strong>YOLOv8n-Seg</strong> from Ultralytics because it gave the best balance between <strong>segmentation quality</strong> and <strong>hardware constraints</strong>.
+              </p>
+              <ul>
+                <li><strong>Direct polygon-friendly output</strong> - the segmentation head produces masks that align naturally with polygon extraction.</li>
+                <li><strong>Modern and efficient</strong> - it is fast to train and run, while still giving reliable results for a single-class task.</li>
+                <li><strong>Built-in evaluation metrics</strong> - precision, recall, and mAP were available directly during training.</li>
+                <li><strong>Practical setup</strong> - compared with alternatives like Detectron2, the dependency setup was much lighter.</li>
+              </ul>
+              <p>
+                I also tested a plain <strong>YOLOv8n detection model</strong>, but box-only predictions were not precise enough for footprint extraction. Segmentation produced much better building outlines.
+              </p>
+              <p>
+                I deliberately stayed with the <strong>nano segmentation variant</strong> because I trained locally on a GPU with <strong>4 GB of VRAM</strong>. Larger or newer variants were less realistic for that environment.
+              </p>
+
+              <h3 class="mt-4">Assumptions Behind the Approach</h3>
+              <ul>
+                <li><strong>Single class problem</strong> - the dataset only contains buildings, which is well suited to YOLOv8.</li>
+                <li><strong>Useful segmentation annotations</strong> - JSON labels included both bounding boxes and segments, making a segmentation model practical.</li>
+                <li><strong>Reasonable training coverage</strong> - the train/validation split was strong enough to learn building shapes from aerial views.</li>
+              </ul>
+
+              <h3 class="mt-4">Evaluation Strategy</h3>
+              <p>
+                I tracked both optimization signals and final detection quality:
+              </p>
+              <ul>
+                <li><strong>Training and validation losses</strong> - <code>box_loss</code>, <code>seg_loss</code>, and <code>dfl_loss</code></li>
+                <li><strong>Precision / Recall / mAP</strong> - especially <code>mAP50</code> and <code>mAP50-95</code></li>
+                <li><strong>Confusion matrix</strong> - to inspect false positives and false negatives</li>
+              </ul>
+              <p>
+                The main interpretation was simple but useful: if training and validation losses both decrease steadily and remain close, the model is learning without severe overfitting. That is the behavior I observed here.
+              </p>
+
+              <h3 class="mt-4">Results</h3>
+              <p>
+                The final Kaggle submission scored approximately <strong>0.5</strong>. Even though that leaderboard score was lower than I wanted, the training metrics showed a model that was learning solid footprint representations and maintaining a good precision/recall trade-off.
+              </p>
+
+              <div class="table-responsive mt-3">
+                <table class="table table-striped align-middle">
+                  <thead>
+                    <tr>
+                      <th scope="col">Metric</th>
+                      <th scope="col">Value</th>
+                      <th scope="col">Interpretation</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Precision (B)</td>
+                      <td>0.80102</td>
+                      <td>The model correctly identified most predicted buildings.</td>
+                    </tr>
+                    <tr>
+                      <td>Recall (B)</td>
+                      <td>0.71129</td>
+                      <td>It retrieved a strong share of the buildings present in ground truth.</td>
+                    </tr>
+                    <tr>
+                      <td>mAP50 (B)</td>
+                      <td>0.80063</td>
+                      <td>Strong overlap quality at the 50 percent IoU threshold.</td>
+                    </tr>
+                    <tr>
+                      <td>mAP50-95 (B)</td>
+                      <td>0.54301</td>
+                      <td>Reasonably consistent performance across stricter IoU thresholds.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                Taken together, the curves and summary metrics suggested <strong>good generalization</strong> rather than a model that was simply memorizing the training set.
+              </p>
+
+              <h3 class="mt-4">Limitations &amp; Next Steps</h3>
+              <p>
+                The main gap was the difference between promising validation metrics and the more modest Kaggle score. Likely reasons include distribution mismatch between local validation and the final test set, as well as limited training time and compute.
+              </p>
+              <ul>
+                <li>Train longer and test whether performance improves past the plateau after additional tuning.</li>
+                <li>Try a larger segmentation model such as <strong>YOLOv8m-Seg</strong> if more VRAM is available.</li>
+                <li>Add more diverse geospatial data or augmentations to improve generalization.</li>
+                <li>Tune learning rate, batch size, confidence thresholds, and IoU thresholds more aggressively.</li>
+              </ul>
+
+              <h3 class="mt-4">Conclusion</h3>
+              <p>
+                Overall, <strong>YOLOv8n-Seg</strong> was a practical and reliable choice for this building extraction task. It delivered accurate enough masks to make polygon-based submission feasible, while staying within the compute budget of a local setup. The project was a good example of balancing <strong>model quality</strong>, <strong>resource limits</strong>, and <strong>competition constraints</strong> in a real computer vision workflow.
+              </p>
+
+              <h3 class="mt-4">How to Run</h3>
+              <ol>
+                <li>Create the conda environment from <code>environment.yml</code>.</li>
+                <li>Place the dataset folder inside the project directory.</li>
+                <li>Run the notebooks for label creation, training, testing, and segmentation inference.</li>
+              </ol>
+
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category</strong> Deep Machine Learning</li>
+                <li><strong>Focus</strong> Computer Vision, Instance Segmentation</li>
+                <li><strong>Framework</strong> YOLOv8n-Seg (Ultralytics)</li>
+                <li><strong>Competition</strong> IEEE BigData Cup 2024</li>
+                <li><strong>Compute</strong> Local GPU, 4 GB VRAM</li>
+                <li><strong>Repository</strong> Private GitHub repo</li>
+                <li>
+                  <a href="https://github.com/madalenarb/IEEE-Bigdata-Cup-2024-Building-extraction" target="_blank" rel="noopener" class="btn-visit align-self-start d-inline-flex align-items-center">
+                    <i class="bi bi-github me-2"></i>GitHub Repo (Private)
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">My Portfolio</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Theme Toggle -->
+  <a href="#" id="theme-toggle" class="theme-toggle d-flex align-items-center justify-content-center"><i class="bi bi-moon"></i></a>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Global Menu File -->
+  <script src="assets/js/menu.js"></script>
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
