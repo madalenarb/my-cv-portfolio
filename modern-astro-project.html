@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Mapping the Milky Way with SALSA - Portfolio Details</title>
+  <meta name="description" content="Mapping the Milky Way with SALSA, a radio astronomy project by Madalena Barros at Chalmers University of Technology: the Galaxy's rotation curve and a face-on hydrogen map from 21 cm observations at Onsala Space Observatory.">
+  <meta name="keywords" content="SALSA, Onsala Space Observatory, radio astronomy, 21 cm hydrogen line, Milky Way rotation curve, MATLAB, Chalmers">
+  <meta name="author" content="Maria Madalena Reforço Osório de Barros">
+  <link rel="canonical" href="https://madalenarb.github.io/my-cv-portfolio/modern-astro-project.html">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo-180.png" rel="icon">
+  <link href="assets/img/logo-180.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+  <script>
+    /* Pick the theme before anything paints: the visitor's saved choice, then the page's theme setting,
+       then the system setting, then dark. */
+    (function () {
+      var stored = null;
+      try { stored = localStorage.getItem('theme'); } catch (e) {}
+      var attr = document.documentElement.getAttribute('data-theme');
+      var prefersLight = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches);
+      var dark = stored ? stored === 'dark' : (attr ? attr === 'dark' : !prefersLight);
+      document.body.classList.toggle('dark-mode', dark);
+      /* Language: if Portuguese or Dutch was chosen, keep the page hidden until it is translated
+         (a safety timer shows it anyway if the translation script cannot run) */
+      var lang = null;
+      try { lang = new URLSearchParams(window.location.search).get('lang'); } catch (e) {}
+      if (!lang) { try { lang = localStorage.getItem('lang'); } catch (e) {} }
+      if (lang === 'pt' || lang === 'nl') {
+        var root = document.documentElement;
+        root.lang = lang === 'pt' ? 'pt-PT' : 'nl';
+        root.classList.add('i18n-pending');
+        setTimeout(function () { root.classList.remove('i18n-pending'); }, 1500);
+      }
+    })();
+  </script>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo-180.png" alt="">
+        <h1 class="sitename">Madalena Barros</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Home<br></a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li class="dropdown"><a href="index.html#services"><span>Projects</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="index.html#services">Projects Overview</a></li>
+              <li><a href="research-details.html">Master's Thesis</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main" id="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Mapping the Milky Way</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li class="current">Mapping the Milky Way</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="row justify-content-between gy-4 mt-4">
+
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="portfolio-description">
+              <h2>Mapping the Milky Way with SALSA</h2>
+              <p class="portfolio-subtitle h4">Radio Astronomy · Signal Processing · MATLAB</p>
+
+              <p>
+                For the Modern Astrophysics course at <strong>Chalmers University of Technology</strong>, I used <strong>SALSA</strong>, a 2.3&nbsp;m radio telescope at <strong>Onsala Space Observatory</strong>, to observe the 21&nbsp;cm line of neutral hydrogen across the plane of the Galaxy. From the Doppler shift of that line I measured the <strong>Milky Way's rotation curve</strong> and built a <strong>face-on map</strong> of its hydrogen clouds.
+              </p>
+
+              <h3 class="mt-4">Why hydrogen</h3>
+              <p>
+                Neutral hydrogen fills the Galactic disc and emits faintly at 1420&nbsp;MHz. Gas moving towards us shifts the line to higher frequencies and gas moving away shifts it lower, so each peak in a spectrum gives the speed of a hydrogen cloud along the line of sight.
+              </p>
+
+              <h3 class="mt-4">What I did</h3>
+              <ul>
+                <li><strong>Observations:</strong> spectra in frequency-switching mode (256 channels, 2.5&nbsp;MHz bandwidth, 20&nbsp;s integrations) at Galactic longitudes from 16° to 190°.</li>
+                <li><strong>Signal processing:</strong> baseline subtraction on every spectrum in MATLAB, then Gaussian fits to the hydrogen peaks to measure their velocities precisely.</li>
+                <li><strong>Rotation curve:</strong> the tangent-point method on 24 directions between 18° and 110°, with the Sun 8.5&nbsp;kpc from the Galactic centre and orbiting at 220&nbsp;km/s.</li>
+                <li><strong>Map:</strong> about 125 velocity peaks converted into distances and then into positions for a top-down view of the Galaxy.</li>
+              </ul>
+
+              <figure class="mt-4">
+                <img src="assets/img/portfolio/astrophysics/salsa-directions.webp" width="725" height="723" class="img-fluid" alt="The Milky Way seen from above, with blue lines from the Sun showing the directions observed with SALSA" loading="lazy" decoding="async">
+                <figcaption class="mt-2">The directions I observed for the rotation curve, drawn from the Sun. Background image: NASA/JPL-Caltech/R.&nbsp;Hurt.</figcaption>
+              </figure>
+
+              <h3 class="mt-4">Results</h3>
+              <p>
+                The rotation velocity climbs to about 180&nbsp;km/s within 3.2&nbsp;kpc of the Galactic centre and then stays roughly flat, mostly between 190 and 227&nbsp;km/s, out to 8.5&nbsp;kpc. If visible matter were all there is, the velocity would drop at larger radii. The flat curve points to unseen mass, usually attributed to dark matter, and matches the curves measured for other spiral galaxies.
+              </p>
+
+              <figure class="mt-4">
+                <img src="assets/img/portfolio/astrophysics/salsa-rotation-curve.webp" width="998" height="595" class="img-fluid" alt="Rotation curve: velocity rises from about 86 km/s at 2.6 kpc to about 180 km/s at 3.2 kpc, then stays mostly between about 190 and 227 km/s out to 8.5 kpc" loading="lazy" decoding="async">
+                <figcaption class="mt-2">Rotation curve measured with SALSA: orbital velocity against distance from the Galactic centre.</figcaption>
+              </figure>
+
+              <p>
+                The face-on map places each hydrogen cloud at its derived position. Some points fall off the expected spiral arms, partly because the map takes a single distance for each cloud.
+              </p>
+
+              <figure class="mt-4">
+                <img src="assets/img/portfolio/astrophysics/salsa-hi-map.webp" width="700" height="525" class="img-fluid" alt="Top-down scatter plot of the hydrogen clouds in the Galactic disc, with distances in kiloparsecs" loading="lazy" decoding="async">
+                <figcaption class="mt-2">Face-on map of the hydrogen clouds, built from about 125 velocity peaks.</figcaption>
+              </figure>
+
+              <h3 class="mt-4">Near or far?</h3>
+              <p>
+                Inside the Sun's orbit, one velocity can match two distances along the same line of sight. Observing the same direction slightly above the Galactic plane tells them apart: clouds that fade are far away, and clouds that stay bright are near. I tested this at longitude 45°, where three of the four hydrogen peaks had two possible distances.
+              </p>
+
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category</strong> Radio Astronomy</li>
+                <li><strong>Course</strong> Modern Astrophysics (RRY125)</li>
+                <li><strong>University</strong> Chalmers University of Technology</li>
+                <li><strong>Telescope</strong> SALSA, 2.3&nbsp;m, Onsala Space Observatory</li>
+                <li><strong>Tools</strong> MATLAB</li>
+                <li><strong>Date</strong> December 2024</li>
+              </ul>
+
+              <div class="mt-4">
+                <h4>Project Resources</h4>
+                <div class="d-grid gap-2">
+                  <a href="assets/img/portfolio/astrophysics/Modern_Astrophysics__SALSA_Lab.pdf" target="_blank" rel="noopener" class="btn btn-primary">
+                    <i class="bi bi-file-pdf" aria-hidden="true"></i> Open Report (PDF)
+                  </a>
+                  <a href="assets/img/portfolio/astrophysics/Modern_Astrophysics__SALSA_Lab.pdf" download class="btn btn-secondary">
+                    <i class="bi bi-download" aria-hidden="true"></i> Download Report
+                  </a>
+                </div>
+                <p class="small mt-3 mb-0">PDF, 12 pages, 1.9 MB</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Madalena Barros</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.linkedin.com/in/m-madalena-barros" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+        <a href="https://github.com/madalenarb" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+        <a href="mailto:mariamadalenarob@gmail.com" aria-label="Email"><i class="bi bi-envelope" aria-hidden="true"></i></a>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <aside class="page-controls" aria-label="Page controls">
+
+    <!-- Theme Toggle -->
+    <a href="#" id="theme-toggle" class="theme-toggle d-flex align-items-center justify-content-center" aria-label="Switch between dark and light theme"><i class="bi bi-moon"></i></a>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up-short"></i></a>
+  </aside>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Global Menu File -->
+  <script src="assets/js/menu.js"></script>
+  <!-- Language switch: English is the source text; Portuguese and Dutch come from these dictionaries -->
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/i18n/common.js"></script>
+  <script src="assets/js/i18n/modern-astro-project.js"></script>
+  <script>SiteI18n.init();</script>
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

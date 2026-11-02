@@ -5,12 +5,14 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>IEEE BigData Cup Building Extraction - Portfolio Details</title>
-  <meta name="description" content="Building footprint extraction project using YOLOv8 instance segmentation on aerial imagery.">
+  <meta name="description" content="Building footprint extraction with YOLOv8 instance segmentation on aerial imagery, an IEEE BigData Cup project by Madalena Barros.">
   <meta name="keywords" content="YOLOv8, building extraction, instance segmentation, computer vision, geospatial AI">
+  <meta name="author" content="Maria Madalena Reforço Osório de Barros">
+  <link rel="canonical" href="https://madalenarb.github.io/my-cv-portfolio/building-extraction-details.html">
 
   <!-- Favicons -->
-  <link href="assets/img/logo1.png" rel="icon">
-  <link href="assets/img/logo1.png" rel="apple-touch-icon">
+  <link href="assets/img/logo-180.png" rel="icon">
+  <link href="assets/img/logo-180.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -20,7 +22,7 @@
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
@@ -30,13 +32,38 @@
 </head>
 
 <body class="portfolio-details-page">
+  <script>
+    /* Pick the theme before anything paints: the visitor's saved choice, then the page's theme setting,
+       then the system setting, then dark. */
+    (function () {
+      var stored = null;
+      try { stored = localStorage.getItem('theme'); } catch (e) {}
+      var attr = document.documentElement.getAttribute('data-theme');
+      var prefersLight = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches);
+      var dark = stored ? stored === 'dark' : (attr ? attr === 'dark' : !prefersLight);
+      document.body.classList.toggle('dark-mode', dark);
+      /* Language: if Portuguese or Dutch was chosen, keep the page hidden until it is translated
+         (a safety timer shows it anyway if the translation script cannot run) */
+      var lang = null;
+      try { lang = new URLSearchParams(window.location.search).get('lang'); } catch (e) {}
+      if (!lang) { try { lang = localStorage.getItem('lang'); } catch (e) {} }
+      if (lang === 'pt' || lang === 'nl') {
+        var root = document.documentElement;
+        root.lang = lang === 'pt' ? 'pt-PT' : 'nl';
+        root.classList.add('i18n-pending');
+        setTimeout(function () { root.classList.remove('i18n-pending'); }, 1500);
+      }
+    })();
+  </script>
+
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo1.png" alt="">
-        <h1 class="sitename">My Portfolio</h1>
+        <img src="assets/img/logo-180.png" alt="">
+        <h1 class="sitename">Madalena Barros</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -45,7 +72,7 @@
     </div>
   </header>
 
-  <main class="main">
+  <main class="main" id="main">
 
     <!-- Page Title -->
     <div class="page-title" data-aos="fade">
@@ -71,7 +98,7 @@
           <div class="col-lg-8" data-aos="fade-up">
             <div class="portfolio-description">
               <h2>Building Footprint Extraction using YOLOv8</h2>
-              <h4>Computer Vision · Instance Segmentation · Geospatial AI</h4>
+              <p class="portfolio-subtitle h4">Computer Vision · Instance Segmentation · Geospatial AI</p>
 
               <p>
                 This project focuses on extracting <strong>building footprints from aerial imagery</strong> for the <strong>IEEE BigData Cup 2024</strong>. The objective was to generate a single submission file where each image is matched with the polygons of every detected building, so the output captures not just location but also the building's shape.
@@ -242,13 +269,12 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">My Portfolio</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Madalena Barros</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/m-madalena-barros" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+        <a href="https://github.com/madalenarb" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+        <a href="mailto:mariamadalenarob@gmail.com" aria-label="Email"><i class="bi bi-envelope" aria-hidden="true"></i></a>
       </div>
       <div class="credits">
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
@@ -257,11 +283,14 @@
 
   </footer>
 
-  <!-- Theme Toggle -->
-  <a href="#" id="theme-toggle" class="theme-toggle d-flex align-items-center justify-content-center"><i class="bi bi-moon"></i></a>
+  <aside class="page-controls" aria-label="Page controls">
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Theme Toggle -->
+    <a href="#" id="theme-toggle" class="theme-toggle d-flex align-items-center justify-content-center" aria-label="Switch between dark and light theme"><i class="bi bi-moon"></i></a>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up-short"></i></a>
+  </aside>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -280,6 +309,11 @@
 
   <!-- Global Menu File -->
   <script src="assets/js/menu.js"></script>
+  <!-- Language switch: English is the source text; Portuguese and Dutch come from these dictionaries -->
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/i18n/common.js"></script>
+  <script src="assets/js/i18n/building-extraction-details.js"></script>
+  <script>SiteI18n.init();</script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 

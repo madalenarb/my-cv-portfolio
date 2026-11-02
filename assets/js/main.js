@@ -23,16 +23,30 @@
   window.addEventListener('load', toggleScrolled);
 
   /**
+   * Text set by this script goes through the site translations (assets/js/i18n.js) when they are loaded
+   */
+  const t = (text) => (window.SiteI18n ? window.SiteI18n.t(text) : text);
+
+  /**
    * Mobile nav toggle
    */
   const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function setMobileNavLabel() {
+    const isOpen = document.body.classList.contains('mobile-nav-active');
+    mobileNavToggleBtn.setAttribute('aria-label', isOpen ? t('Close menu') : t('Open menu'));
+  }
 
   function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
+    const isOpen = document.querySelector('body').classList.toggle('mobile-nav-active');
     mobileNavToggleBtn.classList.toggle('bi-list');
     mobileNavToggleBtn.classList.toggle('bi-x');
+    mobileNavToggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    setMobileNavLabel();
   }
   mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+  document.addEventListener('site:lang', setMobileNavLabel);
 
   /**
    * Hide mobile nav on same-page/hash links
@@ -93,11 +107,13 @@
    * Animation on scroll function and init
    */
   function aosInit() {
+    if (typeof AOS === 'undefined') return;
     AOS.init({
       duration: 1000,
       easing: 'ease-in-out',
       once: false,
-      mirror: false
+      mirror: false,
+      disable: prefersReducedMotion
     });
   }
   window.addEventListener('load', aosInit);
@@ -145,14 +161,22 @@
   /**
    * Initiate Pure Counter
    */
-  new PureCounter();
+  if (typeof PureCounter === 'function') {
+    new PureCounter();
+  }
 
   /**
    * Initiate glightbox
    */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
+  if (typeof GLightbox === 'function') {
+    const lightbox = GLightbox({
+      selector: '.glightbox'
+    });
+    // Captions come from data-title, which changes with the language
+    document.addEventListener('site:lang', function() {
+      if (lightbox && typeof lightbox.reload === 'function') lightbox.reload();
+    });
+  }
 
   /**
    * Init isotope layout and filters
@@ -163,6 +187,7 @@
     let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
     let initIsotope;
+    if (typeof imagesLoaded !== 'function' || typeof Isotope !== 'function') return;
     imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
       initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
         itemSelector: '.isotope-item',
@@ -171,11 +196,21 @@
         sortBy: sort
       });
     });
+    // Card text changes length with the language, so the grid is laid out again
+    document.addEventListener('site:lang', function() {
+      if (initIsotope) initIsotope.layout();
+    });
 
     isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
       filters.addEventListener('click', function() {
-        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
+        if (!initIsotope) return;
+        const current = isotopeItem.querySelector('.isotope-filters .filter-active');
+        current.classList.remove('filter-active');
         this.classList.add('filter-active');
+        // Each filter contains a real <button>, so keyboards work natively; keep its pressed state in sync
+        isotopeItem.querySelectorAll('.isotope-filters li > button').forEach(b => b.setAttribute('aria-pressed', 'false'));
+        const btn = this.querySelector('button');
+        if (btn) btn.setAttribute('aria-pressed', 'true');
         initIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
@@ -200,10 +235,14 @@
    * Init swiper sliders
    */
   function initSwiper() {
+    if (typeof Swiper !== 'function') return;
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
+      if (prefersReducedMotion && config.autoplay) {
+        delete config.autoplay;
+      }
 
       if (swiperElement.classList.contains("swiper-tab")) {
         initSwiperWithCustomPagination(swiperElement, config);
@@ -259,7 +298,19 @@
    */
 
   // Theme Toggle Button (Dark/Light Mode)
+  // Order of preference: the visitor's saved choice, the page's data-theme attribute, the system setting, dark.
+  // Storage can be unavailable (private windows, blocked site data), so every access is guarded.
   const themeToggleBtn = document.getElementById('theme-toggle');
+  const lightSchemeQuery = window.matchMedia ? window.matchMedia('(prefers-color-scheme: light)') : null;
+
+  function readStoredTheme() {
+    try { return localStorage.getItem('theme'); } catch (e) { return null; }
+  }
+
+  function storeTheme(value) {
+    try { localStorage.setItem('theme', value); } catch (e) { /* the choice simply isn't remembered */ }
+  }
+
   function setThemeIcon(isDark) {
     if (themeToggleBtn) {
       const icon = themeToggleBtn.querySelector('i');
@@ -269,25 +320,72 @@
       }
     }
   }
+
+  function applyTheme(isDark) {
+    document.body.classList.toggle('dark-mode', isDark);
+    setThemeIcon(isDark);
+  }
+
+  function ambientThemeIsDark() {
+    const attr = document.documentElement.getAttribute('data-theme');
+    if (attr === 'dark' || attr === 'light') return attr === 'dark';
+    return !(lightSchemeQuery && lightSchemeQuery.matches);
+  }
+
+  function followAmbientTheme() {
+    if (!readStoredTheme()) applyTheme(ambientThemeIsDark());
+  }
+
   function toggleTheme(e) {
     if (e) e.preventDefault();
     const isDark = !document.body.classList.contains('dark-mode');
-    document.body.classList.toggle('dark-mode', isDark);
-    setThemeIcon(isDark);
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    applyTheme(isDark);
+    storeTheme(isDark ? 'dark' : 'light');
   }
+
+  const storedTheme = readStoredTheme();
+  applyTheme(storedTheme ? storedTheme === 'dark' : ambientThemeIsDark());
   if (themeToggleBtn) {
     themeToggleBtn.addEventListener('click', toggleTheme);
-    // Set initial icon
-    let isDark;
-    if (localStorage.getItem('theme') === null) {
-      isDark = document.body.classList.contains('dark-mode');
-    } else {
-      isDark = localStorage.getItem('theme') === 'dark';
-    }
-    document.body.classList.toggle('dark-mode', isDark);
-    setThemeIcon(isDark);
   }
+  if (lightSchemeQuery && typeof lightSchemeQuery.addEventListener === 'function') {
+    lightSchemeQuery.addEventListener('change', followAmbientTheme);
+  }
+  if (window.MutationObserver) {
+    new MutationObserver(followAmbientTheme).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  }
+
+  /**
+   * Copy-email button: copy on click, or select the address if the clipboard is unavailable
+   */
+  document.querySelectorAll('.copy-email').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const label = btn.querySelector('span');
+      const show = function(text) {
+        if (!label) return;
+        label.textContent = t(text);
+        clearTimeout(btn._resetTimer);
+        btn._resetTimer = setTimeout(function() { label.textContent = t('Copy'); }, 2200);
+      };
+      const selectAddress = function() {
+        const address = btn.parentElement.querySelector('.email-address');
+        if (address && window.getSelection) {
+          const range = document.createRange();
+          range.selectNodeContents(address);
+          const sel = window.getSelection();
+          sel.removeAllRanges();
+          sel.addRange(range);
+        }
+        show('Selected');
+      };
+      const value = btn.getAttribute('data-copy');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(value).then(function() { show('Copied'); }, selectAddress);
+      } else {
+        selectAddress();
+      }
+    });
+  });
 
   /**
    * Spotlight Mouse Tracking
@@ -405,7 +503,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Close modal on Escape key
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && modal.classList.contains('active')) {
+    if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
       closeResearchModal();
     }
   });
