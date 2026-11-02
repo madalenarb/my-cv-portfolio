@@ -4,13 +4,46 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>My Portfolio</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Madalena Barros | Electrical &amp; Computer Engineer</title>
+  <meta name="description" content="Portfolio of Madalena Barros (Maria Madalena Reforço Osório de Barros), Assistant Engineer in Digital Architecture at NTT DATA. MSc thesis at IST (Electrical and Computer Engineering) on GPU and HPC quantum circuit simulation. AI &amp; data and industrial data integration.">
+  <meta name="author" content="Maria Madalena Reforço Osório de Barros">
+  <meta name="keywords" content="Madalena Barros, Maria Madalena Reforço Osório de Barros, Maria Madalena Barros, Electrical Engineer, Computer Engineer, HPC, CUDA, C++, AI, Data Engineer, quantum simulation, Unified Namespace, NTT DATA, Lisbon, Amsterdam">
+  <meta name="theme-color" content="#0b1220">
+  <link rel="canonical" href="https://madalenarb.github.io/my-cv-portfolio/">
+
+  <!-- Link previews (LinkedIn, Slack, WhatsApp, email) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://madalenarb.github.io/my-cv-portfolio/">
+  <meta property="og:title" content="Madalena Barros | Electrical &amp; Computer Engineer">
+  <meta property="og:description" content="Assistant Engineer at NTT DATA. HPC, AI &amp; data, quantum simulation and industrial data integration.">
+  <meta property="og:image" content="https://madalenarb.github.io/my-cv-portfolio/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Madalena Barros, Electrical and Computer Engineer">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Who this site is about, for search engines (full name included so it can be found by it) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Madalena Barros",
+    "alternateName": ["Maria Madalena Reforço Osório de Barros", "Maria Madalena Barros", "Maria Madalena Reforco Osorio de Barros"],
+    "url": "https://madalenarb.github.io/my-cv-portfolio/",
+    "image": "https://madalenarb.github.io/my-cv-portfolio/assets/img/photos/about-portrait.webp",
+    "jobTitle": "Assistant Engineer, Digital Architecture",
+    "worksFor": { "@type": "Organization", "name": "NTT DATA" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Instituto Superior Técnico, University of Lisbon" },
+      { "@type": "CollegeOrUniversity", "name": "Chalmers University of Technology" }
+    ],
+    "sameAs": ["https://www.linkedin.com/in/m-madalena-barros", "https://github.com/madalenarb"]
+  }
+  </script>
 
   <!-- Favicons -->
-  <link href="assets/img/logo1.png" rel="icon">
-  <link href="assets/img/logo1.png" rel="apple-touch-icon">
+  <link href="assets/img/logo-180.png" rel="icon">
+  <link href="assets/img/logo-180.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -20,7 +53,7 @@
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
@@ -38,13 +71,38 @@
 </head>
 
 <body class="index-page dark-mode">
+  <script>
+    /* Pick the theme before anything paints: the visitor's saved choice, then the page's theme setting,
+       then the system setting, then dark. */
+    (function () {
+      var stored = null;
+      try { stored = localStorage.getItem('theme'); } catch (e) {}
+      var attr = document.documentElement.getAttribute('data-theme');
+      var prefersLight = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches);
+      var dark = stored ? stored === 'dark' : (attr ? attr === 'dark' : !prefersLight);
+      document.body.classList.toggle('dark-mode', dark);
+      /* Language: if Portuguese or Dutch was chosen, keep the page hidden until it is translated
+         (a safety timer shows it anyway if the translation script cannot run) */
+      var lang = null;
+      try { lang = new URLSearchParams(window.location.search).get('lang'); } catch (e) {}
+      if (!lang) { try { lang = localStorage.getItem('lang'); } catch (e) {} }
+      if (lang === 'pt' || lang === 'nl') {
+        var root = document.documentElement;
+        root.lang = lang === 'pt' ? 'pt-PT' : 'nl';
+        root.classList.add('i18n-pending');
+        setTimeout(function () { root.classList.remove('i18n-pending'); }, 1500);
+      }
+    })();
+  </script>
+
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo1.png" alt="">
-        <h1 class="sitename">My Portfolio</h1>
+        <img src="assets/img/logo-180.png" alt="" width="32" height="32">
+        <h1 class="sitename">Madalena Barros</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -53,39 +111,114 @@
     </div>
   </header>
 
-  <main class="main">
+  <main class="main" id="main">
 
     <!-- Hero Section -->
     <section id="hero" class="hero section">
 
-      <img src="assets/img/hero-img.jpg" alt="" data-aos="fade-in">
+      <div class="container">
+        <div class="row align-items-center justify-content-between gy-4 gy-lg-5">
 
-      <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
-        <h2>I am <span class="my-name">Madalena Barros</span></h2>
-        <div class="hero-carousel swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "direction": "vertical",
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 2000,
-                "disableOnInteraction": false
-              },
-              "slidesPerView": 1,
-              "allowTouchMove": false
-            }
-          </script>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">Electrical Engineer</div>
-            <div class="swiper-slide">Web Developer</div>
-            <div class="swiper-slide">AI and Data Engineer</div>
+          <div class="col-lg-7 order-2 order-lg-1 hero-text" data-aos="fade-up" data-aos-delay="100">
+            <p class="hero-kicker">Hi, I'm</p>
+            <h2 class="hero-name"><span class="my-name">Madalena Barros</span></h2>
+
+            <div class="hero-carousel swiper init-swiper" aria-hidden="true">
+              <script type="application/json" class="swiper-config">
+                {
+                  "direction": "vertical",
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 2200,
+                    "disableOnInteraction": false
+                  },
+                  "slidesPerView": 1,
+                  "allowTouchMove": false
+                }
+              </script>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">Electrical &amp; Computer Engineer</div>
+                <div class="swiper-slide">AI &amp; Data Engineer</div>
+                <div class="swiper-slide">Industrial Data &amp; Integration</div>
+                <div class="swiper-slide">HPC &amp; Quantum Simulation</div>
+              </div>
+            </div>
+            <p class="visually-hidden">Electrical and Computer Engineer. AI and Data Engineer. Industrial Data and Integration. HPC and Quantum Simulation.</p>
+
+            <p class="hero-tagline">Bridging high-performance computing, AI, and industrial data.</p>
+
+            <div class="hero-cta">
+              <a href="#resume" class="btn-hero btn-hero-primary"><i class="bi bi-briefcase" aria-hidden="true"></i>See my experience</a>
+              <a href="#contact" class="btn-hero btn-hero-ghost"><i class="bi bi-envelope" aria-hidden="true"></i>Get in touch</a>
+            </div>
+
+            <div class="hero-social">
+              <a href="https://www.linkedin.com/in/m-madalena-barros" target="_blank" rel="noopener" aria-label="LinkedIn profile"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+              <a href="https://github.com/madalenarb" target="_blank" rel="noopener" aria-label="GitHub profile"><i class="bi bi-github" aria-hidden="true"></i></a>
+              <span class="hero-location"><i class="bi bi-geo-alt" aria-hidden="true"></i> Lisbon, Portugal</span>
+            </div>
           </div>
+
+          <div class="col-lg-5 order-1 order-lg-2 hero-photo" data-aos="zoom-in" data-aos-delay="150">
+            <div class="hero-portrait">
+              <img src="assets/img/photos/hero-portrait.webp" width="800" height="1000" alt="Portrait of Madalena Barros, smiling" fetchpriority="high" decoding="async">
+            </div>
+          </div>
+
         </div>
-        <p class="fst-italic fw-light mt-3">Bridging the gap between High-Performance Computing and User Experience.</p>
       </div>
 
     </section><!-- /Hero Section -->
+
+    <!-- Focus Areas Section -->
+    <section id="focus" class="focus section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>What I work on</h2>
+        <p>Three areas where hardware, data and software meet.</p>
+      </div>
+
+      <div class="container">
+        <div class="row g-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <article class="focus-card">
+              <span class="focus-icon" aria-hidden="true"><i class="bi bi-diagram-3"></i></span>
+              <h3>Industrial data integration</h3>
+              <p>Connecting SAP and shop-floor systems to a Unified Namespace so factory data can flow in real time.</p>
+              <ul class="chips" aria-label="Tools">
+                <li>SAP IDoc</li><li>HighByte</li><li>Unified Namespace</li><li>Docker</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
+            <article class="focus-card">
+              <span class="focus-icon" aria-hidden="true"><i class="bi bi-cpu"></i></span>
+              <h3>HPC &amp; GPU acceleration</h3>
+              <p>Benchmarking and profiling quantum circuit simulators on CPUs, GPUs and the Deucalion supercomputer.</p>
+              <ul class="chips" aria-label="Tools">
+                <li>C/C++</li><li>CUDA</li><li>MPI / OpenMP</li><li>Roofline analysis</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <article class="focus-card">
+              <span class="focus-icon" aria-hidden="true"><i class="bi bi-stars"></i></span>
+              <h3>AI &amp; data products</h3>
+              <p>Grounding LLM answers with RAG, checking them against real sources, and building the interfaces around them.</p>
+              <ul class="chips" aria-label="Tools">
+                <li>Python</li><li>RAG</li><li>LLMs</li><li>React</li>
+              </ul>
+            </article>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /Focus Areas Section -->
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -95,21 +228,28 @@
         <div class="row gy-4">
           <div class="col-md-6">
 
-            <div class="row justify-content-between gy-4">
+            <div class="row justify-content-between gy-4 align-items-center">
               <div class="col-lg-5">
-                <img src="assets/img/profile-img-mada.jpg" class="img-fluid w-100 rounded" alt="">
+                <div class="profile-frame">
+                  <img src="assets/img/photos/about-portrait.webp" width="460" height="460" class="img-fluid" alt="Madalena Barros smiling in the snow at sunset" loading="lazy" decoding="async">
+                </div>
               </div>
               <div class="col-lg-7 about-info">
                 <p><strong>Name: </strong> <span class="my-name">Madalena Barros</span></p>
+                <p><strong>Full name: </strong> <span lang="pt-PT" translate="no">Maria Madalena Reforço Osório de Barros</span></p>
+                <p><strong>Role: </strong> <span>Assistant Engineer, Digital Architecture &middot; NTT DATA</span></p>
+                <p><strong>Location: </strong> <span>Lisbon, Portugal</span></p>
+                <p><strong>Languages: </strong> <span>Portuguese (native) &middot; English (C1) &middot; Spanish (basic) &middot; Dutch (learning)</span></p>
                 <p><strong>Email: </strong> <span><a href="mailto:mariamadalenarob@gmail.com">mariamadalenarob@gmail.com</a></span></p>
-                <p><strong>Github: </strong> <span><a href="https://github.com/madalenarb" target="_blank">https://github.com/madalenarb</a></span></p>
+                <p><strong>GitHub: </strong> <span><a href="https://github.com/madalenarb" target="_blank" rel="noopener">github.com/madalenarb</a></span></p>
+                <p><strong>LinkedIn: </strong> <span><a href="https://www.linkedin.com/in/m-madalena-barros" target="_blank" rel="noopener">in/m-madalena-barros</a></span></p>
               </div>
             </div>
 
             <div class="skills-content">
               <div class="code-editor">
                 <div class="editor-header">
-                  <div class="editor-buttons">
+                  <div class="editor-buttons" aria-hidden="true">
                     <span class="dot red"></span>
                     <span class="dot yellow"></span>
                     <span class="dot green"></span>
@@ -119,25 +259,14 @@
                   </div>
                 </div>
                 <div class="editor-content">
-                  <div class="editor-line-numbers">
-                    <span>1</span>
-                    <span>2</span>
-                    <span>3</span>
-                    <span>4</span>
-                    <span>5</span>
-                    <span>6</span>
-                    <span>7</span>
-                    <span>8</span>
-                    <span>9</span>
-                    <span>10</span>
-                  </div>
-                  <pre><code><span class="code-comment">// Madalena's Technical Stack</span>
-<span class="code-keyword">const</span> <span class="code-variable">core_foundations</span> = {
-  <span class="code-key">hpc_parallel_computing</span>: [<span class="code-string">"C/C++"</span>, <span class="code-string">"CUDA"</span>, <span class="code-string">"SIMD"</span>, <span class="code-string">"MPI"</span>, <span class="code-string">"OpenMP"</span>, <span class="code-string">"Performance optimization"</span>, <span class="code-string">"Profiling & analysis"</span>],
-  <span class="code-key">quantum_simulations</span>: [<span class="code-string">"Qiskit"</span>, <span class="code-string">"CUDA-Q"</span>, <span class="code-string">"Qulacs"</span>, <span class="code-string">"Statevector simulation"</span>, <span class="code-string">"Tensor networks"</span>, <span class="code-string">"Noise models"</span>, <span class="code-string">"GPU backends"</span>, <span class="code-string">"Circuit benchmarking"</span>],
-  <span class="code-key">ai_data_engineering</span>: [<span class="code-string">"Python"</span>, <span class="code-string">"Vector databases"</span>, <span class="code-string">"Embedding pipelines"</span>, <span class="code-string">"RAG architectures"</span>, <span class="code-string">"Retrieval evaluation"</span>, <span class="code-string">"LLM fine-tuning"</span>],
-  <span class="code-key">frontend_design</span>: [<span class="code-string">"React"</span>, <span class="code-string">"JavaScript"</span>, <span class="code-string">"Figma"</span>, <span class="code-string">"API integration"</span>, <span class="code-string">"UI/UX prototyping"</span>]
-};</code></pre>
+                  <pre class="numbered"><code><span class="cl"><span class="code-comment">// Madalena's technical stack</span></span>
+<span class="cl"><span class="code-keyword">const</span> <span class="code-variable">stack</span> = {</span>
+<span class="cl">  <span class="code-key">hpc_parallel</span>: [<span class="code-string">"C/C++"</span>, <span class="code-string">"CUDA"</span>, <span class="code-string">"MPI"</span>, <span class="code-string">"OpenMP"</span>, <span class="code-string">"SIMD"</span>, <span class="code-string">"profiling"</span>],</span>
+<span class="cl">  <span class="code-key">quantum_sim</span>: [<span class="code-string">"Qiskit"</span>, <span class="code-string">"CUDA-Q"</span>, <span class="code-string">"Qulacs"</span>, <span class="code-string">"statevector"</span>, <span class="code-string">"noise models"</span>],</span>
+<span class="cl">  <span class="code-key">ai_and_data</span>: [<span class="code-string">"Python"</span>, <span class="code-string">"RAG"</span>, <span class="code-string">"embeddings"</span>, <span class="code-string">"LLM workflows"</span>, <span class="code-string">"data analysis"</span>],</span>
+<span class="cl">  <span class="code-key">industrial_data</span>: [<span class="code-string">"SAP IDoc"</span>, <span class="code-string">"Unified Namespace"</span>, <span class="code-string">"HighByte"</span>, <span class="code-string">"Docker"</span>, <span class="code-string">"webhooks"</span>],</span>
+<span class="cl">  <span class="code-key">frontend</span>: [<span class="code-string">"React"</span>, <span class="code-string">"TypeScript"</span>, <span class="code-string">"Figma"</span>, <span class="code-string">"REST APIs"</span>]</span>
+<span class="cl">};</span></code></pre>
                 </div>
               </div>
             </div>
@@ -145,21 +274,28 @@
 
           <div class="col-md-6">
             <div class="about-me">
-              <h4>About me</h4>
+              <h2>About me</h2>
               <p>
-                Hi, my name is Madalena Barros! &#11088; 
+                Hi, I'm Madalena! &#128075;
               </p>
               <p>
-                I am a 23 years old university student. I'm finishing my Masters in Electrical and Computer Engineering at Instituto Superior Técnico.
+                I'm an <strong>Assistant Engineer in the Digital Architecture team at NTT DATA</strong>, where I work on industrial
+                data integration. I help connect enterprise systems (SAP) to a Unified Namespace so that factory data can flow in
+                real time, as part of a smart-factory programme for a multinational consumer-goods manufacturer.
               </p>
               <p>
-                Currently, I am writing my thesis, which focuses on accelerating quantum simulators using different protocols (OpenMP) or GPUs. (See <strong>Featured Research</strong> below).
+                In parallel, I've submitted my thesis for the <strong>MSc in Electrical and Computer Engineering</strong> at Instituto
+                Superior Técnico, where I specialised in Control, AI and Robotics. Only the defence is left. The thesis benchmarks
+                quantum circuit simulators from a single CPU thread up to 64 nodes and 16 GPUs on the Deucalion supercomputer (see
+                <strong>Featured Research</strong> below).
               </p>
               <p>
-                When I am not benchmarking quantum simulators, I'm interning at TripGoGo, building RAG pipelines and doing a bit of quality assurance to ensure the model's outputs are realistic and reliable. 
+                Before NTT DATA, I built RAG pipelines and ran output QA as an AI &amp; Prompt Engineering intern at TripGoGo in
+                Amsterdam, and designed a React/TypeScript interface for an internal Generative AI tool at KPMG.
               </p>
               <p>
-                I also have a background in frontend development through my work at KPMG and NEECIST. These experiences taught me how to bridge real-world requirements with web design. A key example was my work at KPMG, where I built a custom user interface for an internal AI chatbot to streamline employee workflows.
+                I enjoy work that sits between hardware and software: performance, data, and systems that solve a real problem.
+                I'm currently learning Dutch and like working in international, English-speaking teams.
               </p>
             </div>
           </div>
@@ -173,22 +309,33 @@
     <section id="featured-research" class="featured-research section accent-background">
       <div class="container section-title" data-aos="fade-up">
         <h2>My Master's thesis</h2>
-        <p>High-Performance Computing & Quantum Simulation</p>
+        <p>High-Performance Computing &amp; Quantum Simulation</p>
       </div>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-10">
             <div class="glass-card text-center">
               <h3>Accelerating Quantum Circuit Simulation</h3>
-              <p class="fst-italic mt-2">Leveraging the <strong>Deucalion</strong> HPC System</p>
-              <p class="mt-3">
-                My thesis focuses on accelerating quantum circuit simulators using hybrid parallelism (MPI/OpenMP) and GPU offloading. 
-                Working with the <strong>Deucalion</strong> supercomputer enables multi-node benchmarking to study scaling limits, memory bottlenecks, 
-                and performance/accuracy trade-offs across simulation backends.
+              <p class="thesis-status"><i class="bi bi-check2-circle" aria-hidden="true"></i> Thesis submitted in October&nbsp;2026, defence&nbsp;pending</p>
+              <p class="thesis-summary mt-3">
+                I benchmarked six state-vector simulators on three circuit families, from a single CPU thread up to 64 nodes and
+                16 NVIDIA A100 GPUs on the EuroHPC supercomputer <strong>Deucalion</strong>, and used performance models and profiling
+                to explain the rankings. No backend wins everywhere, since the leader depends on the circuit, the qubit count and the
+                hardware. The results support a two-level framework for choosing a simulation method and then a backend.
               </p>
+              <ul class="thesis-facts">
+                <li><strong>6</strong><span>simulators benchmarked</span></li>
+                <li><strong>64</strong><span>CPU nodes on Deucalion</span></li>
+                <li><strong>16</strong><span>NVIDIA A100 GPUs</span></li>
+              </ul>
+              <ul class="chips chips-center" aria-label="Simulators benchmarked">
+                <li>Qiskit Aer</li><li>CUDA-Q</li><li>Qulacs</li><li>mpiQulacs</li><li>Qibo</li><li>QuEST</li>
+              </ul>
+              <p class="thesis-tools">Analysed with the cache-aware roofline model (CARM, with PMU counts checked against DynamoRIO) and top-down profiling in Intel VTune.</p>
               <div class="research-buttons mt-4">
-                <a href="research-details.html" class="btn btn-primary me-2">See more</a>
-                <a href="https://rnca.fccn.pt/en/deucalion/" target="_blank" class="btn btn-link mt-2 mt-sm-0" style="font-size: 0.9rem; color: var(--default-color);">Deucalion specs <i class="bi bi-box-arrow-up-right"></i></a>
+                <a href="assets/thesis/Madalena_Barros_MSc_Thesis_2026.pdf" target="_blank" rel="noopener" class="btn btn-primary"><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> Read the thesis (PDF)</a>
+                <a href="research-details.html" class="btn btn-outline-primary">Findings &amp; details</a>
+                <a href="https://madalenarb.github.io/quantum-simulator-selector/" target="_blank" rel="noopener" class="btn btn-link" style="font-size: 0.9rem; color: var(--default-color);">Simulator selector prototype <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
               </div>
             </div>
           </div>
@@ -201,8 +348,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        <p>Here is my summary of my experience, mainly throughout my academic journey.</p>
+        <h2>Experience</h2>
+        <p>A summary of my professional and academic journey.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -210,87 +357,118 @@
         <div class="row">
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>MSc, Electrical and Computer Engineering</h4>
-              <p><em>Instituto Superior Técnico, University of Lisbon</em></p>
-              <ul style="list-style: none; padding-left: 0;">
-                <li><b>Specialisation</b>: Control, Artificial Intelligence, and Robotics</li>
-                <li><b>Minor:</b> Contemporary Physics (Quantum Mechanics; Intro Particle &amp; Nuclear Physics; Astrophysics)</li>
-                <li><b>Thesis:</b> Accelerating Quantum Circuit Simulation with NVIDIA GPUs (HPC focus on <a href="https://rnca.fccn.pt/en/deucalion/" target="_blank">Deucalion</a>: CPU/GPU parallelization and performance benchmarking)</li>
-              </ul>
-
-
-              <!---<p>I am currently finishing my Master's thesis, which focuses on accelerating quantum simulators using different protocols (OpenMP) or GPUs. I am also working with a HPC system (Deucalion), which enables multinodal benchmarking.</p>
-              <p>I really like physics, so I chose to minor in Contemporary Physics, where I studied Quantum Mechanics, had an introductory course for particle and nuclear phyics, as well as studied astrophysics</p>
-              <p>For my masters I had some courses in AI and data science, for instance big data analyssi and machine learning. I also had OOP where I learned how to think about a programming project even better: how the differnt parts of the code should be decoupled, etc</p>-->
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>BSc, Electrical and Computer Engineering</h4>
-                <p><em>Instituto Superior Técnico, University of Lisbon</em></p>
-                <ul style="list-style: none; padding-left: 0;">
-                  <li><b>Relevant Coursework:</b> Electronics, control, embedded systems, and software fundamentals</li>
-                  <li>Academic Merit Diploma (2022/2023)</li>
-                </ul>
-
-            </div><!-- Edn Resume Item -->
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item hover-box">
-              <a href="https://www.tripgogo.ai/" target="_blank" class="resume-item-link">
-              <h4>AI & Prompt Engineering Intern <i class="bi bi-box-arrow-up-right" style="font-size: 0.8em; opacity: 0.7;"></i></h4>
-              <p><em>TripGoGo (start-up), Amsterdam Science Park, Netherlands</em> | 09/2025 - Present</p>
+
+            <div class="resume-item current">
+              <h4>Assistant Engineer, Digital Architecture</h4>
+              <p class="mb-1"><em>NTT DATA, Lisbon, Portugal</em> | <span class="text-nowrap">06/2026 - <span class="badge-current">Present</span></span></p>
+              <ul class="chips chips-sm" aria-label="Technologies">
+                <li>SAP IDoc</li><li>HighByte Intelligence Hub</li><li>Unified Namespace</li><li>Docker Compose</li><li>Webhooks</li>
+              </ul>
               <ul class="list-compact" style="list-style: none; padding-left: 0;">
-                <li>Optimized prompt-engineering workflows for LLM-based travel planning, reducing token usage while preserving response quality and coverage.</li>
+                <li>Work in the Digital Architecture team on an industrial data-integration programme for a multinational consumer-goods manufacturer, connecting SAP (IDoc) data to a Unified Namespace (UNS) to support a Manufacturing Execution System (MES) rollout.</li>
+                <li>Configured webhooks and event flows between SAP and the UNS layer using HighByte Intelligence Hub, and validated message mapping and delivery.</li>
+                <li>Set up a containerised integration environment with Docker Compose for reproducible local testing and smoother team onboarding.</li>
+                <li>Collaborate in an international, cross-functional team following enterprise delivery practices.</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item hover-box">
+              <a href="https://www.tripgogo.ai/" target="_blank" rel="noopener" class="resume-item-link">
+              <h4>AI &amp; Prompt Engineering Intern <i class="bi bi-box-arrow-up-right" style="font-size: 0.8em; opacity: 0.7;" aria-hidden="true"></i></h4>
+              <p class="mb-1"><em>TripGoGo (start-up), Amsterdam Science Park, Netherlands</em> | 11/2025 - 03/2026</p>
+              <ul class="chips chips-sm" aria-label="Technologies">
+                <li>Python</li><li>RAG</li><li>LLMs</li><li>Prompt engineering</li><li>REST APIs</li>
+              </ul>
+              <ul class="list-compact" style="list-style: none; padding-left: 0;">
                 <li>Performed QA on itinerary outputs by validating POIs, coordinates, and opening hours against official sources/APIs, and documenting recurring failure modes.</li>
                 <li>Designed a RAG-based grounding approach to enrich answers with verified place metadata and reduce hallucinations in recommendations.</li>
-                <li>Integrated and evaluated external APIs and data sources to improve reliability, factual correctness, and overall user experience.</li>
+                <li>Optimized prompt-engineering workflows for LLM-based travel planning, reducing token usage while preserving response quality.</li>
+                <li>Integrated and evaluated external APIs and data sources to improve reliability and factual correctness.</li>
               </ul>
               </a>
               <div class="resume-item-actions">
                 <a href="assets/tripgogo_internship_sumup.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm tripgogo-btn">
-                  <i class="bi bi-file-earmark-pdf me-2"></i>Internship Summary
+                  <i class="bi bi-file-earmark-pdf me-2" aria-hidden="true"></i>Internship Summary
                 </a>
               </div>
-            </div><!-- Edn Resume Item -->
+            </div><!-- End Resume Item -->
 
             <div class="resume-item">
               <h4>Data and Analytics Summer Intern</h4>
               <p class="mb-1"><em>KPMG Portugal, Évora, Portugal </em>| 07/2024</p>
-              
-              <ul style="list-style: none; padding-left: 0;">
+              <ul class="chips chips-sm" aria-label="Technologies">
+                <li>React</li><li>TypeScript</li><li>Figma</li><li>Generative AI</li>
+              </ul>
+              <ul class="list-compact" style="list-style: none; padding-left: 0;">
                 <li>Contributed to an internal Generative AI project, focusing on UI/UX integration and product delivery.</li>
                 <li>Designed the interface in Figma and implemented the web application from scratch using React + TypeScript.</li>
-                <li>Integrated API access into the web interface to connect the UI with Generative AI capabilities and support deployment.</li>
-                <li>Worked with international teams, iterating quickly based on feedback, testing, and stakeholder requirements.</li>
+                <li>Integrated API access into the web interface to connect the UI with Generative AI capabilities.</li>
+                <li>Worked with international teams, iterating quickly based on feedback and stakeholder requirements.</li>
               </ul>
+            </div><!-- End Resume Item -->
 
-              
-            </div><!-- Edn Resume Item -->
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>MSc, Electrical and Computer Engineering</h4>
+              <p><em>Instituto Superior Técnico, University of Lisbon</em> | 2024 - 2026</p>
+              <ul style="list-style: none; padding-left: 0;">
+                <li><b>Specialisation:</b> Control, Artificial Intelligence, and Robotics</li>
+                <li><b>Minor:</b> Contemporary Physics (Quantum Mechanics; Intro Particle &amp; Nuclear Physics; Astrophysics)</li>
+                <li><b>Thesis:</b> <a href="assets/thesis/Madalena_Barros_MSc_Thesis_2026.pdf" target="_blank" rel="noopener">Accelerating Quantum Circuit Simulation with NVIDIA GPUs</a>, benchmarking six simulators from one CPU thread to 64 nodes and 16 GPUs on <a href="https://rnca.fccn.pt/en/deucalion/" target="_blank" rel="noopener">Deucalion</a></li>
+                <li><b>Status:</b> thesis submitted in October 2026, defence pending</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item">
+              <h4>Erasmus Exchange</h4>
+              <p><em>Chalmers University of Technology, Gothenburg, Sweden</em> | 2024 - 2025</p>
+              <ul style="list-style: none; padding-left: 0;">
+                <li>Mechatronic systems, AI &amp; machine learning, and quantum mechanics.</li>
+                <li><b>Radio astronomy:</b> <a href="modern-astro-project.html">Mapping the Milky Way with SALSA</a>, measuring the Galaxy's rotation curve with a radio telescope at Onsala Space Observatory</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <div class="resume-item">
+              <h4>BSc, Electrical and Computer Engineering</h4>
+              <p><em>Instituto Superior Técnico, University of Lisbon</em> | 2020 - 2024</p>
+              <ul style="list-style: none; padding-left: 0;">
+                <li><b>Relevant coursework:</b> Electronics, control, embedded systems, and software fundamentals.</li>
+                <li>Academic Merit Diploma (2022/2023).</li>
+              </ul>
+            </div><!-- End Resume Item -->
+
           </div>
 
         </div>
 
-        <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="300">
-          <button type="button" class="btn btn-lg rounded-3 px-4 py-2 me-2 cv-btn" data-bs-toggle="modal" data-bs-target="#cvModal">
-            <i class="bi bi-eye me-2"></i>View CV
+        <!-- On large screens "View CV" opens the in-page viewer; phones and tablets open the PDF directly,
+             because mobile browsers cannot render a PDF inside an embedded frame. -->
+        <div class="cv-actions" data-aos="fade-up" data-aos-delay="300">
+          <button type="button" class="btn btn-lg rounded-3 px-4 py-2 cv-btn d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#cvModal">
+            <i class="bi bi-eye me-2" aria-hidden="true"></i>View CV
           </button>
-          <a href="assets/CV_2026_madalenab.pdf" class="btn btn-lg rounded-3 px-4 py-2 cv-btn" download>
-            <i class="bi bi-download me-2"></i>Download CV
+          <a href="assets/CV_2026_madalenab.pdf" data-href-pt="assets/CV_2026_madalenab_pt.pdf" target="_blank" rel="noopener" class="btn btn-lg rounded-3 px-4 py-2 cv-btn d-inline-flex d-lg-none">
+            <i class="bi bi-eye me-2" aria-hidden="true"></i>View CV
+          </a>
+          <a href="assets/CV_2026_madalenab.pdf" data-href-pt="assets/CV_2026_madalenab_pt.pdf" class="btn btn-lg rounded-3 px-4 py-2 cv-btn" download="Madalena_Barros_CV.pdf">
+            <i class="bi bi-download me-2" aria-hidden="true"></i>Download CV
           </a>
         </div>
+        <p class="cv-alt" data-aos="fade-up" data-aos-delay="300">
+          <a href="assets/CV_2026_madalenab_pt.pdf" data-href-pt="assets/CV_2026_madalenab.pdf" target="_blank" rel="noopener">Also available in Portuguese (PDF)</a>
+        </p>
 
         <!-- CV Modal -->
-        <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+        <div class="modal fade" id="cvModal" tabindex="-1" aria-label="CV preview" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
               <div class="modal-body p-0">
-                <iframe src="assets/CV_2026_madalenab.pdf"></iframe>
+                <iframe src="assets/CV_2026_madalenab.pdf" data-src-pt="assets/CV_2026_madalenab_pt.pdf" title="CV of Madalena Barros (PDF)"></iframe>
               </div>
             </div>
           </div>
@@ -300,17 +478,13 @@
 
     </section><!-- /Resume Section -->
 
-    <!-- Services Section -->
-    <!-- Services Section commented out -->
-
-
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Portfolio</h2>
-        <p>Featured projects showcasing my work in algorithms, data structures, and software engineering</p>
+        <p>Selected projects across algorithms, machine learning, and data processing</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -318,51 +492,62 @@
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-algorithms">Algorithms & Data Structures</li>
-            <li data-filter=".filter-deepml">Deep Machine Learning</li>
-            <li data-filter=".filter-bigdata">Big Data Processing</li>
+            <li data-filter="*" class="filter-active"><button type="button" aria-pressed="true">All</button></li>
+            <li data-filter=".filter-algorithms"><button type="button" aria-pressed="false">Algorithms &amp; Data Structures</button></li>
+            <li data-filter=".filter-deepml"><button type="button" aria-pressed="false">Deep Machine Learning</button></li>
+            <li data-filter=".filter-bigdata"><button type="button" aria-pressed="false">Big Data Processing</button></li>
+            <li data-filter=".filter-astro"><button type="button" aria-pressed="false">Radio Astronomy</button></li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-algorithms">
-              <img src="assets/img/portfolio/wordmutations-gui.png" class="img-fluid" alt="Word Mutations GUI">
+              <img src="assets/img/portfolio/wordmutations-gui.png" width="907" height="681" class="img-fluid" alt="Word Mutations GUI" loading="lazy" decoding="async">
               <div class="portfolio-info">
-                <h4>Word Mutations</h4>
-                <p>Algorithms & Data Structures · C</p>
-                <a href="assets/img/portfolio/wordmutations-gui.png" title="Word Mutations" data-gallery="portfolio-gallery-algorithms" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <h3>Word Mutations</h3>
+                <p>Algorithms &amp; Data Structures · C</p>
+                <a href="assets/img/portfolio/wordmutations-gui.png" title="Word Mutations" data-gallery="portfolio-gallery-algorithms" class="glightbox preview-link" aria-label="Enlarge Word Mutations image"><i class="bi bi-zoom-in" aria-hidden="true"></i></a>
+                <a href="portfolio-details.html" title="More Details" class="details-link" aria-label="Word Mutations project details"><i class="bi bi-link-45deg" aria-hidden="true"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-deepml">
-              <img src="assets/img/portfolio/DnDgenerator.png" class="img-fluid" alt="DnDialogueGenerator">
+              <img src="assets/img/portfolio/thumbs/DnDgenerator.webp" width="952" height="741" class="img-fluid" alt="DnDialogueGenerator project poster" loading="lazy" decoding="async">
               <div class="portfolio-info">
-                <h4>DnDialogueGenerator</h4>
+                <h3>DnDialogueGenerator</h3>
                 <p>Deep Machine Learning · NLP</p>
-                <a href="assets/img/portfolio/DnDgenerator.png" title="DnDialogueGenerator" data-gallery="portfolio-gallery-deepml" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="dndialogue-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="assets/img/portfolio/DnDgenerator.png" title="DnDialogueGenerator" data-gallery="portfolio-gallery-deepml" class="glightbox preview-link" aria-label="Enlarge DnDialogueGenerator image"><i class="bi bi-zoom-in" aria-hidden="true"></i></a>
+                <a href="dndialogue-details.html" title="More Details" class="details-link" aria-label="DnDialogueGenerator project details"><i class="bi bi-link-45deg" aria-hidden="true"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-deepml">
-              <img src="assets/img/portfolio/project_img_ai.png" class="img-fluid" alt="Example building footprint extraction result">
+              <img src="assets/img/portfolio/thumbs/project_img_ai.webp" width="636" height="658" class="img-fluid" alt="Example building footprint extraction result" loading="lazy" decoding="async">
               <div class="portfolio-info">
-                <h4>Building Footprint Extraction</h4>
+                <h3>Building Footprint Extraction</h3>
                 <p>Deep Machine Learning · Computer Vision</p>
-                <a href="assets/img/portfolio/project_img_ai.png" title="Example building footprint extraction result" data-gallery="portfolio-gallery-deepml" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="building-extraction-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="assets/img/portfolio/project_img_ai.png" title="Example building footprint extraction result" data-gallery="portfolio-gallery-deepml" class="glightbox preview-link" aria-label="Enlarge building footprint extraction image"><i class="bi bi-zoom-in" aria-hidden="true"></i></a>
+                <a href="building-extraction-details.html" title="More Details" class="details-link" aria-label="Building Footprint Extraction project details"><i class="bi bi-link-45deg" aria-hidden="true"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-bigdata">
-              <img src="assets/img/portfolio/marianamort.png" class="img-fluid" alt="Legislative Debate Video Analytics">
+              <img src="assets/img/portfolio/thumbs/marianamort.webp" width="398" height="257" class="img-fluid" alt="Legislative Debate Video Analytics example frame" loading="lazy" decoding="async">
               <div class="portfolio-info">
-                <h4>Legislative Debate Video Analytics</h4>
+                <h3>Legislative Debate Video Analytics</h3>
                 <p>Big Data Processing · Multimodal CV/NLP</p>
-                <a href="assets/img/portfolio/clustercandidates.png" title="Legislative Debate Video Analytics" data-gallery="portfolio-gallery-bigdata" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="legislative-debate-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="assets/img/portfolio/clustercandidates.png" title="Legislative Debate Video Analytics" data-gallery="portfolio-gallery-bigdata" class="glightbox preview-link" aria-label="Enlarge Legislative Debate Video Analytics image"><i class="bi bi-zoom-in" aria-hidden="true"></i></a>
+                <a href="legislative-debate-details.html" title="More Details" class="details-link" aria-label="Legislative Debate Video Analytics project details"><i class="bi bi-link-45deg" aria-hidden="true"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-astro">
+              <img src="assets/img/portfolio/astrophysics/salsa-directions.webp" width="725" height="723" class="img-fluid" alt="The Milky Way seen from above, with blue lines from the Sun showing the directions observed with SALSA" loading="lazy" decoding="async">
+              <div class="portfolio-info">
+                <h3>Mapping the Milky Way</h3>
+                <p>Radio Astronomy · MATLAB</p>
+                <a href="assets/img/portfolio/astrophysics/salsa-directions.webp" title="Mapping the Milky Way" data-gallery="portfolio-gallery-astro" class="glightbox preview-link" aria-label="Enlarge Mapping the Milky Way image"><i class="bi bi-zoom-in" aria-hidden="true"></i></a>
+                <a href="modern-astro-project.html" title="More Details" class="details-link" aria-label="Mapping the Milky Way project details"><i class="bi bi-link-45deg" aria-hidden="true"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
@@ -374,270 +559,109 @@
 
     </section><!-- /Portfolio Section -->
 
-    <!-- Pricing Section -->
-    <!-- Pricing Section commented out -->
+    <!-- Beyond Work Section -->
+    <!-- To edit a caption, change both the data-title (lightbox) and the .life-caption text. -->
+    <section id="life" class="life section">
 
-    <!-- Faq Section -->
-    <!-- <section id="faq" class="faq section"> -->
-
-      <!-- <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="content px-xl-5">
-              <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="faq-container">
-              <div class="faq-item faq-active">
-                <h3><span class="num">1.</span> <span>Non consectetur a erat nam at lectus urna duis?</span></h3>
-                <div class="faq-content">
-                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-
-              <div class="faq-item">
-                <h3><span class="num">2.</span> <span>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</span></h3>
-                <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-
-              <div class="faq-item">
-                <h3><span class="num">3.</span> <span>Dolor sit amet consectetur adipiscing elit pellentesque?</span></h3>
-                <div class="faq-content">
-                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-
-              <div class="faq-item">
-                <h3><span class="num">4.</span> <span>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</span></h3>
-                <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-
-              <div class="faq-item">
-                <h3><span class="num">5.</span> <span>Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</span></h3>
-                <div class="faq-content">
-                  <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-      </div> -->
-
-    <!-- </section> --><!-- /Faq Section -->
-
-    <!-- Testimonials Section -->
-    <!-- <section id="testimonials" class="testimonials section accent-background"> -->
-
-      <!-- <img src="assets/img/testimonials-bg.jpg" class="testimonials-bg" alt="">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div> -->
-
-    <!-- </section> --><!-- /Testimonials Section -->
-
-    <!-- Contact Section -->
-    <!-- <section id="contact" class="contact section"> -->
-
-      <!-- Section Title -->
-      <!-- <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Beyond work</h2>
+        <p>A few snapshots from life outside the terminal.</p>
       </div>
 
-      <div class="container glass-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-3 g-md-4 justify-content-center">
 
-        <div class="info-wrap" data-aos="fade-up" data-aos-delay="200">
-          <div class="row gy-5">
+          <div class="col-6 col-md-4">
+            <a class="life-card glightbox" href="assets/img/photos/life-amsterdam-lg.webp" data-gallery="life-gallery" data-title="King&#x27;s Day in Amsterdam">
+              <img src="assets/img/photos/life-amsterdam.webp" width="600" height="750" alt="Madalena in an orange shirt and a Dutch-flag hat by an Amsterdam canal on King&#x27;s Day" loading="lazy" decoding="async">
+              <span class="life-caption">King&#x27;s Day in Amsterdam</span>
+            </a>
+          </div>
 
-            <div class="col-lg-4">
-              <div class="info-item d-flex align-items-center">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
-                </div>
-              </div>
+          <div class="col-6 col-md-4">
+            <a class="life-card glightbox" href="assets/img/photos/life-nordic-lg.webp" data-gallery="life-gallery" data-title="Björkliden, Swedish Lapland: husky sledding, Nordic skiing and other outdoor activities">
+              <img src="assets/img/photos/life-nordic.webp" width="400" height="500" alt="Madalena in the snow above a lake and mountains in Björkliden, Swedish Lapland" loading="lazy" decoding="async">
+              <span class="life-caption">Adventure in Swedish Lapland</span>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <a class="life-card glightbox" href="assets/img/photos/life-husky-lg.webp" data-gallery="life-gallery" data-title="With the huskies in Swedish Lapland">
+              <img src="assets/img/photos/life-husky.webp" width="600" height="750" alt="Madalena in a fur-hooded winter jacket and beanie, petting two harnessed huskies in the snow" loading="lazy" decoding="async">
+              <span class="life-caption">Husky sledding in Swedish Lapland</span>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <a class="life-card glightbox" href="assets/img/photos/life-aurora-lg.webp" data-gallery="life-gallery" data-title="Northern lights over a snowy plain in Swedish Lapland">
+              <img src="assets/img/photos/life-aurora.webp" width="600" height="750" alt="Green northern lights over a snowy landscape with a small hut and mountains" loading="lazy" decoding="async">
+              <span class="life-caption">Northern lights in Swedish Lapland</span>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <a class="life-card glightbox" href="assets/img/photos/life-skiing-lg.webp" data-gallery="life-gallery" data-title="Night-time Nordic skiing with friends">
+              <img src="assets/img/photos/life-skiing.webp" width="600" height="750" alt="Madalena with a group of friends holding cross-country skis at night" loading="lazy" decoding="async">
+              <span class="life-caption">Nordic skiing with friends</span>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <a class="life-card glightbox" href="assets/img/photos/life-coins-lg.webp" data-gallery="life-gallery" data-title="On a snowshoe walk in Björkliden, where local folklore says carrying coins keeps the trolls from taking children">
+              <img src="assets/img/photos/life-coins.webp" width="600" height="750" alt="Madalena smiling in a white beanie, holding up two gold coins outside a wooden cabin at night" loading="lazy" decoding="async">
+              <span class="life-caption">Coins to keep the trolls away</span>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <a class="life-card glightbox" href="assets/img/photos/life-onsala-lg.webp" data-gallery="life-gallery" data-title="Onsala Space Observatory, Sweden, where I mapped the Milky Way&#x27;s hydrogen with the SALSA radio telescope">
+              <img src="assets/img/photos/life-onsala.webp" width="600" height="750" alt="A large radio telescope dish lit up at night at Onsala Space Observatory" loading="lazy" decoding="async">
+              <span class="life-caption">Mapping the Milky Way at Onsala</span>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <a class="life-card glightbox" href="assets/img/photos/life-yule-lg.webp" data-gallery="life-gallery" data-title="The Gävle Goat (Gävlebocken), the giant straw Yule goat in Gävle, Sweden">
+              <img src="assets/img/photos/life-yule.webp" width="600" height="750" alt="The Gävle Goat, a giant straw Yule goat with red ribbons, lit up at night behind a fence" loading="lazy" decoding="async">
+              <span class="life-caption">The Gävle Goat in Sweden</span>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-4">
+            <a class="life-card glightbox" href="assets/img/photos/life-greenhouse-lg.webp" data-gallery="life-gallery" data-title="Among the tropical plants of a greenhouse in Vienna">
+              <img src="assets/img/photos/life-greenhouse.webp" width="600" height="750" alt="Madalena among tropical plants in a greenhouse in Vienna" loading="lazy" decoding="async">
+              <span class="life-caption">Tropical greenhouse in Vienna</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /Beyond Work Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-cta section">
+      <div class="container">
+        <div class="contact-card" data-aos="fade-up">
+          <div class="contact-copy">
+            <h2>Let's connect</h2>
+            <p>I'm always happy to talk about HPC, AI and industrial data. Email is the quickest way to reach me.</p>
+          </div>
+          <div class="contact-actions">
+            <div class="email-row">
+              <a class="email-address" href="mailto:mariamadalenarob@gmail.com">mariamadalenarob@gmail.com</a>
+              <button type="button" class="copy-email" data-copy="mariamadalenarob@gmail.com">
+                <i class="bi bi-copy" aria-hidden="true"></i><span aria-live="polite">Copy</span>
+              </button>
             </div>
-
-            <div class="col-lg-4">
-              <div class="info-item d-flex align-items-center">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
-                </div>
-              </div>
+            <div class="contact-links">
+              <a href="https://www.linkedin.com/in/m-madalena-barros" target="_blank" rel="noopener"><i class="bi bi-linkedin" aria-hidden="true"></i>LinkedIn</a>
+              <a href="https://github.com/madalenarb" target="_blank" rel="noopener"><i class="bi bi-github" aria-hidden="true"></i>GitHub</a>
             </div>
-
-            <div class="col-lg-4">
-              <div class="info-item d-flex align-items-center">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email Us</h3>
-                  <p><a class="my-email"></a></p>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
-
-        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="300">
-          <div class="row gy-4">
-
-            <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-            </div>
-
-            <div class="col-md-6 ">
-              <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-            </div>
-
-            <div class="col-md-12">
-              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-            </div>
-
-            <div class="col-md-12">
-              <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-            </div>
-
-            <div class="col-md-12 text-center">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-
-              <button type="submit">Send Message</button>
-            </div>
-
-          </div>
-        </form>
-
-      </div> -->
-
-    <!-- </section> --><!-- /Contact Section -->
+      </div>
+    </section><!-- /Contact Section -->
 
   </main>
 
@@ -645,13 +669,12 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">My Portfolio</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Madalena Barros</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/m-madalena-barros" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+        <a href="https://github.com/madalenarb" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+        <a href="mailto:mariamadalenarob@gmail.com" aria-label="Email"><i class="bi bi-envelope" aria-hidden="true"></i></a>
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
@@ -665,21 +688,18 @@
   </footer>
 
 
-  <!-- Theme Toggle -->
-  <a href="#" id="theme-toggle" class="theme-toggle d-flex align-items-center justify-content-center"><i class="bi bi-moon"></i></a>
+  <aside class="page-controls" aria-label="Page controls">
+    <!-- Theme Toggle -->
+    <a href="#" id="theme-toggle" class="theme-toggle d-flex align-items-center justify-content-center" aria-label="Switch between dark and light theme"><i class="bi bi-moon" aria-hidden="true"></i></a>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></a>
+  </aside>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
@@ -690,6 +710,11 @@
   <script src="assets/js/variables.js"></script>
   <!-- Global Menu File -->
   <script src="assets/js/menu.js"></script>
+  <!-- Language switch: English is the source text; Portuguese and Dutch come from these dictionaries -->
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/i18n/common.js"></script>
+  <script src="assets/js/i18n/index.js"></script>
+  <script>SiteI18n.init();</script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 

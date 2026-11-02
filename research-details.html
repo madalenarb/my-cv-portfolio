@@ -4,13 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>My master's thesis</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Master's thesis | Madalena Barros</title>
+  <meta name="description" content="Accelerating Quantum Circuit Simulation, MSc thesis by Maria Madalena Reforço Osório de Barros (Madalena Barros), Instituto Superior Técnico, 2026. Six state-vector simulators benchmarked from one CPU thread to 64 nodes and 16 NVIDIA A100 GPUs on Deucalion.">
+  <meta name="author" content="Maria Madalena Reforço Osório de Barros">
+  <link rel="canonical" href="https://madalenarb.github.io/my-cv-portfolio/research-details.html">
 
   <!-- Favicons -->
-  <link href="assets/img/logo1.png" rel="icon">
-  <link href="assets/img/logo1.png" rel="apple-touch-icon">
+  <link href="assets/img/logo-180.png" rel="icon">
+  <link href="assets/img/logo-180.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -20,7 +21,7 @@
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
@@ -30,13 +31,38 @@
 </head>
 
 <body class="index-page dark-mode">
+  <script>
+    /* Pick the theme before anything paints: the visitor's saved choice, then the page's theme setting,
+       then the system setting, then dark. */
+    (function () {
+      var stored = null;
+      try { stored = localStorage.getItem('theme'); } catch (e) {}
+      var attr = document.documentElement.getAttribute('data-theme');
+      var prefersLight = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches);
+      var dark = stored ? stored === 'dark' : (attr ? attr === 'dark' : !prefersLight);
+      document.body.classList.toggle('dark-mode', dark);
+      /* Language: if Portuguese or Dutch was chosen, keep the page hidden until it is translated
+         (a safety timer shows it anyway if the translation script cannot run) */
+      var lang = null;
+      try { lang = new URLSearchParams(window.location.search).get('lang'); } catch (e) {}
+      if (!lang) { try { lang = localStorage.getItem('lang'); } catch (e) {} }
+      if (lang === 'pt' || lang === 'nl') {
+        var root = document.documentElement;
+        root.lang = lang === 'pt' ? 'pt-PT' : 'nl';
+        root.classList.add('i18n-pending');
+        setTimeout(function () { root.classList.remove('i18n-pending'); }, 1500);
+      }
+    })();
+  </script>
+
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo1.png" alt="">
-        <h1 class="sitename">My Portfolio</h1>
+        <img src="assets/img/logo-180.png" alt="">
+        <h1 class="sitename">Madalena Barros</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -45,7 +71,7 @@
     </div>
   </header>
 
-  <main class="main">
+  <main class="main" id="main">
 
     <!-- Page Title -->
     <div class="page-title dark-background" data-aos="fade">
@@ -63,117 +89,207 @@
 
     <!-- Thesis Section -->
     <section id="thesis" class="section">
-      <div class="container glass-card" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Accelerating Quantum Circuit Simulation</h2>
-          <p class="text-muted fst-italic">Thesis details (in progress)</p>
-        </div>
+      <div class="container glass-card doc-panel" data-aos="fade-up">
 
-        <div class="row mt-4">
-          <div class="col-lg-12">
+        <header class="doc-head">
+          <h2>Accelerating Quantum Circuit Simulation</h2>
+          <p class="thesis-status"><i class="bi bi-check2-circle" aria-hidden="true"></i> Thesis submitted in October&nbsp;2026, defence&nbsp;pending</p>
+        </header>
+
+        <div class="doc-layout">
+
+          <!-- The document: cover, details, read and download -->
+          <aside class="doc-aside" aria-labelledby="thesis-doc-heading">
+            <h3 id="thesis-doc-heading" class="visually-hidden">Read the thesis</h3>
+            <div class="doc-card">
+              <a class="doc-cover" href="assets/thesis/Madalena_Barros_MSc_Thesis_2026.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="assets/thesis/thesis-cover.webp" width="600" height="592" alt="" loading="lazy" decoding="async">
+              </a>
+              <div class="doc-info">
+                <p class="doc-title">Accelerating Quantum Circuit Simulation with NVIDIA GPUs and tools editing</p>
+                <p class="doc-meta doc-author" lang="pt-PT" translate="no">Maria Madalena Reforço Osório de Barros</p>
+                <p class="doc-meta">MSc thesis in Electrical and Computer Engineering, Instituto Superior Técnico, October 2026</p>
+                <p class="doc-meta">Supervised by Prof. Leonel Sousa and Prof. Aleksandar Ilić</p>
+              </div>
+              <div class="doc-actions">
+                <a href="assets/thesis/Madalena_Barros_MSc_Thesis_2026.pdf" target="_blank" rel="noopener" class="btn btn-primary">
+                  <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> Read the thesis
+                </a>
+                <a href="assets/thesis/Madalena_Barros_MSc_Thesis_2026.pdf" download class="btn btn-outline-primary">
+                  <i class="bi bi-download" aria-hidden="true"></i> Download PDF
+                </a>
+              </div>
+              <p class="doc-file">PDF, 118 pages, 2.7 MB</p>
+            </div>
+          </aside>
+
+          <div class="doc-main">
             <p class="lead">
-              This work investigates how far classical simulation can be pushed using hybrid parallelism and GPU acceleration.
-              The focus is on identifying bottlenecks and evaluating simulator backends under realistic workloads using reproducible benchmarking.
+              Published simulator comparisons often rank runtimes without saying under which conditions a backend does well.
+              My thesis benchmarks six state-vector simulators on three circuit families, from a single CPU thread up to 64 nodes
+              and 16 NVIDIA A100 GPUs on the EuroHPC supercomputer Deucalion, and uses performance models and profiling to explain
+              the rankings.
             </p>
 
-            <h4 class="mt-4">Key Research Areas</h4>
-            <ul class="research-list">
-              <li><strong>Hybrid parallelism:</strong> MPI across nodes + OpenMP within a node</li>
-              <li><strong>GPU offloading</strong> and profiling-driven optimization</li>
-              <li><strong>Benchmarking methodology:</strong> circuit workloads, scaling behavior, and accuracy metrics</li>
-            </ul>
-
-            <div class="alert alert-info mt-4" role="alert">
-              <i class="bi bi-info-circle me-2"></i>
-              <em>Thesis report and implementation artifacts will be published upon completion.</em>
+            <div class="doc-block">
+              <h3>What I did</h3>
+              <dl class="spec-list">
+                <div>
+                  <dt>Backends</dt>
+                  <dd>
+                    <ul class="chips chips-sm" aria-label="Simulators benchmarked">
+                      <li>Qiskit Aer</li><li>CUDA-Q</li><li>Qulacs</li><li>mpiQulacs</li><li>Qibo</li><li>QuEST</li>
+                    </ul>
+                  </dd>
+                </div>
+                <div>
+                  <dt>Circuits</dt>
+                  <dd>The Quantum Fourier Transform (QFT), a hardware-efficient ansatz (HEA) and a Clifford circuit</dd>
+                </div>
+                <div>
+                  <dt>Scale</dt>
+                  <dd>1 to 128 threads on one node, up to 64 CPU nodes and up to 16 A100 GPUs on <a href="https://rnca.fccn.pt/en/deucalion/" target="_blank" rel="noopener">Deucalion</a></dd>
+                </div>
+                <div>
+                  <dt>Analysis</dt>
+                  <dd>Performance models, the cache-aware roofline model (CARM) and top-down profiling in Intel VTune</dd>
+                </div>
+                <div>
+                  <dt>Beyond state vectors</dt>
+                  <dd>Stabiliser, tensor-network and noisy density-matrix simulation</dd>
+                </div>
+              </dl>
             </div>
 
-            <div class="mt-4">
-              <a href="https://rnca.fccn.pt/en/deucalion/" target="_blank" rel="noopener" class="btn btn-outline-primary">
-                <i class="bi bi-link-45deg"></i> Deucalion HPC System
-              </a>
+            <div class="doc-block">
+              <h3>Main findings</h3>
+              <p class="finding-lead">No backend is fastest everywhere. The leader depends on the circuit, the qubit count and the hardware.</p>
+              <dl class="result-list">
+                <div><dt>61&times;</dt><dd>Qiskit Aer on a full 128-thread node versus one thread, on the 30-qubit QFT, helped by gate fusion</dd></div>
+                <div><dt>53&times;</dt><dd>mpiQulacs on 64 nodes versus one, the fastest of the backends measured on 32 and 64 nodes</dd></div>
+                <div><dt>3.2&times;</dt><dd>from gate fusion with AVX2 in Qulacs on one core (1.7&times; with scalar code), more than vectorisation alone</dd></div>
+                <div><dt>CUDA-Q</dt><dd>the fastest distributed backend within one node of four A100 GPUs, at every measured size</dd></div>
+                <div><dt>&lt;&nbsp;0.1&nbsp;s</dt><dd>for the Clifford circuit up to 60 qubits with the stabiliser backends of Qiskit Aer and Qibo</dd></div>
+                <div><dt>500</dt><dd>qubits with tensor networks for GHZ and a single-layer HEA, with sampled output</dd></div>
+              </dl>
+            </div>
+
+            <div class="doc-block">
+              <h3>Simulator-selection framework</h3>
+              <p>The results support a two-level guide for choosing a simulator.</p>
+              <ol class="step-list">
+                <li>
+                  <h4>Pick the method</h4>
+                  <p>Circuit structure and the required output decide between state vector, stabiliser, tensor network and density matrix.</p>
+                </li>
+                <li>
+                  <h4>Pick the backend</h4>
+                  <p>The hardware and the state size decide which simulator runs it.</p>
+                </li>
+              </ol>
+              <p>I built a first prototype that encodes both levels and the measured results as rules.</p>
+              <div class="doc-links">
+                <a href="https://madalenarb.github.io/quantum-simulator-selector/" target="_blank" rel="noopener" class="btn btn-outline-primary">
+                  <i class="bi bi-sliders" aria-hidden="true"></i> Try the selector prototype
+                </a>
+                <a href="https://github.com/madalenarb/quantum-simulator-selector" target="_blank" rel="noopener" class="btn btn-outline-secondary">
+                  <i class="bi bi-github" aria-hidden="true"></i> Selector code
+                </a>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
     <!-- PIC Section -->
     <section id="pic" class="section">
-      <div class="container glass-card" data-aos="fade-up">
-        <div class="section-header">
-          <h2>PIC2 — "Phase 1" of a Master's thesis</h2>
-          <p class="text-muted fst-italic">Project in Electrical and Computer Engineering (Completed)</p>
-        </div>
+      <div class="container glass-card doc-panel" data-aos="fade-up">
 
-        <div class="row mt-4">
-          <div class="col-lg-12">
+        <header class="doc-head">
+          <h2>PIC2: "Phase 1" of my Master's thesis</h2>
+          <p class="thesis-status"><i class="bi bi-check2-circle" aria-hidden="true"></i> Completed in June&nbsp;2025</p>
+        </header>
+
+        <div class="doc-layout">
+
+          <!-- The document: cover, details, read, download and code -->
+          <aside class="doc-aside" aria-labelledby="pic-doc-heading">
+            <h3 id="pic-doc-heading" class="visually-hidden">Read the PIC2 report</h3>
+            <div class="doc-card">
+              <a class="doc-cover" href="assets/pic/PIC2___Accelerating_Quantum_Circuit_Simulation_with_NVIDIA_GPUs_and_tools_editing.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                <img src="assets/pic/pic2-cover.webp" width="600" height="592" alt="" loading="lazy" decoding="async">
+              </a>
+              <div class="doc-info">
+                <p class="doc-title">Accelerating Quantum Circuit Simulation with NVIDIA GPUs and tools</p>
+                <p class="doc-meta">Project in Electrical and Computer Engineering (PIC2), Instituto Superior Técnico, June 2025</p>
+              </div>
+              <div class="doc-actions">
+                <a href="assets/pic/PIC2___Accelerating_Quantum_Circuit_Simulation_with_NVIDIA_GPUs_and_tools_editing.pdf" target="_blank" rel="noopener" class="btn btn-primary">
+                  <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> Read the report
+                </a>
+                <a href="assets/pic/PIC2___Accelerating_Quantum_Circuit_Simulation_with_NVIDIA_GPUs_and_tools_editing.pdf" download class="btn btn-outline-primary">
+                  <i class="bi bi-download" aria-hidden="true"></i> Download PDF
+                </a>
+                <a href="https://github.com/madalenarb/PIC2_QuantumComputing" target="_blank" rel="noopener" class="btn btn-outline-secondary">
+                  <i class="bi bi-github" aria-hidden="true"></i> View the code
+                </a>
+              </div>
+              <p class="doc-file">PDF, 41 pages, 3.7 MB</p>
+            </div>
+          </aside>
+
+          <div class="doc-main">
             <p class="lead">
               At Instituto Superior Técnico, the <strong>PIC2</strong> is a capstone-style project that bridges master's coursework
-              and the independent research carried out during the thesis. This report establishes my benchmarking methodology
-              for GPU-accelerated quantum circuit simulation and provides baseline performance and accuracy results that inform
-              my thesis direction.
+              and the independent research carried out during the thesis. This report established my benchmarking methodology
+              for GPU-accelerated quantum circuit simulation and the baseline performance and accuracy results that shaped my thesis.
             </p>
 
-            <h4 class="mt-4">What's Inside</h4>
-            <ul class="research-list">
-              <li><strong>Reproducible benchmarking setup</strong> — circuit workloads, input states, shot selection, and evaluation workflow.</li>
-              <li><strong>Simulator + backend comparison</strong> — CPU vs GPU execution across modern toolchains (e.g., Qiskit Aer / CUDA-Q) with scaling analysis.</li>
-              <li><strong>Performance + correctness metrics</strong> — runtime together with fidelity and distance-based errors (e.g., Frobenius norm, L2).</li>
-              <li><strong>Noise experiments</strong> — standard noise channels to quantify accuracy degradation and runtime impact under realistic conditions.</li>
-            </ul>
-
-            <h4 class="mt-4">How It Informed My Thesis</h4>
-            <p>
-              PIC2 served as the foundation for my thesis by defining a reproducible benchmarking methodology (workloads,
-              metrics, and experimental workflow) and generating baseline CPU/GPU results under both ideal and noisy runs.
-              The observed scaling trends and accuracy degradation directly shape the thesis scope, the simulator/backends
-              I prioritize, and the larger-scale experiments I plan to run next.
-            </p>
-            <ul class="research-list">
-              <li><strong>Thesis next steps:</strong> extend to larger-scale GPU and distributed runs and broaden comparisons to additional simulators and algorithms.</li>
-            </ul>
-
-            <h4 class="mt-5">Resources</h4>
-
-            <!-- ✅ Use same-origin (GitHub Pages) PDF paths so buttons + iframe work on project pages -->
-            <div class="pic-buttons mt-3">
-              <a href="assets/pic/PIC2___Accelerating_Quantum_Circuit_Simulation_with_NVIDIA_GPUs_and_tools_editing.pdf"
-                 target="_blank" rel="noopener"
-                 class="btn btn-primary me-2 mb-2">
-                <i class="bi bi-file-earmark-pdf"></i> Open PIC Report
-              </a>
-
-              <a href="assets/pic/PIC2___Accelerating_Quantum_Circuit_Simulation_with_NVIDIA_GPUs_and_tools_editing.pdf"
-                 download
-                 class="btn btn-outline-primary me-2 mb-2">
-                <i class="bi bi-download"></i> Download PDF
-              </a>
-
-              <a href="https://github.com/madalenarb/PIC2_QuantumComputing"
-                 target="_blank" rel="noopener"
-                 class="btn btn-outline-secondary mb-2">
-                <i class="bi bi-github"></i> View PIC Code
-              </a>
+            <div class="doc-block">
+              <h3>What's inside</h3>
+              <dl class="spec-list">
+                <div>
+                  <dt>Reproducible benchmarking setup</dt>
+                  <dd>Circuit workloads, input states, shot selection, and evaluation workflow</dd>
+                </div>
+                <div>
+                  <dt>Simulator + backend comparison</dt>
+                  <dd>CPU vs GPU execution across modern toolchains (e.g., Qiskit Aer / CUDA-Q) with scaling analysis</dd>
+                </div>
+                <div>
+                  <dt>Performance + correctness metrics</dt>
+                  <dd>Runtime together with fidelity and distance-based errors (e.g., Frobenius norm, L2)</dd>
+                </div>
+                <div>
+                  <dt>Noise experiments</dt>
+                  <dd>Standard noise channels to quantify accuracy degradation and runtime impact under realistic conditions</dd>
+                </div>
+              </dl>
             </div>
 
-            <div class="pdf-preview mt-5">
-              <h5>Document Preview</h5>
-              <div class="pdf-container">
-                <!-- ✅ IMPORTANT: no leading "/" on GitHub Pages project sites -->
-                <iframe
-                  src="assets/pic/PIC2___Accelerating_Quantum_Circuit_Simulation_with_NVIDIA_GPUs_and_tools_editing.pdf"
-                  loading="lazy">
-                </iframe>
+            <div class="doc-block">
+              <h3>How it informed my thesis</h3>
+              <p>
+                PIC2 laid the foundation for my thesis by defining a reproducible benchmarking methodology (workloads,
+                metrics, and experimental workflow) and producing baseline CPU/GPU results for both ideal and noisy runs.
+                The thesis then extended this work to six backends and three circuit families, with multi-node CPU runs on up to
+                64 nodes and multi-GPU runs on up to 16 A100 GPUs.
+              </p>
+            </div>
 
-                <!-- Optional fallback link if iframe is blocked by a browser setting -->
+            <details class="doc-preview">
+              <summary><i class="bi bi-chevron-right" aria-hidden="true"></i> Preview the report on this page</summary>
+              <div class="pdf-container">
+                <iframe title="PIC2 report preview (PDF)" src="assets/pic/PIC2___Accelerating_Quantum_Circuit_Simulation_with_NVIDIA_GPUs_and_tools_editing.pdf" loading="lazy"></iframe>
                 <p class="mt-3 mb-0 small">
-                  If the preview doesn’t load, <a href="assets/pic/PIC2___Accelerating_Quantum_Circuit_Simulation_with_NVIDIA_GPUs_and_tools_editing.pdf" target="_blank" rel="noopener">open the PDF in a new tab</a>.
+                  If the preview doesn&rsquo;t load, <a href="assets/pic/PIC2___Accelerating_Quantum_Circuit_Simulation_with_NVIDIA_GPUs_and_tools_editing.pdf" target="_blank" rel="noopener">open the PDF in a new tab</a>.
                 </p>
               </div>
-            </div>
-
+            </details>
           </div>
+
         </div>
       </div>
     </section>
@@ -183,13 +299,12 @@
   <footer id="footer" class="footer accent-background">
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">My Portfolio</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Madalena Barros</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a href="#"><i class="bi bi-twitter-x"></i></a>
-        <a href="#"><i class="bi bi-facebook"></i></a>
-        <a href="#"><i class="bi bi-instagram"></i></a>
-        <a href="#"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/m-madalena-barros" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+        <a href="https://github.com/madalenarb" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+        <a href="mailto:mariamadalenarob@gmail.com" aria-label="Email"><i class="bi bi-envelope" aria-hidden="true"></i></a>
       </div>
       <div class="credits">
         Designed by <a href="https://bootstrapmade.com/" target="_blank" rel="noopener">BootstrapMade</a>
@@ -197,11 +312,14 @@
     </div>
   </footer>
 
-  <!-- Theme Toggle -->
-  <a href="#" id="theme-toggle" class="theme-toggle d-flex align-items-center justify-content-center"><i class="bi bi-moon"></i></a>
+  <aside class="page-controls" aria-label="Page controls">
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Theme Toggle -->
+    <a href="#" id="theme-toggle" class="theme-toggle d-flex align-items-center justify-content-center" aria-label="Switch between dark and light theme"><i class="bi bi-moon"></i></a>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up-short"></i></a>
+  </aside>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -220,6 +338,11 @@
 
   <!-- Global Menu File -->
   <script src="assets/js/menu.js"></script>
+  <!-- Language switch: English is the source text; Portuguese and Dutch come from these dictionaries -->
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/i18n/common.js"></script>
+  <script src="assets/js/i18n/research-details.js"></script>
+  <script>SiteI18n.init();</script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 

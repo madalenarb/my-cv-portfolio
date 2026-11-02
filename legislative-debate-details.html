@@ -5,12 +5,14 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Legislative Debate Video Analytics - Portfolio Details</title>
-  <meta name="description" content="">
+  <meta name="description" content="Video analytics of the 2024 Portuguese election debates by Madalena Barros. Object detection, facial emotions and frame embeddings, clustered to separate candidates, presenter and scenes.">
   <meta name="keywords" content="">
+  <meta name="author" content="Maria Madalena Reforço Osório de Barros">
+  <link rel="canonical" href="https://madalenarb.github.io/my-cv-portfolio/legislative-debate-details.html">
 
   <!-- Favicons -->
-  <link href="assets/img/logo1.png" rel="icon">
-  <link href="assets/img/logo1.png" rel="apple-touch-icon">
+  <link href="assets/img/logo-180.png" rel="icon">
+  <link href="assets/img/logo-180.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -20,7 +22,7 @@
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
@@ -30,13 +32,38 @@
 </head>
 
 <body class="portfolio-details-page">
+  <script>
+    /* Pick the theme before anything paints: the visitor's saved choice, then the page's theme setting,
+       then the system setting, then dark. */
+    (function () {
+      var stored = null;
+      try { stored = localStorage.getItem('theme'); } catch (e) {}
+      var attr = document.documentElement.getAttribute('data-theme');
+      var prefersLight = !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches);
+      var dark = stored ? stored === 'dark' : (attr ? attr === 'dark' : !prefersLight);
+      document.body.classList.toggle('dark-mode', dark);
+      /* Language: if Portuguese or Dutch was chosen, keep the page hidden until it is translated
+         (a safety timer shows it anyway if the translation script cannot run) */
+      var lang = null;
+      try { lang = new URLSearchParams(window.location.search).get('lang'); } catch (e) {}
+      if (!lang) { try { lang = localStorage.getItem('lang'); } catch (e) {} }
+      if (lang === 'pt' || lang === 'nl') {
+        var root = document.documentElement;
+        root.lang = lang === 'pt' ? 'pt-PT' : 'nl';
+        root.classList.add('i18n-pending');
+        setTimeout(function () { root.classList.remove('i18n-pending'); }, 1500);
+      }
+    })();
+  </script>
+
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo1.png" alt="">
-        <h1 class="sitename">My Portfolio</h1>
+        <img src="assets/img/logo-180.png" alt="">
+        <h1 class="sitename">Madalena Barros</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -45,7 +72,7 @@
     </div>
   </header>
 
-  <main class="main">
+  <main class="main" id="main">
 
     <!-- Page Title -->
     <div class="page-title" data-aos="fade">
@@ -71,10 +98,10 @@
           <div class="col-lg-8" data-aos="fade-up">
             <div class="portfolio-description">
               <h2>Legislative Debate Video Analytics</h2>
-              <h4>Big Data Processing · Multimodal CV/NLP · Clustering &amp; Embeddings</h4>
+              <p class="portfolio-subtitle h4">Big Data Processing · Multimodal CV/NLP · Clustering &amp; Embeddings</p>
 
               <p>
-                I completed this project during the 2024 legislative elections in Portugal as part of the <strong>Big Data Processing</strong> course. The goal was to analyze video frames from televised election debates and extract structured signals—<strong>objects</strong>, <strong>facial emotions</strong>, and <strong>frame embeddings</strong>—to study content and attempt to <strong>separate identities and scenes via clustering</strong>. The debate used for the project featured André Ventura and Mariana Mortágua. Final grade: <strong>8/10</strong>.
+                I completed this project during the 2024 legislative elections in Portugal as part of the <strong>Big Data Processing</strong> course. The goal was to analyze video frames from televised election debates and extract structured signals (<strong>objects</strong>, <strong>facial emotions</strong>, and <strong>frame embeddings</strong>) to study content and attempt to <strong>separate identities and scenes via clustering</strong>. The debate used for the project featured André Ventura and Mariana Mortágua. Final grade: <strong>8/10</strong>.
               </p>
 
               <h3 class="mt-4">Problem &amp; Goal</h3>
@@ -125,29 +152,33 @@
 
               <h4 class="mt-3">4) Clustering algorithms explored</h4>
               <ul>
-                <li><strong>K-Means</strong> — used with the elbow method to pick the number of clusters</li>
-                <li><strong>Spectral Clustering</strong> — produced a strong, stable separation in practice</li>
-                <li><strong>DBSCAN</strong> — identified outliers (noise), but was sensitive to parameters and tended to create too many clusters</li>
-                <li><strong>Isolation Forest</strong> — used for outlier detection / preprocessing (not clustering itself), which affected downstream clustering outcomes</li>
-                <li><strong>t-SNE visualization</strong> — used to project high-dimensional embeddings to 2D for interpretability and qualitative validation of cluster structure</li>
+                <li><strong>K-Means</strong>: used with the elbow method to pick the number of clusters</li>
+                <li><strong>Spectral Clustering</strong>: produced a strong, stable separation in practice</li>
+                <li><strong>DBSCAN</strong>: identified outliers (noise), but was sensitive to parameters and tended to create too many clusters</li>
+                <li><strong>Isolation Forest</strong>: used for outlier detection / preprocessing (not clustering itself), which affected downstream clustering outcomes</li>
+                <li><strong>t-SNE visualization</strong>: used to project high-dimensional embeddings to 2D for interpretability and qualitative validation of cluster structure</li>
               </ul>
 
               <h3 class="mt-4">Results &amp; Visual Diagnostics</h3>
               <h4 class="mt-3">Emotion and object statistics</h4>
 
+              <!-- TODO: upload the emotion pie chart as assets/img/portfolio/13eda23a-bdb9-4d88-90e9-15286bef1be7.png, then remove this comment wrapper.
               <figure class="mt-3">
                 <img src="assets/img/portfolio/13eda23a-bdb9-4d88-90e9-15286bef1be7.png" class="img-fluid" alt="Emotion pie chart">
                 <figcaption class="mt-2">Emotion distribution across detected faces in debate frames.</figcaption>
               </figure>
+              -->
 
+              <!-- TODO: upload the object-detection histogram as assets/img/portfolio/c05b9315-430a-41b2-82f7-47eb40442a3d.png, then remove this comment wrapper.
               <figure class="mt-4">
                 <img src="assets/img/portfolio/c05b9315-430a-41b2-82f7-47eb40442a3d.png" class="img-fluid" alt="Object detection histogram">
                 <figcaption class="mt-2">Histogram of detected objects across frames.</figcaption>
               </figure>
+              -->
 
               <figure class="mt-4">
-                <img src="assets/img/portfolio/85bee57c-0bc2-42e1-8a1f-c9a95fccd131.png" class="img-fluid" alt="Example frame with emotion overlay">
-                <figcaption class="mt-2">Example frame annotated with emotion recognition overlay.</figcaption>
+                <img src="assets/img/portfolio/andreven.png" class="img-fluid" alt="Debate frames annotated with face-landmark and detection overlays" loading="lazy">
+                <figcaption class="mt-2">Example frames annotated with face landmarks, pose and detection overlays.</figcaption>
               </figure>
 
               <h4 class="mt-4">Spectral clustering (strong baseline)</h4>
@@ -162,7 +193,7 @@
 
               <h4 class="mt-4">DBSCAN (best outlier handling, but over-clustered)</h4>
               <p>
-                DBSCAN was <strong>even better at identifying outliers</strong> (noise points), but it <strong>over-segmented</strong> into too many clusters—likely requiring tighter parameter search (eps/min_samples) to match the expected debate structure.
+                DBSCAN was <strong>even better at identifying outliers</strong> (noise points), but it <strong>over-segmented</strong> into too many clusters. It probably needed a tighter parameter search (eps/min_samples) to match the expected debate structure.
               </p>
 
               <figure class="mt-3">
@@ -232,13 +263,12 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">My Portfolio</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Madalena Barros</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/m-madalena-barros" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+        <a href="https://github.com/madalenarb" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+        <a href="mailto:mariamadalenarob@gmail.com" aria-label="Email"><i class="bi bi-envelope" aria-hidden="true"></i></a>
       </div>
       <div class="credits">
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
@@ -247,11 +277,14 @@
 
   </footer>
 
-  <!-- Theme Toggle -->
-  <a href="#" id="theme-toggle" class="theme-toggle d-flex align-items-center justify-content-center"><i class="bi bi-moon"></i></a>
+  <aside class="page-controls" aria-label="Page controls">
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Theme Toggle -->
+    <a href="#" id="theme-toggle" class="theme-toggle d-flex align-items-center justify-content-center" aria-label="Switch between dark and light theme"><i class="bi bi-moon"></i></a>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up-short"></i></a>
+  </aside>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -270,6 +303,11 @@
 
   <!-- Global Menu File -->
   <script src="assets/js/menu.js"></script>
+  <!-- Language switch: English is the source text; Portuguese and Dutch come from these dictionaries -->
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/i18n/common.js"></script>
+  <script src="assets/js/i18n/legislative-debate-details.js"></script>
+  <script>SiteI18n.init();</script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
