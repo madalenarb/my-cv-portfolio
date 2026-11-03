@@ -214,14 +214,14 @@ SiteI18n.add([
     nl: "Ingestort"
   },
   {
-    en: "Collapsed.",
-    pt: "Caiu.",
-    nl: "Ingestort."
+    en: "Sabotage made it collapse.",
+    pt: "Uma sabotagem fê-lo cair.",
+    nl: "Door sabotage stortte hij in."
   },
   {
-    en: "Stolen by a man who put it in his back garden. He got two years in prison.",
-    pt: "Roubado por um homem que o pôs no quintal. Apanhou dois anos de prisão.",
-    nl: "Gestolen door een man die hem in zijn achtertuin zette. Hij kreeg twee jaar cel."
+    en: "Wikipedia says a man stole it and kept it in his back garden, and got two years in prison. Visit Gävle lists its fate as uncertain.",
+    pt: "Segundo a Wikipédia, um homem roubou-o e guardou-o no quintal, e apanhou dois anos de prisão. A Visit Gävle diz que o seu destino é incerto.",
+    nl: "Volgens Wikipedia stal een man hem en zette hem in zijn achtertuin, waarvoor hij twee jaar cel kreeg. Visit Gävle noemt zijn lot onzeker."
   },
   {
     en: "Burned.",
@@ -229,9 +229,9 @@ SiteI18n.add([
     nl: "Verbrand."
   },
   {
-    en: "Collapsed under its own weight.",
-    pt: "Caiu com o próprio peso.",
-    nl: "Bezweek onder zijn eigen gewicht."
+    en: "Wikipedia says it collapsed under its own weight. Visit Gävle lists its fate as unknown.",
+    pt: "Segundo a Wikipédia, caiu com o próprio peso. A Visit Gävle diz que o seu destino é desconhecido.",
+    nl: "Volgens Wikipedia bezweek hij onder zijn eigen gewicht. Visit Gävle noemt zijn lot onbekend."
   },
   {
     en: "Hit by a car",
@@ -404,9 +404,9 @@ SiteI18n.add([
     nl: "Verbrandde op 23 december door toedoen van een bezoeker uit Cleveland, Ohio, die werd gearresteerd."
   },
   {
-    en: "Survived. A 22-year-old tried to set it on fire, but it only got minor damage.",
-    pt: "Sobreviveu. Um jovem de 22 anos tentou pegar-lhe fogo, mas só causou estragos ligeiros.",
-    nl: "Overleefde. Een 22-jarige probeerde hem in brand te steken, maar hij liep alleen lichte schade op."
+    en: "Survived. Visit Gävle says it was completely unharmed, while Wikipedia mentions a failed attempt to set it on fire.",
+    pt: "Sobreviveu. A Visit Gävle diz que ficou completamente intacto, mas a Wikipédia fala de uma tentativa falhada de lhe pegar fogo.",
+    nl: "Overleefde. Volgens Visit Gävle bleef hij volkomen ongedeerd, maar Wikipedia noemt een mislukte poging om hem in brand te steken."
   },
   {
     en: "Burned on 11 December. A second goat went up a week later and survived.",
@@ -474,9 +474,9 @@ SiteI18n.add([
     nl: "Verbrandde op 27 december. De man die werd opgepakt, noemde het later een ‘extreem slecht idee’."
   },
   {
-    en: "Burned on 27 November, hours after its 50th birthday party. The replacement was hit by a car.",
-    pt: "Ardeu a 27 de novembro, horas depois da festa dos seus 50 anos. O substituto foi atropelado.",
-    nl: "Verbrandde op 27 november, een paar uur na zijn vijftigste verjaardagsfeest. De vervanger werd aangereden door een auto."
+    en: "Burned on 27 November, hours after its 50th birthday party. The students' goat took its place and was hit by a car on 5 December.",
+    pt: "Ardeu a 27 de novembro, horas depois da festa dos seus 50 anos. O bode dos estudantes ocupou o lugar dele e foi atropelado a 5 de dezembro.",
+    nl: "Verbrandde op 27 november, een paar uur na zijn vijftigste verjaardagsfeest. De bok van de scholieren nam zijn plaats in en werd op 5 december aangereden door een auto."
   },
   {
     en: "Survived behind a double fence, with cameras and guards.",
@@ -529,9 +529,9 @@ SiteI18n.add([
     nl: "Omgewaaid"
   },
   {
-    en: "Storm Johannes knocked it over on 27 December, the first time a storm got it.",
-    pt: "A tempestade Johannes deitou-o abaixo a 27 de dezembro, a primeira vez que uma tempestade o apanhou.",
-    nl: "Storm Johannes blies hem op 27 december omver, de eerste keer dat een storm hem te pakken kreeg."
+    en: "Storm Johannes, with winds over 40 m/s, knocked it over inside its fence on 27 December.",
+    pt: "A tempestade Johannes, com ventos de mais de 40 m/s, derrubou-o dentro da vedação a 27 de dezembro.",
+    nl: "Storm Johannes, met windsnelheden van meer dan 40 m/s, blies hem op 27 december binnen zijn hek omver."
   },
   {
     en: "We'll see",
@@ -544,9 +544,9 @@ SiteI18n.add([
     nl: "Hij zou op de eerste adventszondag moeten verrijzen. We zien wel hoe het dit jaar gaat."
   },
   {
-    en: "The stories follow the year-by-year table in Wikipedia's <a href=\"https://en.wikipedia.org/wiki/G%C3%A4vle_goat\" target=\"_blank\" rel=\"noopener\">Gävle goat</a> article. The icons are my own drawings.",
-    pt: "As histórias seguem a tabela ano a ano do artigo <a href=\"https://en.wikipedia.org/wiki/G%C3%A4vle_goat\" target=\"_blank\" rel=\"noopener\">Gävle goat</a> da Wikipédia. Os ícones são desenhos meus.",
-    nl: "De verhalen volgen de tabel per jaar in het Wikipedia-artikel <a href=\"https://en.wikipedia.org/wiki/G%C3%A4vle_goat\" target=\"_blank\" rel=\"noopener\">Gävle goat</a>. De iconen heb ik zelf getekend."
+    en: "The stories come from Visit Gävle's <a href=\"https://www.visitgavle.se/en/gavlebockens-ode\" target=\"_blank\" rel=\"noopener\">The fate of the Gävle Goat</a> and the year-by-year table in Wikipedia's <a href=\"https://en.wikipedia.org/wiki/G%C3%A4vle_goat\" target=\"_blank\" rel=\"noopener\">Gävle goat</a> article. The icons are my own drawings.",
+    pt: "As histórias vêm da página <a href=\"https://www.visitgavle.se/en/gavlebockens-ode\" target=\"_blank\" rel=\"noopener\">The fate of the Gävle Goat</a> da Visit Gävle e da tabela ano a ano do artigo <a href=\"https://en.wikipedia.org/wiki/G%C3%A4vle_goat\" target=\"_blank\" rel=\"noopener\">Gävle goat</a> da Wikipédia. Os ícones são desenhos meus.",
+    nl: "De verhalen komen van <a href=\"https://www.visitgavle.se/en/gavlebockens-ode\" target=\"_blank\" rel=\"noopener\">The fate of the Gävle Goat</a> van Visit Gävle en uit de tabel per jaar in het Wikipedia-artikel <a href=\"https://en.wikipedia.org/wiki/G%C3%A4vle_goat\" target=\"_blank\" rel=\"noopener\">Gävle goat</a>. De iconen heb ik zelf getekend."
   },
   {
     en: "With my friend Inês at the students' goat",
