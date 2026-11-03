@@ -95,7 +95,7 @@ SiteI18n.add([
   },
   {
     en: "Stabiliser, tensor-network and noisy density-matrix simulation",
-    pt: "Simulação por estabilizadores, redes tensoriais e matriz de densidade com ruído",
+    pt: "Estabilizadores, redes tensoriais e matrizes de densidade com ruído",
     nl: "Simulatie met stabilisatoren, tensornetwerken en dichtheidsmatrices met ruis"
   },
   {
@@ -104,9 +104,9 @@ SiteI18n.add([
     nl: "Belangrijkste bevindingen"
   },
   {
-    en: "No backend is fastest everywhere. The leader depends on the circuit, the qubit count and the hardware.",
-    pt: "Nenhum backend é o mais rápido em todos os casos. O líder depende do circuito, do número de qubits e do hardware.",
-    nl: "Geen enkele backend is overal de snelste. Welke wint, hangt af van het circuit, het aantal qubits en de hardware."
+    en: "No backend is fastest everywhere. Which one comes out on top changes with the circuit, its size and the machine it runs on.",
+    pt: "Nenhum backend é o mais rápido em todos os casos. O que fica à frente muda com o circuito, o seu tamanho e a máquina onde corre.",
+    nl: "Geen enkele backend is overal de snelste. Welke bovenaan eindigt, verschilt per circuit, grootte en machine."
   },
   {
     en: "Qiskit Aer on a full 128-thread node versus one thread, on the 30-qubit QFT, helped by gate fusion",
@@ -114,9 +114,9 @@ SiteI18n.add([
     nl: "Qiskit Aer op een volledige node met 128 threads ten opzichte van één thread, op de QFT met 30 qubits, geholpen door gate fusion"
   },
   {
-    en: "mpiQulacs on 64 nodes versus one, the fastest of the backends measured on 32 and 64 nodes",
-    pt: "mpiQulacs em 64 nós face a um, o mais rápido dos backends medidos em 32 e 64 nós",
-    nl: "mpiQulacs op 64 nodes ten opzichte van één, de snelste van de gemeten backends op 32 en 64 nodes"
+    en: "faster for mpiQulacs on 64 nodes than on one; it was the quickest backend in the 32- and 64-node runs",
+    pt: "mais rápido com o mpiQulacs em 64 nós do que num só; foi o backend mais veloz nas execuções com 32 e 64 nós",
+    nl: "sneller met mpiQulacs op 64 nodes dan op één; het was de snelste backend in de runs met 32 en 64 nodes"
   },
   {
     en: "from gate fusion with AVX2 in Qulacs on one core (1.7× with scalar code), more than vectorisation alone",
@@ -129,14 +129,14 @@ SiteI18n.add([
     nl: "de snelste gedistribueerde backend binnen één node met vier A100-GPU's, bij elke gemeten grootte"
   },
   {
-    en: "for the Clifford circuit up to 60 qubits with the stabiliser backends of Qiskit Aer and Qibo",
-    pt: "para o circuito de Clifford até 60 qubits, com os backends de estabilizadores do Qiskit Aer e do Qibo",
-    nl: "voor het Clifford-circuit tot 60 qubits met de stabilisatorbackends van Qiskit Aer en Qibo"
+    en: "to simulate the Clifford circuit at up to 60 qubits using the Qiskit Aer and Qibo stabiliser simulators",
+    pt: "para simular o circuito de Clifford até 60 qubits com os simuladores de estabilizadores do Qiskit Aer e do Qibo",
+    nl: "om het Clifford-circuit tot 60 qubits te simuleren met de stabilisatorsimulatoren van Qiskit Aer en Qibo"
   },
   {
-    en: "qubits with tensor networks for GHZ and a single-layer HEA, with sampled output",
-    pt: "qubits com redes tensoriais para GHZ e um HEA de uma camada, com saída amostrada",
-    nl: "qubits met tensornetwerken voor GHZ en een HEA met één laag, met gesamplede output"
+    en: "qubits reached for GHZ and one-layer HEA circuits using tensor networks and output sampling",
+    pt: "qubits alcançados nos circuitos GHZ e HEA de uma camada, com redes tensoriais e amostragem da saída",
+    nl: "qubits gehaald voor GHZ- en HEA-circuits met één laag, met tensornetwerken en sampling van de output"
   },
   {
     en: "Simulator-selection framework",
