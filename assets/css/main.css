@@ -4128,6 +4128,33 @@ html.i18n-pending body > * {
     padding-bottom: 0;
     margin-left: 6px;
   }
+
+  .header .logo h1 {
+    white-space: nowrap;
+  }
+}
+
+/* Seven menu items plus the switch: tighten the desktop header below 1400px so everything stays on one line */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .navmenu > ul > li {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .navmenu > ul > li.lang-switch {
+    margin-left: 2px;
+  }
+
+  .header .logo h1 {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1299px) {
+  .navmenu a,
+  .navmenu a:focus {
+    font-size: 14px;
+  }
 }
 
 /* Inside the phone and tablet menu panel: dark text on the light panel (light text in dark mode) */

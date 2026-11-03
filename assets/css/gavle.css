@@ -246,6 +246,7 @@ body.dark-mode.gavle-page .goat-hero::before {
 }
 
 .goat-photo a {
+  position: relative;
   display: block;
   border-radius: 18px;
   overflow: hidden;
@@ -258,6 +259,21 @@ body.dark-mode.gavle-page .goat-hero::before {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.goat-photo-count {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 11px;
+  border-radius: 999px;
+  background: rgba(24, 16, 8, 0.74);
+  color: #fff;
+  font: 600 0.78rem/1 var(--nav-font);
+  pointer-events: none;
 }
 
 .goat-photo figcaption {
@@ -663,6 +679,13 @@ body.dark-mode.gavle-page .cd-unit {
   }
 }
 
+@media (min-width: 576px) {
+  .goat-year[data-pos="below"] .goat-story {
+    bottom: auto;
+    top: calc(100% + 8px);
+  }
+}
+
 .goat-year.is-open .goat-story,
 .goat-year:focus-within .goat-story {
   display: grid;
@@ -740,6 +763,91 @@ body.dark-mode.gavle-page .cd-unit {
   margin: 1.4rem 0 0;
   font-size: 0.86rem;
   color: var(--yule-muted);
+}
+
+/* The students' goat inside a timeline story */
+.goat-story .goat-story-kid {
+  margin-top: 10px;
+  padding-top: 9px;
+  border-top: 1px dashed var(--yule-card-line);
+  font-size: 0.86rem;
+}
+
+/* The goat war */
+.goat-students h3 {
+  margin: 1.3rem 0 0.6rem;
+  font-size: 1.15rem;
+}
+
+.goat-war {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.goat-war li {
+  display: grid;
+  grid-template-columns: 6.2rem minmax(0, 1fr);
+  gap: 12px;
+  align-items: baseline;
+  line-height: 1.55;
+}
+
+.goat-war strong {
+  color: var(--yule-red);
+  font-family: var(--nav-font);
+  font-variant-numeric: lining-nums;
+}
+
+@media (max-width: 575px) {
+  .goat-war li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px;
+  }
+}
+
+/* The cousin in Iceland */
+.goat-iceland-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 6px 28px;
+}
+
+@media (min-width: 992px) {
+  .goat-iceland-intro {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    align-items: end;
+  }
+
+  .goat-iceland-facts {
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+  }
+}
+
+.goat-iceland-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0.2rem 0 0;
+  padding: 0;
+}
+
+.goat-iceland-facts li {
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--yule-card-line);
+  background: var(--yule-red-soft);
+  font-size: 0.86rem;
+  color: var(--yule-text);
+}
+
+.goat-iceland-facts strong {
+  color: var(--yule-ink);
+  font-variant-numeric: lining-nums;
 }
 
 /* The students' goat */

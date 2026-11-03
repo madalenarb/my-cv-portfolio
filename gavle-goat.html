@@ -109,7 +109,14 @@
     <path id="gs-flame" d="M0 0 C-6.2 -5.6 -5.4 -13.4 0 -22 C1.2 -15.2 7.4 -12.6 6.3 -5.2 C5.8 -1.6 3.2 0 0 0 Z"/>
     <clipPath id="gs-front"><rect x="0" y="0" width="34" height="64"/></clipPath>
     <clipPath id="gs-back"><rect x="34" y="0" width="30" height="64"/></clipPath>
+    <clipPath id="gs-water"><rect x="0" y="0" width="64" height="49"/></clipPath>
   </defs>
+  <symbol id="i-waves" viewBox="0 0 64 64">
+    <g style="fill:none;stroke:var(--ice);stroke-width:2.8;stroke-linecap:round">
+      <path d="M2 50 Q8 45.5 14 50 T26 50 T38 50 T50 50 T62 50"/>
+      <path d="M8 57.5 Q14 53 20 57.5 T32 57.5 T44 57.5 T56 57.5"/>
+    </g>
+  </symbol>
   <symbol id="i-goat" viewBox="0 0 64 64">
     <use href="#gs-shape" style="fill:var(--g-line);stroke:var(--g-line);stroke-width:3;stroke-linejoin:round"/>
     <use href="#gs-horn" style="fill:none;stroke:var(--g-line);stroke-width:6.6;stroke-linecap:round"/>
@@ -226,6 +233,16 @@
     <rect x="48.7" y="5.6" width="6.6" height="10.8" rx="0.6" style="fill:var(--badge-bg)"/>
     <use href="#gs-flame" transform="translate(52 14.8) scale(0.36)" style="fill:var(--flame-1)"/>
   </symbol>
+  <symbol id="b-lights" viewBox="0 0 64 64">
+    <path d="M43.5 7.5 Q52 15 60.5 7.5" style="fill:none;stroke:var(--badge-ink);stroke-width:1.2"/>
+    <ellipse cx="46" cy="11.7" rx="1.7" ry="2.4" style="fill:var(--g-band)"/>
+    <ellipse cx="50" cy="13.4" rx="1.7" ry="2.4" style="fill:var(--flame-2)"/>
+    <ellipse cx="54" cy="13.4" rx="1.7" ry="2.4" style="fill:var(--yule-green)"/>
+    <ellipse cx="58" cy="11.7" rx="1.7" ry="2.4" style="fill:var(--ice)"/>
+  </symbol>
+  <symbol id="b-bolt" viewBox="0 0 64 64">
+    <path d="M54.2 3.4 L46.4 12.8 H51.2 L49 19.8 L57.6 9.6 H52.6 Z" style="fill:var(--flame-2);stroke:var(--badge-ink);stroke-width:0.9;stroke-linejoin:round"/>
+  </symbol>
   <symbol id="b-cake" viewBox="0 0 64 64">
     <rect x="45" y="12" width="14" height="6.2" rx="1.2" style="fill:var(--badge-ink)"/>
     <rect x="46.4" y="8.8" width="11.2" height="3.6" rx="1" style="fill:var(--g-band)"/>
@@ -335,7 +352,7 @@
       <div class="container" data-aos="fade-up">
         <div class="yule-card">
           <h2>Every goat since 1966</h2>
-          <p class="goat-help">Hover over a year, or tap it, to read what happened.</p>
+          <p class="goat-help">Hover over a year, or tap it, to read what happened. The small goat in front is the students' goat, in the years we know what happened to it.</p>
           <ul class="goat-legend">
             <li><svg class="goat-legend-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg><span>Survived</span></li>
             <li><svg class="goat-legend-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/></svg><span>Burned</span></li>
@@ -343,6 +360,7 @@
             <li><svg class="goat-legend-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-ghost"/></svg><span>Stolen</span></li>
             <li><svg class="goat-legend-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(14 6) scale(0.85) rotate(-30 22 58)"><use href="#i-goat"/></g><use href="#i-wind"/><use href="#i-ground"/></svg><span>Other mishaps</span></li>
             <li><svg class="goat-legend-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-ghost"/><use href="#b-bg"/><use href="#b-q"/></svg><span>Still to come</span></li>
+            <li><svg class="goat-legend-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat"/></g></svg><span>Small goat in front: the students&#x27; goat</span></li>
           </ul>
           <div class="goat-timeline">
           <div class="goat-decade">
@@ -638,17 +656,20 @@
                   </div>
                 </div>
               </li>
-              <li class="goat-year cat-burned" style="grid-column:7" data-align="center">
+              <li class="goat-year cat-burned has-kid" style="grid-column:7" data-align="center">
                 <button type="button" class="goat-year-btn" aria-describedby="goat-1986">
-                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/></svg>
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat-char"/><use href="#i-flames"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat"/></g></svg>
                   <span class="goat-year-num">1986</span>
                   <span class="visually-hidden">Burned</span>
+                  <span class="visually-hidden">Students' goat: built in protest</span>
                 </button>
                 <div class="goat-story" id="goat-1986" role="tooltip">
-                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/></svg></div>
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat-char"/><use href="#i-flames"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat"/></g></svg></div>
                   <div>
                     <p class="goat-story-head">1986 <span class="goat-story-fate">Burned</span></p>
-                    <p>The merchants were back with their first goat since 1971. It burned on 23 December, and from then on Gävle built two goats a year.</p>
+                    <p>The merchants were back with their first goat since 1971. It burned on 23 December.</p>
+                    <p class="goat-story-head goat-story-kid">The students' goat <span class="goat-story-fate">Built in protest</span></p>
+                    <p>The students built a smaller goat in protest against the merchants&#x27; record attempt. From now on, Gävle has two goats.</p>
                   </div>
                 </div>
               </li>
@@ -727,31 +748,37 @@
                   </div>
                 </div>
               </li>
-              <li class="goat-year cat-burned" style="grid-column:3" data-align="start">
+              <li class="goat-year cat-burned has-kid" style="grid-column:3" data-align="start">
                 <button type="button" class="goat-year-btn" aria-describedby="goat-1992">
-                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/><use href="#b-bg"/><use href="#b-x2"/></svg>
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat-char"/><use href="#i-flames"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat-char"/><use href="#i-flames"/></g><use href="#b-bg"/><use href="#b-x2"/></svg>
                   <span class="goat-year-num">1992</span>
                   <span class="visually-hidden">Burned twice</span>
+                  <span class="visually-hidden">Students' goat: burned</span>
                 </button>
                 <div class="goat-story" id="goat-1992" role="tooltip">
-                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/><use href="#b-bg"/><use href="#b-x2"/></svg></div>
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat-char"/><use href="#i-flames"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat-char"/><use href="#i-flames"/></g><use href="#b-bg"/><use href="#b-x2"/></svg></div>
                   <div>
                     <p class="goat-story-head">1992 <span class="goat-story-fate">Burned twice</span></p>
                     <p>Burned after eight days, rebuilt, and burned again on 20 December. The arsonist went to jail, and the Goat Committee was founded.</p>
+                    <p class="goat-story-head goat-story-kid">The students' goat <span class="goat-story-fate">Burned</span></p>
+                    <p>Burned down on the same night as the big goat.</p>
                   </div>
                 </div>
               </li>
-              <li class="goat-year cat-survived" style="grid-column:4" data-align="center">
+              <li class="goat-year cat-survived has-kid" style="grid-column:4" data-align="center">
                 <button type="button" class="goat-year-btn" aria-describedby="goat-1993">
-                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg>
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat"/></g><use href="#i-star"/></svg>
                   <span class="goat-year-num">1993</span>
                   <span class="visually-hidden">Survived</span>
+                  <span class="visually-hidden">Students' goat: in the Guinness Book</span>
                 </button>
                 <div class="goat-story" id="goat-1993" role="tooltip">
-                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg></div>
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat"/></g><use href="#i-star"/></svg></div>
                   <div>
                     <p class="goat-story-head">1993 <span class="goat-story-fate">Survived</span></p>
                     <p>Survived, guarded by taxi drivers and the Home Guard.</p>
+                    <p class="goat-story-head goat-story-kid">The students' goat <span class="goat-story-fate">In the Guinness Book</span></p>
+                    <p>Measured 14.9 m, beating the merchants&#x27; 10.5 m goat, and went back into the Guinness Book of Records. Visit Gävle says it was 16 m.</p>
                   </div>
                 </div>
               </li>
@@ -797,17 +824,20 @@
                   </div>
                 </div>
               </li>
-              <li class="goat-year cat-survived" style="grid-column:8" data-align="end">
+              <li class="goat-year cat-survived has-kid" style="grid-column:8" data-align="end">
                 <button type="button" class="goat-year-btn" aria-describedby="goat-1997">
-                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#b-bg"/><use href="#b-fireworks"/></svg>
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat"/></g><use href="#b-bg"/><use href="#b-fireworks"/></svg>
                   <span class="goat-year-num">1997</span>
                   <span class="visually-hidden">Survived, slightly damaged</span>
+                  <span class="visually-hidden">Students' goat: survived, slightly damaged</span>
                 </button>
                 <div class="goat-story" id="goat-1997" role="tooltip">
-                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#b-bg"/><use href="#b-fireworks"/></svg></div>
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat"/></g><use href="#b-bg"/><use href="#b-fireworks"/></svg></div>
                   <div>
                     <p class="goat-story-head">1997 <span class="goat-story-fate">Survived, slightly damaged</span></p>
                     <p>Survived, with some fireworks damage.</p>
+                    <p class="goat-story-head goat-story-kid">The students' goat <span class="goat-story-fate">Survived, slightly damaged</span></p>
+                    <p>Attacked too, but survived with minor damage.</p>
                   </div>
                 </div>
               </li>
@@ -825,17 +855,20 @@
                   </div>
                 </div>
               </li>
-              <li class="goat-year cat-burned" style="grid-column:10" data-align="end">
+              <li class="goat-year cat-burned has-kid" style="grid-column:10" data-align="end">
                 <button type="button" class="goat-year-btn" aria-describedby="goat-1999">
-                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/></svg>
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat-char"/><use href="#i-flames"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat-char"/><use href="#i-flames"/></g></svg>
                   <span class="goat-year-num">1999</span>
                   <span class="visually-hidden">Burned</span>
+                  <span class="visually-hidden">Students' goat: burned</span>
                 </button>
                 <div class="goat-story" id="goat-1999" role="tooltip">
-                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/></svg></div>
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat-char"/><use href="#i-flames"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat-char"/><use href="#i-flames"/></g></svg></div>
                   <div>
                     <p class="goat-story-head">1999 <span class="goat-story-fate">Burned</span></p>
                     <p>Burned within hours, and was rebuilt in time for Lucia.</p>
+                    <p class="goat-story-head goat-story-kid">The students' goat <span class="goat-story-fate">Burned</span></p>
+                    <p>Burned down too.</p>
                   </div>
                 </div>
               </li>
@@ -844,31 +877,37 @@
           <div class="goat-decade">
             <p class="goat-decade-label">2000s</p>
             <ol class="goat-years">
-              <li class="goat-year cat-burned" style="grid-column:1" data-align="start">
+              <li class="goat-year cat-burned has-kid" style="grid-column:1" data-align="start">
                 <button type="button" class="goat-year-btn" aria-describedby="goat-2000">
-                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/></svg>
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat-char"/><use href="#i-flames"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><g clip-path="url(#gs-water)"><g transform="translate(0 13) rotate(-8 32 40)"><use href="#i-goat"/></g></g><use href="#i-waves"/></g></svg>
                   <span class="goat-year-num">2000</span>
                   <span class="visually-hidden">Burned</span>
+                  <span class="visually-hidden">Students' goat: thrown into the river</span>
                 </button>
                 <div class="goat-story" id="goat-2000" role="tooltip">
-                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/></svg></div>
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat-char"/><use href="#i-flames"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><g clip-path="url(#gs-water)"><g transform="translate(0 13) rotate(-8 32 40)"><use href="#i-goat"/></g></g><use href="#i-waves"/></g></svg></div>
                   <div>
                     <p class="goat-story-head">2000 <span class="goat-story-fate">Burned</span></p>
                     <p>Burned in late December.</p>
+                    <p class="goat-story-head goat-story-kid">The students' goat <span class="goat-story-fate">Thrown into the river</span></p>
+                    <p>Thrown into the Gävle river.</p>
                   </div>
                 </div>
               </li>
-              <li class="goat-year cat-burned" style="grid-column:2" data-align="start">
+              <li class="goat-year cat-burned has-kid" style="grid-column:2" data-align="start">
                 <button type="button" class="goat-year-btn" aria-describedby="goat-2001">
-                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/></svg>
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat-char"/><use href="#i-flames"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat-char"/><use href="#i-flames"/></g></svg>
                   <span class="goat-year-num">2001</span>
                   <span class="visually-hidden">Burned</span>
+                  <span class="visually-hidden">Students' goat: burned</span>
                 </button>
                 <div class="goat-story" id="goat-2001" role="tooltip">
-                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/></svg></div>
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat-char"/><use href="#i-flames"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat-char"/><use href="#i-flames"/></g></svg></div>
                   <div>
                     <p class="goat-story-head">2001 <span class="goat-story-fate">Burned</span></p>
                     <p>Burned on 23 December by a visitor from Cleveland, Ohio, who was arrested.</p>
+                    <p class="goat-story-head goat-story-kid">The students' goat <span class="goat-story-fate">Burned</span></p>
+                    <p>Burned down too.</p>
                   </div>
                 </div>
               </li>
@@ -928,59 +967,71 @@
                   </div>
                 </div>
               </li>
-              <li class="goat-year cat-survived" style="grid-column:7" data-align="center">
+              <li class="goat-year cat-survived has-kid" style="grid-column:7" data-align="center">
                 <button type="button" class="goat-year-btn" aria-describedby="goat-2006">
-                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg>
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat-char"/><use href="#i-flames"/></g><use href="#i-star"/></svg>
                   <span class="goat-year-num">2006</span>
                   <span class="visually-hidden">Survived</span>
+                  <span class="visually-hidden">Students' goat: burned</span>
                 </button>
                 <div class="goat-story" id="goat-2006" role="tooltip">
-                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg></div>
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat-char"/><use href="#i-flames"/></g><use href="#i-star"/></svg></div>
                   <div>
                     <p class="goat-story-head">2006 <span class="goat-story-fate">Survived</span></p>
                     <p>Survived, and was hidden away in a secret place in January.</p>
+                    <p class="goat-story-head goat-story-kid">The students' goat <span class="goat-story-fate">Burned</span></p>
+                    <p>Burned, while the big goat survived.</p>
                   </div>
                 </div>
               </li>
-              <li class="goat-year cat-survived" style="grid-column:8" data-align="end">
+              <li class="goat-year cat-survived has-kid" style="grid-column:8" data-align="end">
                 <button type="button" class="goat-year-btn" aria-describedby="goat-2007">
-                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg>
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><g transform="translate(14 6) scale(0.85) rotate(-30 22 58)"><use href="#i-goat-char"/></g><use href="#i-flames"/><use href="#i-ground"/></g><use href="#i-star"/></svg>
                   <span class="goat-year-num">2007</span>
                   <span class="visually-hidden">Survived</span>
+                  <span class="visually-hidden">Students' goat: toppled, then burned</span>
                 </button>
                 <div class="goat-story" id="goat-2007" role="tooltip">
-                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg></div>
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><g transform="translate(14 6) scale(0.85) rotate(-30 22 58)"><use href="#i-goat-char"/></g><use href="#i-flames"/><use href="#i-ground"/></g><use href="#i-star"/></svg></div>
                   <div>
                     <p class="goat-story-head">2007 <span class="goat-story-fate">Survived</span></p>
                     <p>Survived.</p>
+                    <p class="goat-story-head goat-story-kid">The students' goat <span class="goat-story-fate">Toppled, then burned</span></p>
+                    <p>Toppled on 13 December, then burned on the night of 24 December.</p>
                   </div>
                 </div>
               </li>
-              <li class="goat-year cat-burned" style="grid-column:9" data-align="end">
+              <li class="goat-year cat-burned has-kid" style="grid-column:9" data-align="end">
                 <button type="button" class="goat-year-btn" aria-describedby="goat-2008">
-                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/></svg>
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat-char"/><use href="#i-flames"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><g clip-path="url(#gs-front)" transform="rotate(-10 20 57) translate(-2 1)"><use href="#i-goat"/></g><g clip-path="url(#gs-back)" transform="rotate(9 46 57) translate(3 0)"><use href="#i-goat"/></g><use href="#i-ground"/></g></svg>
                   <span class="goat-year-num">2008</span>
                   <span class="visually-hidden">Burned</span>
+                  <span class="visually-hidden">Students' goat: vandalised</span>
                 </button>
                 <div class="goat-story" id="goat-2008" role="tooltip">
-                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/></svg></div>
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat-char"/><use href="#i-flames"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><g clip-path="url(#gs-front)" transform="rotate(-10 20 57) translate(-2 1)"><use href="#i-goat"/></g><g clip-path="url(#gs-back)" transform="rotate(9 46 57) translate(3 0)"><use href="#i-goat"/></g><use href="#i-ground"/></g></svg></div>
                   <div>
                     <p class="goat-story-head">2008 <span class="goat-story-fate">Burned</span></p>
                     <p>Passers-by put out a fire on 26 December, but it burned anyway at 03:50 the next morning.</p>
+                    <p class="goat-story-head goat-story-kid">The students' goat <span class="goat-story-fate">Vandalised</span></p>
+                    <p>Vandalised on 16 December and later taken away.</p>
                   </div>
                 </div>
               </li>
-              <li class="goat-year cat-burned" style="grid-column:10" data-align="end">
+              <li class="goat-year cat-burned has-kid" style="grid-column:10" data-align="end">
                 <button type="button" class="goat-year-btn" aria-describedby="goat-2009">
-                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/><use href="#b-bg"/><use href="#b-laptop"/></svg>
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat-char"/><use href="#i-flames"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-ghost"/></g><use href="#b-bg"/><use href="#b-laptop"/></svg>
                   <span class="goat-year-num">2009</span>
                   <span class="visually-hidden">Burned</span>
+                  <span class="visually-hidden">Students' goat: stolen</span>
                 </button>
                 <div class="goat-story" id="goat-2009" role="tooltip">
-                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/><use href="#b-bg"/><use href="#b-laptop"/></svg></div>
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat-char"/><use href="#i-flames"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-ghost"/></g><use href="#b-bg"/><use href="#b-laptop"/></svg></div>
                   <div>
                     <p class="goat-story-head">2009 <span class="goat-story-fate">Burned</span></p>
                     <p>Hackers knocked its webcams offline, and it burned on 23 December.</p>
+                    <p class="goat-story-head goat-story-kid">The students' goat <span class="goat-story-fate">Stolen</span></p>
+                    <p>Someone failed to throw it into the river on the weekend of 11 December. On the night of 14 December it was stolen with a lorry.</p>
                   </div>
                 </div>
               </li>
@@ -989,31 +1040,37 @@
           <div class="goat-decade">
             <p class="goat-decade-label">2010s</p>
             <ol class="goat-years">
-              <li class="goat-year cat-survived" style="grid-column:1" data-align="start">
+              <li class="goat-year cat-survived has-kid" style="grid-column:1" data-align="start">
                 <button type="button" class="goat-year-btn" aria-describedby="goat-2010">
-                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#b-bg"/><use href="#b-heli"/></svg>
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat"/><use href="#gs-flame" transform="translate(8 59.5) scale(0.55)" style="fill:var(--flame-1)"/><use href="#gs-flame" transform="translate(8.2 59) scale(0.3)" style="fill:var(--flame-2)"/></g><use href="#b-bg"/><use href="#b-heli"/></svg>
                   <span class="goat-year-num">2010</span>
                   <span class="visually-hidden">Survived</span>
+                  <span class="visually-hidden">Students' goat: survived an arson attempt</span>
                 </button>
                 <div class="goat-story" id="goat-2010" role="tooltip">
-                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#b-bg"/><use href="#b-heli"/></svg></div>
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat"/><use href="#gs-flame" transform="translate(8 59.5) scale(0.55)" style="fill:var(--flame-1)"/><use href="#gs-flame" transform="translate(8.2 59) scale(0.3)" style="fill:var(--flame-2)"/></g><use href="#b-bg"/><use href="#b-heli"/></svg></div>
                   <div>
                     <p class="goat-story-head">2010 <span class="goat-story-fate">Survived</span></p>
                     <p>Survived a plan to bribe a guard and fly it to Stockholm by helicopter.</p>
+                    <p class="goat-story-head goat-story-kid">The students' goat <span class="goat-story-fate">Survived an arson attempt</span></p>
+                    <p>Survived an arson attempt on the night of 2 December. Both goats made it to January.</p>
                   </div>
                 </div>
               </li>
-              <li class="goat-year cat-burned" style="grid-column:2" data-align="start">
+              <li class="goat-year cat-burned has-kid" style="grid-column:2" data-align="start">
                 <button type="button" class="goat-year-btn" aria-describedby="goat-2011">
-                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/><use href="#b-bg"/><use href="#b-ice"/></svg>
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat-char"/><use href="#i-flames"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat-char"/><use href="#i-flames"/></g><use href="#b-bg"/><use href="#b-ice"/></svg>
                   <span class="goat-year-num">2011</span>
                   <span class="visually-hidden">Burned</span>
+                  <span class="visually-hidden">Students' goat: burned</span>
                 </button>
                 <div class="goat-story" id="goat-2011" role="tooltip">
-                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/><use href="#b-bg"/><use href="#b-ice"/></svg></div>
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat-char"/><use href="#i-flames"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat-char"/><use href="#i-flames"/></g><use href="#b-bg"/><use href="#b-ice"/></svg></div>
                   <div>
                     <p class="goat-story-head">2011 <span class="goat-story-fate">Burned</span></p>
                     <p>Mild weather melted its protective ice, and it burned on 2 December.</p>
+                    <p class="goat-story-head goat-story-kid">The students' goat <span class="goat-story-fate">Burned</span></p>
+                    <p>Burned too.</p>
                   </div>
                 </div>
               </li>
@@ -1045,45 +1102,54 @@
                   </div>
                 </div>
               </li>
-              <li class="goat-year cat-survived" style="grid-column:5" data-align="center">
+              <li class="goat-year cat-survived has-kid" style="grid-column:5" data-align="center">
                 <button type="button" class="goat-year-btn" aria-describedby="goat-2014">
-                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#b-bg"/><use href="#b-plane"/></svg>
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><g transform="translate(0 58) scale(1 0.5) translate(0 -58)"><use href="#i-goat"/></g><use href="#i-ground"/></g><use href="#b-bg"/><use href="#b-plane"/></svg>
                   <span class="goat-year-num">2014</span>
                   <span class="visually-hidden">Survived</span>
+                  <span class="visually-hidden">Students' goat: collapsed</span>
                 </button>
                 <div class="goat-story" id="goat-2014" role="tooltip">
-                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#b-bg"/><use href="#b-plane"/></svg></div>
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><g transform="translate(0 58) scale(1 0.5) translate(0 -58)"><use href="#i-goat"/></g><use href="#i-ground"/></g><use href="#b-bg"/><use href="#b-plane"/></svg></div>
                   <div>
                     <p class="goat-story-head">2014 <span class="goat-story-fate">Survived</span></p>
                     <p>Survived at least three arson attempts, then spent most of 2015 in Zhuhai, China.</p>
+                    <p class="goat-story-head goat-story-kid">The students' goat <span class="goat-story-fate">Collapsed</span></p>
+                    <p>Collapsed, while the big goat survived.</p>
                   </div>
                 </div>
               </li>
-              <li class="goat-year cat-burned" style="grid-column:6" data-align="center">
+              <li class="goat-year cat-burned has-kid" style="grid-column:6" data-align="center">
                 <button type="button" class="goat-year-btn" aria-describedby="goat-2015">
-                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/></svg>
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat-char"/><use href="#i-flames"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat-char"/><use href="#i-flames"/></g></svg>
                   <span class="goat-year-num">2015</span>
                   <span class="visually-hidden">Burned</span>
+                  <span class="visually-hidden">Students' goat: burned</span>
                 </button>
                 <div class="goat-story" id="goat-2015" role="tooltip">
-                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/></svg></div>
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat-char"/><use href="#i-flames"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat-char"/><use href="#i-flames"/></g></svg></div>
                   <div>
                     <p class="goat-story-head">2015 <span class="goat-story-fate">Burned</span></p>
                     <p>Burned on 27 December. The man arrested later called it an ‘extremely bad idea’.</p>
+                    <p class="goat-story-head goat-story-kid">The students' goat <span class="goat-story-fate">Burned</span></p>
+                    <p>Burned too.</p>
                   </div>
                 </div>
               </li>
-              <li class="goat-year cat-burned" style="grid-column:7" data-align="center">
+              <li class="goat-year cat-burned has-kid" style="grid-column:7" data-align="center">
                 <button type="button" class="goat-year-btn" aria-describedby="goat-2016">
-                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/><use href="#b-bg"/><use href="#b-cake"/></svg>
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat-char"/><use href="#i-flames"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><g transform="translate(0 58) scale(1 0.5) translate(0 -58)"><use href="#i-goat"/></g><use href="#i-ground"/></g><use href="#b-bg"/><use href="#b-cake"/></svg>
                   <span class="goat-year-num">2016</span>
                   <span class="visually-hidden">Burned</span>
+                  <span class="visually-hidden">Students' goat: hit by a car</span>
                 </button>
                 <div class="goat-story" id="goat-2016" role="tooltip">
-                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/><use href="#b-bg"/><use href="#b-cake"/></svg></div>
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat-char"/><use href="#i-flames"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><g transform="translate(0 58) scale(1 0.5) translate(0 -58)"><use href="#i-goat"/></g><use href="#i-ground"/></g><use href="#b-bg"/><use href="#b-cake"/></svg></div>
                   <div>
                     <p class="goat-story-head">2016 <span class="goat-story-fate">Burned</span></p>
-                    <p>Burned on 27 November, hours after its 50th birthday party. The students&#x27; goat took its place and was hit by a car on 5 December.</p>
+                    <p>Burned on 27 November, hours after its 50th birthday party. The students&#x27; goat took its place.</p>
+                    <p class="goat-story-head goat-story-kid">The students' goat <span class="goat-story-fate">Hit by a car</span></p>
+                    <p>Stood in for the big goat on the castle square until a car ran it over on 5 December. It fell over on 27 December and was taken away.</p>
                   </div>
                 </div>
               </li>
@@ -1101,31 +1167,37 @@
                   </div>
                 </div>
               </li>
-              <li class="goat-year cat-survived" style="grid-column:9" data-align="end">
+              <li class="goat-year cat-survived has-kid" style="grid-column:9" data-align="end">
                 <button type="button" class="goat-year-btn" aria-describedby="goat-2018">
-                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg>
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat"/><use href="#gs-flame" transform="translate(21 59) scale(0.62)" style="fill:var(--flame-1)"/><use href="#gs-flame" transform="translate(21.2 58.6) scale(0.34)" style="fill:var(--flame-2)"/></g><use href="#i-star"/></svg>
                   <span class="goat-year-num">2018</span>
                   <span class="visually-hidden">Survived</span>
+                  <span class="visually-hidden">Students' goat: set on fire, still standing</span>
                 </button>
                 <div class="goat-story" id="goat-2018" role="tooltip">
-                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg></div>
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat"/><use href="#gs-flame" transform="translate(21 59) scale(0.62)" style="fill:var(--flame-1)"/><use href="#gs-flame" transform="translate(21.2 58.6) scale(0.34)" style="fill:var(--flame-2)"/></g><use href="#i-star"/></svg></div>
                   <div>
                     <p class="goat-story-head">2018 <span class="goat-story-fate">Survived</span></p>
                     <p>Survived.</p>
+                    <p class="goat-story-head goat-story-kid">The students' goat <span class="goat-story-fate">Set on fire, still standing</span></p>
+                    <p>Set on fire on the night of 15 December, but only its left front leg got burned. A man was arrested.</p>
                   </div>
                 </div>
               </li>
-              <li class="goat-year cat-survived" style="grid-column:10" data-align="end">
+              <li class="goat-year cat-survived has-kid" style="grid-column:10" data-align="end">
                 <button type="button" class="goat-year-btn" aria-describedby="goat-2019">
-                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg>
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat"/><use href="#gs-flame" transform="translate(21 59) scale(0.62)" style="fill:var(--flame-1)"/><use href="#gs-flame" transform="translate(21.2 58.6) scale(0.34)" style="fill:var(--flame-2)"/></g><use href="#i-star"/></svg>
                   <span class="goat-year-num">2019</span>
                   <span class="visually-hidden">Survived</span>
+                  <span class="visually-hidden">Students' goat: set on fire, still standing</span>
                 </button>
                 <div class="goat-story" id="goat-2019" role="tooltip">
-                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg></div>
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat"/><use href="#gs-flame" transform="translate(21 59) scale(0.62)" style="fill:var(--flame-1)"/><use href="#gs-flame" transform="translate(21.2 58.6) scale(0.34)" style="fill:var(--flame-2)"/></g><use href="#i-star"/></svg></div>
                   <div>
                     <p class="goat-story-head">2019 <span class="goat-story-fate">Survived</span></p>
                     <p>Survived, with guards and a dog patrol watching it day and night.</p>
+                    <p class="goat-story-head goat-story-kid">The students' goat <span class="goat-story-fate">Set on fire, still standing</span></p>
+                    <p>Set on fire at about 01:20 on 27 December. It stayed standing, only slightly damaged, and a drunk man was arrested.</p>
                   </div>
                 </div>
               </li>
@@ -1134,31 +1206,37 @@
           <div class="goat-decade">
             <p class="goat-decade-label">2020s</p>
             <ol class="goat-years">
-              <li class="goat-year cat-survived" style="grid-column:1" data-align="start">
+              <li class="goat-year cat-survived has-kid" style="grid-column:1" data-align="start">
                 <button type="button" class="goat-year-btn" aria-describedby="goat-2020">
-                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#b-bg"/><use href="#b-laptop"/></svg>
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat"/><use href="#gs-flame" transform="translate(8 59.5) scale(0.55)" style="fill:var(--flame-1)"/><use href="#gs-flame" transform="translate(8.2 59) scale(0.3)" style="fill:var(--flame-2)"/></g><use href="#b-bg"/><use href="#b-laptop"/></svg>
                   <span class="goat-year-num">2020</span>
                   <span class="visually-hidden">Survived</span>
+                  <span class="visually-hidden">Students' goat: arson attempt</span>
                 </button>
                 <div class="goat-story" id="goat-2020" role="tooltip">
-                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#b-bg"/><use href="#b-laptop"/></svg></div>
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat"/><use href="#gs-flame" transform="translate(8 59.5) scale(0.55)" style="fill:var(--flame-1)"/><use href="#gs-flame" transform="translate(8.2 59) scale(0.3)" style="fill:var(--flame-2)"/></g><use href="#b-bg"/><use href="#b-laptop"/></svg></div>
                   <div>
                     <p class="goat-story-head">2020 <span class="goat-story-fate">Survived</span></p>
                     <p>Survived. Because of COVID-19, it was inaugurated online.</p>
+                    <p class="goat-story-head goat-story-kid">The students' goat <span class="goat-story-fate">Arson attempt</span></p>
+                    <p>Someone tried to burn it right after it went up.</p>
                   </div>
                 </div>
               </li>
-              <li class="goat-year cat-burned" style="grid-column:2" data-align="start">
+              <li class="goat-year cat-burned has-kid" style="grid-column:2" data-align="start">
                 <button type="button" class="goat-year-btn" aria-describedby="goat-2021">
-                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/></svg>
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat-char"/><use href="#i-flames"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat-char"/><use href="#i-flames"/></g></svg>
                   <span class="goat-year-num">2021</span>
                   <span class="visually-hidden">Burned</span>
+                  <span class="visually-hidden">Students' goat: burned</span>
                 </button>
                 <div class="goat-story" id="goat-2021" role="tooltip">
-                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/></svg></div>
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(0 13.5) scale(0.78)"><use href="#i-goat-char"/><use href="#i-flames"/></g><g class="kid" transform="translate(40.5 38.5) scale(0.38)"><use href="#i-goat-char"/><use href="#i-flames"/></g></svg></div>
                   <div>
                     <p class="goat-story-head">2021 <span class="goat-story-fate">Burned</span></p>
                     <p>Burned on 17 December. The arsonist got six months in prison.</p>
+                    <p class="goat-story-head goat-story-kid">The students' goat <span class="goat-story-fate">Burned</span></p>
+                    <p>About half of it burned in the early hours of 12 December, five days before the big goat.</p>
                   </div>
                 </div>
               </li>
@@ -1235,7 +1313,7 @@
             </ol>
           </div>
           </div>
-          <p class="goat-source">The stories come from Visit Gävle's <a href="https://www.visitgavle.se/en/gavlebockens-ode" target="_blank" rel="noopener">The fate of the Gävle Goat</a> and the year-by-year table in Wikipedia's <a href="https://en.wikipedia.org/wiki/G%C3%A4vle_goat" target="_blank" rel="noopener">Gävle goat</a> article. The icons are my own drawings.</p>
+          <p class="goat-source">The stories come from Visit Gävle's <a href="https://www.visitgavle.se/en/gavlebockens-ode" target="_blank" rel="noopener">The fate of the Gävle Goat</a> and the year-by-year table in Wikipedia's <a href="https://en.wikipedia.org/wiki/G%C3%A4vle_goat" target="_blank" rel="noopener">Gävle goat</a> article. For the students' goat I also used The Local (<a href="https://www.thelocal.se/20161205/gvles-baby-yule-goat-run-over-by-car" target="_blank" rel="noopener">2016</a>, <a href="https://www.thelocal.se/20181216/smaller-gvle-goat-set-on-fire-but-big-brother-unscathed" target="_blank" rel="noopener">2018</a>, <a href="https://www.thelocal.se/20191227/gavles-ill-fated-christmas-goat-survives-as-smaller-sibling-burns" target="_blank" rel="noopener">2019</a>), <a href="https://www.arbetarbladet.se/2016-12-28/lillbocken-valte-under-gardagen-nu-har-den-tagits-bort" target="_blank" rel="noopener">Arbetarbladet</a>, <a href="https://www.svt.se/nyheter/lokalt/gavleborg/lilla-gavlebocken-i-brand-i-natt" target="_blank" rel="noopener">SVT</a> and <a href="https://www.sverigesradio.se/artikel/7612733" target="_blank" rel="noopener">Sveriges Radio</a>. The icons are my own drawings.</p>
         </div>
       </div>
     </section>
@@ -1245,23 +1323,297 @@
       <div class="container" data-aos="fade-up">
         <div class="yule-card goat-students">
           <figure class="goat-photo">
-            <a class="glightbox" href="assets/img/gavle/students-goat-lg.webp" data-title="With my friend Inês at the students' goat">
-              <img src="assets/img/gavle/students-goat.webp" width="800" height="1000" alt="Madalena and her friend Inês making peace signs in front of a straw goat wrapped in red fabric, in falling snow" loading="lazy" decoding="async">
+            <a class="glightbox" href="assets/img/gavle/students-goat-lg.webp" data-gallery="students-goat" data-title="With my friend Inês under the students' goat">
+              <img src="assets/img/gavle/students-goat.webp" width="800" height="1000" alt="Madalena and her friend Inês standing under the belly of a big straw goat wrapped in red fabric, on a wet winter square" loading="lazy" decoding="async">
+              <span class="goat-photo-count"><i class="bi bi-images" aria-hidden="true"></i> <span>2 photos</span></span>
             </a>
-            <figcaption>With my friend Inês at the students' goat</figcaption>
+            <a class="glightbox" href="assets/img/gavle/students-goat-solo-lg.webp" data-gallery="students-goat" data-title="The students' goat on its own, with lights on its horns" hidden></a>
+            <figcaption>With my friend Inês under the students' goat</figcaption>
           </figure>
           <div>
             <h2>The students' goat</h2>
-            <p>Gävle actually has two goats. Since 1971, students from the Natural Science Club at the Vasa School have built a second, smaller one, and it has collapsed and met dreadful fates too.</p>
-            <ul class="goat-chips">
-              <li><strong>1985, 1993</strong> In the Guinness Book of Records</li>
-              <li><strong>2000</strong> Thrown into the river</li>
-              <li><strong>2007</strong> Knocked over, then burned</li>
-              <li><strong>2009</strong> Stolen with a lorry</li>
-              <li><strong>2014</strong> Collapsed</li>
-              <li><strong>1999, 2001, 2006, 2011, 2015, 2021</strong> Burned</li>
+            <p>Gävle actually has two goats. Since 1986 the town has built two every Christmas: the Gävle Goat, paid for by the Southern Merchants, and a second goat built by the Natural Science Club at the Vasa School. The students first stepped in back in 1971, when the merchants gave up.</p>
+            <p>Swedish news calls it Lillbocken, the little goat. It has burned at least eight times, ended up in the river, been stolen with a lorry and been run over by a car. In the timeline above, it is the small goat in front.</p>
+            <h3>The goat war</h3>
+            <ol class="goat-war">
+              <li><strong>1985</strong><span>The students' goat made the Guinness Book of Records at 12.5 m, taking the record from the merchants. Stig Gavlén, who came up with the first goat in 1966, thought that was unfair: it wasn't as pretty as the merchants' goat, and its neck was far too long.</span></li>
+              <li><strong>1986</strong><span>The goat war. The merchants built a huge goat to win the record back, and the students built a smaller one in protest. When the merchants' goat was measured, it fell short.</span></li>
+              <li><strong>Until 1993</strong><span>Nobody tried for the record again, but the students put up a sign by their goat wishing a Merry Christmas to everyone except the Southern Merchants.</span></li>
+              <li><strong>1993</strong><span>The merchants tried again with a 10.5 m goat. The students' goat that year measured 14.9 m and went back into the Guinness Book. Visit Gävle says it was 16 m.</span></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The cousin in Iceland -->
+    <section id="goat-iceland" class="section goat-section">
+      <div class="container" data-aos="fade-up">
+        <div class="yule-card">
+          <div class="goat-iceland-intro">
+            <div>
+              <p class="goat-kicker"><span>Garðabær, Iceland</span></p>
+              <h2>Its cousin in Iceland</h2>
+              <p>Since 2010, IKEA in Garðabær, just south of Reykjavík, has put up its own straw goat every October, inspired by the one in Gävle. Its luck has not been much better.</p>
+            </div>
+            <ul class="goat-iceland-facts">
+              <li><strong>Almost 7 m</strong> tall</li>
+              <li><strong>7 to 8 tonnes</strong> of straw</li>
+              <li><strong>Electric fence</strong> since 2013</li>
+              <li><strong>Guards and cameras</strong> day and night</li>
             </ul>
           </div>
+          <div class="goat-timeline">
+          <div class="goat-decade">
+            <p class="goat-decade-label">2010s</p>
+            <ol class="goat-years">
+              <li class="goat-year cat-burned" style="grid-column:1" data-align="start">
+                <button type="button" class="goat-year-btn" aria-describedby="ikea-2010">
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/></svg>
+                  <span class="goat-year-num">2010</span>
+                  <span class="visually-hidden">Burned</span>
+                </button>
+                <div class="goat-story" id="ikea-2010" role="tooltip">
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/></svg></div>
+                  <div>
+                    <p class="goat-story-head">2010 <span class="goat-story-fate">Burned</span></p>
+                    <p>Its very first year. It lasted until 23 December, when vandals set it on fire.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="goat-year cat-other" style="grid-column:2" data-align="start">
+                <button type="button" class="goat-year-btn" aria-describedby="ikea-2011">
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(14 6) scale(0.85) rotate(-30 22 58)"><use href="#i-goat"/></g><use href="#i-wind"/><use href="#i-ground"/></svg>
+                  <span class="goat-year-num">2011</span>
+                  <span class="visually-hidden">Blown over</span>
+                </button>
+                <div class="goat-story" id="ikea-2011" role="tooltip">
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(14 6) scale(0.85) rotate(-30 22 58)"><use href="#i-goat"/></g><use href="#i-wind"/><use href="#i-ground"/></svg></div>
+                  <div>
+                    <p class="goat-story-head">2011 <span class="goat-story-fate">Blown over</span></p>
+                    <p>Blown over by heavy winds.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="goat-year cat-burned" style="grid-column:3" data-align="start">
+                <button type="button" class="goat-year-btn" aria-describedby="ikea-2012">
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/></svg>
+                  <span class="goat-year-num">2012</span>
+                  <span class="visually-hidden">Burned</span>
+                </button>
+                <div class="goat-story" id="ikea-2012" role="tooltip">
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/></svg></div>
+                  <div>
+                    <p class="goat-story-head">2012 <span class="goat-story-fate">Burned</span></p>
+                    <p>Burned down by vandals.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="goat-year cat-other" style="grid-column:4" data-align="center">
+                <button type="button" class="goat-year-btn" aria-describedby="ikea-2013">
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(14 6) scale(0.85) rotate(-30 22 58)"><use href="#i-goat"/></g><use href="#i-wind"/><use href="#i-ground"/><use href="#b-bg"/><use href="#b-bolt"/></svg>
+                  <span class="goat-year-num">2013</span>
+                  <span class="visually-hidden">Blown over</span>
+                </button>
+                <div class="goat-story" id="ikea-2013" role="tooltip">
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="translate(14 6) scale(0.85) rotate(-30 22 58)"><use href="#i-goat"/></g><use href="#i-wind"/><use href="#i-ground"/><use href="#b-bg"/><use href="#b-bolt"/></svg></div>
+                  <div>
+                    <p class="goat-story-head">2013 <span class="goat-story-fate">Blown over</span></p>
+                    <p>It got an electric fence, and the wind blew it over anyway.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="goat-year cat-survived" style="grid-column:5" data-align="center">
+                <button type="button" class="goat-year-btn" aria-describedby="ikea-2014">
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg>
+                  <span class="goat-year-num">2014</span>
+                  <span class="visually-hidden">Survived</span>
+                </button>
+                <div class="goat-story" id="ikea-2014" role="tooltip">
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg></div>
+                  <div>
+                    <p class="goat-story-head">2014 <span class="goat-story-fate">Survived</span></p>
+                    <p>Survived without a scratch.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="goat-year cat-burned" style="grid-column:6" data-align="center">
+                <button type="button" class="goat-year-btn" aria-describedby="ikea-2015">
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/><use href="#b-bg"/><use href="#b-lights"/></svg>
+                  <span class="goat-year-num">2015</span>
+                  <span class="visually-hidden">Burned</span>
+                </button>
+                <div class="goat-story" id="ikea-2015" role="tooltip">
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/><use href="#b-bg"/><use href="#b-lights"/></svg></div>
+                  <div>
+                    <p class="goat-story-head">2015 <span class="goat-story-fate">Burned</span></p>
+                    <p>Burned on 26 October, before Advent even started, because of a faulty string of lights. The lights weren&#x27;t IKEA&#x27;s.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="goat-year cat-burned" style="grid-column:7" data-align="center">
+                <button type="button" class="goat-year-btn" aria-describedby="ikea-2016">
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/></svg>
+                  <span class="goat-year-num">2016</span>
+                  <span class="visually-hidden">Burned</span>
+                </button>
+                <div class="goat-story" id="ikea-2016" role="tooltip">
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat-char"/><use href="#i-flames"/></svg></div>
+                  <div>
+                    <p class="goat-story-head">2016 <span class="goat-story-fate">Burned</span></p>
+                    <p>Set on fire in November by three drunk men, who were caught after a high-speed car chase. It wasn&#x27;t rebuilt that Christmas.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="goat-year cat-survived" style="grid-column:8" data-align="end">
+                <button type="button" class="goat-year-btn" aria-describedby="ikea-2017">
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg>
+                  <span class="goat-year-num">2017</span>
+                  <span class="visually-hidden">Survived</span>
+                </button>
+                <div class="goat-story" id="ikea-2017" role="tooltip">
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg></div>
+                  <div>
+                    <p class="goat-story-head">2017 <span class="goat-story-fate">Survived</span></p>
+                    <p>Survived, with two security guards watching it around the clock.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="goat-year cat-survived" style="grid-column:9" data-align="end">
+                <button type="button" class="goat-year-btn" aria-describedby="ikea-2018">
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg>
+                  <span class="goat-year-num">2018</span>
+                  <span class="visually-hidden">Survived</span>
+                </button>
+                <div class="goat-story" id="ikea-2018" role="tooltip">
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg></div>
+                  <div>
+                    <p class="goat-story-head">2018 <span class="goat-story-fate">Survived</span></p>
+                    <p>Survived behind barbed wire, an electric fence and guards.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="goat-year cat-survived" style="grid-column:10" data-align="end">
+                <button type="button" class="goat-year-btn" aria-describedby="ikea-2019">
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#b-bg"/><use href="#b-phone"/></svg>
+                  <span class="goat-year-num">2019</span>
+                  <span class="visually-hidden">Survived</span>
+                </button>
+                <div class="goat-story" id="ikea-2019" role="tooltip">
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#b-bg"/><use href="#b-phone"/></svg></div>
+                  <div>
+                    <p class="goat-story-head">2019 <span class="goat-story-fate">Survived</span></p>
+                    <p>Survived, even after someone set up a Facebook event to burn it.</p>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <div class="goat-decade">
+            <p class="goat-decade-label">2020s</p>
+            <ol class="goat-years">
+              <li class="goat-year cat-survived" style="grid-column:1" data-align="start">
+                <button type="button" class="goat-year-btn" aria-describedby="ikea-2020">
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg>
+                  <span class="goat-year-num">2020</span>
+                  <span class="visually-hidden">Survived</span>
+                </button>
+                <div class="goat-story" id="ikea-2020" role="tooltip">
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg></div>
+                  <div>
+                    <p class="goat-story-head">2020 <span class="goat-story-fate">Survived</span></p>
+                    <p>Survived.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="goat-year cat-survived" style="grid-column:2" data-align="start">
+                <button type="button" class="goat-year-btn" aria-describedby="ikea-2021">
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg>
+                  <span class="goat-year-num">2021</span>
+                  <span class="visually-hidden">Survived</span>
+                </button>
+                <div class="goat-story" id="ikea-2021" role="tooltip">
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg></div>
+                  <div>
+                    <p class="goat-story-head">2021 <span class="goat-story-fate">Survived</span></p>
+                    <p>Survived. Iceland Monitor says its fence, guards and cameras have kept it safe since 2016.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="goat-year cat-survived" style="grid-column:3" data-align="start">
+                <button type="button" class="goat-year-btn" aria-describedby="ikea-2022">
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg>
+                  <span class="goat-year-num">2022</span>
+                  <span class="visually-hidden">Survived</span>
+                </button>
+                <div class="goat-story" id="ikea-2022" role="tooltip">
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg></div>
+                  <div>
+                    <p class="goat-story-head">2022 <span class="goat-story-fate">Survived</span></p>
+                    <p>Survived.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="goat-year cat-survived" style="grid-column:4" data-align="center">
+                <button type="button" class="goat-year-btn" aria-describedby="ikea-2023">
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg>
+                  <span class="goat-year-num">2023</span>
+                  <span class="visually-hidden">Survived</span>
+                </button>
+                <div class="goat-story" id="ikea-2023" role="tooltip">
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg></div>
+                  <div>
+                    <p class="goat-story-head">2023 <span class="goat-story-fate">Survived</span></p>
+                    <p>Survived.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="goat-year cat-survived" style="grid-column:5" data-align="center">
+                <button type="button" class="goat-year-btn" aria-describedby="ikea-2024">
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg>
+                  <span class="goat-year-num">2024</span>
+                  <span class="visually-hidden">Survived</span>
+                </button>
+                <div class="goat-story" id="ikea-2024" role="tooltip">
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg></div>
+                  <div>
+                    <p class="goat-story-head">2024 <span class="goat-story-fate">Survived</span></p>
+                    <p>Survived. It went up on 9 October, earlier than ever.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="goat-year cat-survived" style="grid-column:6" data-align="center">
+                <button type="button" class="goat-year-btn" aria-describedby="ikea-2025">
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg>
+                  <span class="goat-year-num">2025</span>
+                  <span class="visually-hidden">Survived</span>
+                </button>
+                <div class="goat-story" id="ikea-2025" role="tooltip">
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-goat"/><use href="#i-star"/></svg></div>
+                  <div>
+                    <p class="goat-story-head">2025 <span class="goat-story-fate">Survived</span></p>
+                    <p>Survived.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="goat-year cat-tbd" style="grid-column:7" data-align="center">
+                <button type="button" class="goat-year-btn" aria-describedby="ikea-2026">
+                  <svg class="goat-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-ghost"/><use href="#b-bg"/><use href="#b-q"/></svg>
+                  <span class="goat-year-num">2026</span>
+                  <span class="visually-hidden">We&#x27;ll see</span>
+                </button>
+                <div class="goat-story" id="ikea-2026" role="tooltip">
+                  <div class="goat-story-art"><svg class="goat-story-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-ghost"/><use href="#b-bg"/><use href="#b-q"/></svg></div>
+                  <div>
+                    <p class="goat-story-head">2026 <span class="goat-story-fate">We&#x27;ll see</span></p>
+                    <p>Went up in October, ten years after its last mishap. We&#x27;ll see this year.</p>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+          </div>
+          <p class="goat-source">Sources: Iceland Monitor's <a href="https://icelandmonitor.mbl.is/news/culture_and_living/2021/12/25/iceland_s_largest_goat_is_well_protected/" target="_blank" rel="noopener">Iceland's Largest Goat Is Well Protected</a> (2021), The Reykjavík Grapevine (<a href="https://grapevine.is/news/2015/10/26/christmas-goat-self-immolates-video/" target="_blank" rel="noopener">2015</a>, <a href="https://grapevine.is/news/2017/11/13/ikea-christmas-goat-under-247-guard/" target="_blank" rel="noopener">2017</a>), <a href="https://www.mbl.is/frettir/innlent/2026/10/24/ikea_geitin_komin_upp_og_aratugur_fra_sidustu_hrakf/" target="_blank" rel="noopener">mbl.is</a> (2026) and Wikipedia's <a href="https://en.wikipedia.org/wiki/G%C3%A4vle_goat#IKEA_goat_in_Iceland" target="_blank" rel="noopener">Gävle goat</a> article. After 2016 there is no news of any mishap, and mbl.is counts ten years since the last one.</p>
         </div>
       </div>
     </section>

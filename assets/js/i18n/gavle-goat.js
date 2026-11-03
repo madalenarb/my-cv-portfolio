@@ -687,5 +687,415 @@ SiteI18n.add([
     en: "The Gävle Goat | Madalena Barros",
     pt: "O Bode de Gävle | Madalena Barros",
     nl: "De kerstbok van Gävle | Madalena Barros"
+  },
+  {
+    en: "Hover over a year, or tap it, to read what happened. The small goat in front is the students' goat, in the years we know what happened to it.",
+    pt: "Passe o cursor sobre um ano, ou toque nele, para ler o que aconteceu. O bode pequeno à frente é o bode dos estudantes, nos anos em que se sabe o que lhe aconteceu.",
+    nl: "Beweeg over een jaar, of tik erop, om te lezen wat er gebeurde. De kleine bok vooraan is de bok van de scholieren, in de jaren waarvan we weten wat hem overkwam."
+  },
+  {
+    en: "Small goat in front: the students' goat",
+    pt: "Bode pequeno à frente: o bode dos estudantes",
+    nl: "Kleine bok vooraan: de bok van de scholieren"
+  },
+  {
+    en: "Students' goat: built in protest",
+    pt: "Bode dos estudantes: construído em protesto",
+    nl: "Bok van de scholieren: gebouwd uit protest"
+  },
+  {
+    en: "The merchants were back with their first goat since 1971. It burned on 23 December.",
+    pt: "Os comerciantes voltaram com o primeiro bode desde 1971. Ardeu a 23 de dezembro.",
+    nl: "De winkeliers waren terug met hun eerste bok sinds 1971. Hij verbrandde op 23 december."
+  },
+  {
+    en: "The students' goat <span class=\"goat-story-fate\">Built in protest</span>",
+    pt: "O bode dos estudantes <span class=\"goat-story-fate\">Construído em protesto</span>",
+    nl: "De bok van de scholieren <span class=\"goat-story-fate\">Gebouwd uit protest</span>"
+  },
+  {
+    en: "The students built a smaller goat in protest against the merchants' record attempt. From now on, Gävle has two goats.",
+    pt: "Os estudantes construíram um bode mais pequeno em protesto contra a tentativa de recorde dos comerciantes. A partir daqui, Gävle passa a ter dois bodes.",
+    nl: "De scholieren bouwden uit protest tegen de recordpoging van de winkeliers een kleinere bok. Vanaf nu heeft Gävle twee bokken."
+  },
+  {
+    en: "Students' goat: burned",
+    pt: "Bode dos estudantes: queimado",
+    nl: "Bok van de scholieren: verbrand"
+  },
+  {
+    en: "The students' goat <span class=\"goat-story-fate\">Burned</span>",
+    pt: "O bode dos estudantes <span class=\"goat-story-fate\">Queimado</span>",
+    nl: "De bok van de scholieren <span class=\"goat-story-fate\">Verbrand</span>"
+  },
+  {
+    en: "Burned down on the same night as the big goat.",
+    pt: "Ardeu na mesma noite que o bode grande.",
+    nl: "Brandde af in dezelfde nacht als de grote bok."
+  },
+  {
+    en: "Students' goat: in the Guinness Book",
+    pt: "Bode dos estudantes: no Livro do Guinness",
+    nl: "Bok van de scholieren: in het Guinness Book"
+  },
+  {
+    en: "The students' goat <span class=\"goat-story-fate\">In the Guinness Book</span>",
+    pt: "O bode dos estudantes <span class=\"goat-story-fate\">No Livro do Guinness</span>",
+    nl: "De bok van de scholieren <span class=\"goat-story-fate\">In het Guinness Book</span>"
+  },
+  {
+    en: "Measured 14.9 m, beating the merchants' 10.5 m goat, and went back into the Guinness Book of Records. Visit Gävle says it was 16 m.",
+    pt: "Mediu 14,9 m, mais do que os 10,5 m do bode dos comerciantes, e voltou ao Livro do Guinness. A Visit Gävle diz que tinha 16 m.",
+    nl: "Was 14,9 m hoog, hoger dan de bok van 10,5 m van de winkeliers, en kwam opnieuw in het Guinness Book of Records. Volgens Visit Gävle was hij 16 m."
+  },
+  {
+    en: "Students' goat: survived, slightly damaged",
+    pt: "Bode dos estudantes: sobreviveu, com poucos estragos",
+    nl: "Bok van de scholieren: overleefd, licht beschadigd"
+  },
+  {
+    en: "The students' goat <span class=\"goat-story-fate\">Survived, slightly damaged</span>",
+    pt: "O bode dos estudantes <span class=\"goat-story-fate\">Sobreviveu, com poucos estragos</span>",
+    nl: "De bok van de scholieren <span class=\"goat-story-fate\">Overleefd, licht beschadigd</span>"
+  },
+  {
+    en: "Attacked too, but survived with minor damage.",
+    pt: "Também foi atacado, mas sobreviveu com poucos estragos.",
+    nl: "Werd ook aangevallen, maar overleefde met lichte schade."
+  },
+  {
+    en: "Burned down too.",
+    pt: "Também ardeu.",
+    nl: "Brandde ook af."
+  },
+  {
+    en: "Students' goat: thrown into the river",
+    pt: "Bode dos estudantes: atirado ao rio",
+    nl: "Bok van de scholieren: in de rivier gegooid"
+  },
+  {
+    en: "The students' goat <span class=\"goat-story-fate\">Thrown into the river</span>",
+    pt: "O bode dos estudantes <span class=\"goat-story-fate\">Atirado ao rio</span>",
+    nl: "De bok van de scholieren <span class=\"goat-story-fate\">In de rivier gegooid</span>"
+  },
+  {
+    en: "Thrown into the Gävle river.",
+    pt: "Atirado ao rio de Gävle.",
+    nl: "In de rivier van Gävle gegooid."
+  },
+  {
+    en: "Burned, while the big goat survived.",
+    pt: "Ardeu, enquanto o bode grande sobreviveu.",
+    nl: "Verbrandde, terwijl de grote bok het overleefde."
+  },
+  {
+    en: "Students' goat: toppled, then burned",
+    pt: "Bode dos estudantes: derrubado e depois queimado",
+    nl: "Bok van de scholieren: omvergeduwd, daarna verbrand"
+  },
+  {
+    en: "The students' goat <span class=\"goat-story-fate\">Toppled, then burned</span>",
+    pt: "O bode dos estudantes <span class=\"goat-story-fate\">Derrubado e depois queimado</span>",
+    nl: "De bok van de scholieren <span class=\"goat-story-fate\">Omvergeduwd, daarna verbrand</span>"
+  },
+  {
+    en: "Toppled on 13 December, then burned on the night of 24 December.",
+    pt: "Foi derrubado a 13 de dezembro e ardeu na noite de 24 de dezembro.",
+    nl: "Werd op 13 december omvergeduwd en verbrandde in de nacht van 24 december."
+  },
+  {
+    en: "Students' goat: vandalised",
+    pt: "Bode dos estudantes: vandalizado",
+    nl: "Bok van de scholieren: vernield"
+  },
+  {
+    en: "The students' goat <span class=\"goat-story-fate\">Vandalised</span>",
+    pt: "O bode dos estudantes <span class=\"goat-story-fate\">Vandalizado</span>",
+    nl: "De bok van de scholieren <span class=\"goat-story-fate\">Vernield</span>"
+  },
+  {
+    en: "Vandalised on 16 December and later taken away.",
+    pt: "Vandalizado a 16 de dezembro e retirado mais tarde.",
+    nl: "Op 16 december vernield en later weggehaald."
+  },
+  {
+    en: "Students' goat: stolen",
+    pt: "Bode dos estudantes: roubado",
+    nl: "Bok van de scholieren: gestolen"
+  },
+  {
+    en: "The students' goat <span class=\"goat-story-fate\">Stolen</span>",
+    pt: "O bode dos estudantes <span class=\"goat-story-fate\">Roubado</span>",
+    nl: "De bok van de scholieren <span class=\"goat-story-fate\">Gestolen</span>"
+  },
+  {
+    en: "Someone failed to throw it into the river on the weekend of 11 December. On the night of 14 December it was stolen with a lorry.",
+    pt: "No fim de semana de 11 de dezembro, alguém tentou atirá-lo ao rio, sem sucesso. Na noite de 14 de dezembro foi roubado com um camião.",
+    nl: "In het weekend van 11 december probeerde iemand hem in de rivier te gooien, zonder succes. In de nacht van 14 december werd hij met een vrachtwagen gestolen."
+  },
+  {
+    en: "Students' goat: survived an arson attempt",
+    pt: "Bode dos estudantes: sobreviveu a uma tentativa de fogo posto",
+    nl: "Bok van de scholieren: poging tot brandstichting overleefd"
+  },
+  {
+    en: "The students' goat <span class=\"goat-story-fate\">Survived an arson attempt</span>",
+    pt: "O bode dos estudantes <span class=\"goat-story-fate\">Sobreviveu a uma tentativa de fogo posto</span>",
+    nl: "De bok van de scholieren <span class=\"goat-story-fate\">Poging tot brandstichting overleefd</span>"
+  },
+  {
+    en: "Survived an arson attempt on the night of 2 December. Both goats made it to January.",
+    pt: "Sobreviveu a uma tentativa de fogo posto na noite de 2 de dezembro. Os dois bodes chegaram a janeiro.",
+    nl: "Overleefde in de nacht van 2 december een poging tot brandstichting. Beide bokken haalden januari."
+  },
+  {
+    en: "Burned too.",
+    pt: "Também ardeu.",
+    nl: "Verbrandde ook."
+  },
+  {
+    en: "Students' goat: collapsed",
+    pt: "Bode dos estudantes: caiu",
+    nl: "Bok van de scholieren: ingestort"
+  },
+  {
+    en: "The students' goat <span class=\"goat-story-fate\">Collapsed</span>",
+    pt: "O bode dos estudantes <span class=\"goat-story-fate\">Caiu</span>",
+    nl: "De bok van de scholieren <span class=\"goat-story-fate\">Ingestort</span>"
+  },
+  {
+    en: "Collapsed, while the big goat survived.",
+    pt: "Caiu, enquanto o bode grande sobreviveu.",
+    nl: "Stortte in, terwijl de grote bok het overleefde."
+  },
+  {
+    en: "Students' goat: hit by a car",
+    pt: "Bode dos estudantes: atropelado",
+    nl: "Bok van de scholieren: aangereden door een auto"
+  },
+  {
+    en: "Burned on 27 November, hours after its 50th birthday party. The students' goat took its place.",
+    pt: "Ardeu a 27 de novembro, horas depois da festa dos seus 50 anos. O bode dos estudantes ocupou o lugar dele.",
+    nl: "Verbrandde op 27 november, een paar uur na zijn vijftigste verjaardagsfeest. De bok van de scholieren nam zijn plaats in."
+  },
+  {
+    en: "The students' goat <span class=\"goat-story-fate\">Hit by a car</span>",
+    pt: "O bode dos estudantes <span class=\"goat-story-fate\">Atropelado</span>",
+    nl: "De bok van de scholieren <span class=\"goat-story-fate\">Aangereden door een auto</span>"
+  },
+  {
+    en: "Stood in for the big goat on the castle square until a car ran it over on 5 December. It fell over on 27 December and was taken away.",
+    pt: "Substituiu o bode grande na praça do castelo até ser atropelado por um carro a 5 de dezembro. Caiu a 27 de dezembro e foi retirado.",
+    nl: "Verving de grote bok op het kasteelplein, tot een auto hem op 5 december overreed. Op 27 december viel hij om en werd hij weggehaald."
+  },
+  {
+    en: "Students' goat: set on fire, still standing",
+    pt: "Bode dos estudantes: incendiado, mas ficou de pé",
+    nl: "Bok van de scholieren: in brand gestoken, bleef staan"
+  },
+  {
+    en: "The students' goat <span class=\"goat-story-fate\">Set on fire, still standing</span>",
+    pt: "O bode dos estudantes <span class=\"goat-story-fate\">Incendiado, mas ficou de pé</span>",
+    nl: "De bok van de scholieren <span class=\"goat-story-fate\">In brand gestoken, bleef staan</span>"
+  },
+  {
+    en: "Set on fire on the night of 15 December, but only its left front leg got burned. A man was arrested.",
+    pt: "Pegaram-lhe fogo na noite de 15 de dezembro, mas só a pata dianteira esquerda ficou queimada. Um homem foi detido.",
+    nl: "Werd in de nacht van 15 december in brand gestoken, maar alleen zijn linkervoorpoot raakte verbrand. Een man werd gearresteerd."
+  },
+  {
+    en: "Set on fire at about 01:20 on 27 December. It stayed standing, only slightly damaged, and a drunk man was arrested.",
+    pt: "Pegaram-lhe fogo por volta da 01h20 de 27 de dezembro. Ficou de pé, só com poucos estragos, e um homem embriagado foi detido.",
+    nl: "Werd op 27 december rond 01.20 uur in brand gestoken. Hij bleef staan, met maar lichte schade, en een dronken man werd opgepakt."
+  },
+  {
+    en: "Students' goat: arson attempt",
+    pt: "Bode dos estudantes: tentativa de fogo posto",
+    nl: "Bok van de scholieren: poging tot brandstichting"
+  },
+  {
+    en: "The students' goat <span class=\"goat-story-fate\">Arson attempt</span>",
+    pt: "O bode dos estudantes <span class=\"goat-story-fate\">Tentativa de fogo posto</span>",
+    nl: "De bok van de scholieren <span class=\"goat-story-fate\">Poging tot brandstichting</span>"
+  },
+  {
+    en: "Someone tried to burn it right after it went up.",
+    pt: "Alguém tentou queimá-lo logo depois de ser montado.",
+    nl: "Iemand probeerde hem in brand te steken meteen nadat hij was neergezet."
+  },
+  {
+    en: "About half of it burned in the early hours of 12 December, five days before the big goat.",
+    pt: "Cerca de metade ardeu na madrugada de 12 de dezembro, cinco dias antes do bode grande.",
+    nl: "Ongeveer de helft verbrandde in de vroege ochtend van 12 december, vijf dagen voor de grote bok."
+  },
+  {
+    en: "The stories come from Visit Gävle's <a href=\"https://www.visitgavle.se/en/gavlebockens-ode\" target=\"_blank\" rel=\"noopener\">The fate of the Gävle Goat</a> and the year-by-year table in Wikipedia's <a href=\"https://en.wikipedia.org/wiki/G%C3%A4vle_goat\" target=\"_blank\" rel=\"noopener\">Gävle goat</a> article. For the students' goat I also used The Local (<a href=\"https://www.thelocal.se/20161205/gvles-baby-yule-goat-run-over-by-car\" target=\"_blank\" rel=\"noopener\">2016</a>, <a href=\"https://www.thelocal.se/20181216/smaller-gvle-goat-set-on-fire-but-big-brother-unscathed\" target=\"_blank\" rel=\"noopener\">2018</a>, <a href=\"https://www.thelocal.se/20191227/gavles-ill-fated-christmas-goat-survives-as-smaller-sibling-burns\" target=\"_blank\" rel=\"noopener\">2019</a>), <a href=\"https://www.arbetarbladet.se/2016-12-28/lillbocken-valte-under-gardagen-nu-har-den-tagits-bort\" target=\"_blank\" rel=\"noopener\">Arbetarbladet</a>, <a href=\"https://www.svt.se/nyheter/lokalt/gavleborg/lilla-gavlebocken-i-brand-i-natt\" target=\"_blank\" rel=\"noopener\">SVT</a> and <a href=\"https://www.sverigesradio.se/artikel/7612733\" target=\"_blank\" rel=\"noopener\">Sveriges Radio</a>. The icons are my own drawings.",
+    pt: "As histórias vêm da página <a href=\"https://www.visitgavle.se/en/gavlebockens-ode\" target=\"_blank\" rel=\"noopener\">The fate of the Gävle Goat</a> da Visit Gävle e da tabela ano a ano do artigo <a href=\"https://en.wikipedia.org/wiki/G%C3%A4vle_goat\" target=\"_blank\" rel=\"noopener\">Gävle goat</a> da Wikipédia. Para o bode dos estudantes usei também o The Local (<a href=\"https://www.thelocal.se/20161205/gvles-baby-yule-goat-run-over-by-car\" target=\"_blank\" rel=\"noopener\">2016</a>, <a href=\"https://www.thelocal.se/20181216/smaller-gvle-goat-set-on-fire-but-big-brother-unscathed\" target=\"_blank\" rel=\"noopener\">2018</a>, <a href=\"https://www.thelocal.se/20191227/gavles-ill-fated-christmas-goat-survives-as-smaller-sibling-burns\" target=\"_blank\" rel=\"noopener\">2019</a>), o <a href=\"https://www.arbetarbladet.se/2016-12-28/lillbocken-valte-under-gardagen-nu-har-den-tagits-bort\" target=\"_blank\" rel=\"noopener\">Arbetarbladet</a>, a <a href=\"https://www.svt.se/nyheter/lokalt/gavleborg/lilla-gavlebocken-i-brand-i-natt\" target=\"_blank\" rel=\"noopener\">SVT</a> e a <a href=\"https://www.sverigesradio.se/artikel/7612733\" target=\"_blank\" rel=\"noopener\">Sveriges Radio</a>. Os ícones são desenhos meus.",
+    nl: "De verhalen komen van <a href=\"https://www.visitgavle.se/en/gavlebockens-ode\" target=\"_blank\" rel=\"noopener\">The fate of the Gävle Goat</a> van Visit Gävle en uit de tabel per jaar in het Wikipedia-artikel <a href=\"https://en.wikipedia.org/wiki/G%C3%A4vle_goat\" target=\"_blank\" rel=\"noopener\">Gävle goat</a>. Voor de bok van de scholieren gebruikte ik ook The Local (<a href=\"https://www.thelocal.se/20161205/gvles-baby-yule-goat-run-over-by-car\" target=\"_blank\" rel=\"noopener\">2016</a>, <a href=\"https://www.thelocal.se/20181216/smaller-gvle-goat-set-on-fire-but-big-brother-unscathed\" target=\"_blank\" rel=\"noopener\">2018</a>, <a href=\"https://www.thelocal.se/20191227/gavles-ill-fated-christmas-goat-survives-as-smaller-sibling-burns\" target=\"_blank\" rel=\"noopener\">2019</a>), <a href=\"https://www.arbetarbladet.se/2016-12-28/lillbocken-valte-under-gardagen-nu-har-den-tagits-bort\" target=\"_blank\" rel=\"noopener\">Arbetarbladet</a>, <a href=\"https://www.svt.se/nyheter/lokalt/gavleborg/lilla-gavlebocken-i-brand-i-natt\" target=\"_blank\" rel=\"noopener\">SVT</a> en <a href=\"https://www.sverigesradio.se/artikel/7612733\" target=\"_blank\" rel=\"noopener\">Sveriges Radio</a>. De iconen heb ik zelf getekend."
+  },
+  {
+    en: "2 photos",
+    pt: "2 fotografias",
+    nl: "2 foto's"
+  },
+  {
+    en: "With my friend Inês under the students' goat",
+    pt: "Com a minha amiga Inês debaixo do bode dos estudantes",
+    nl: "Met mijn vriendin Inês onder de bok van de scholieren"
+  },
+  {
+    en: "Gävle actually has two goats. Since 1986 the town has built two every Christmas: the Gävle Goat, paid for by the Southern Merchants, and a second goat built by the Natural Science Club at the Vasa School. The students first stepped in back in 1971, when the merchants gave up.",
+    pt: "Gävle tem, na verdade, dois bodes. Desde 1986 a cidade constrói dois em cada Natal: o Bode de Gävle, pago pelos comerciantes de Söder, e um segundo bode construído pelo Clube de Ciências Naturais da Escola Vasa. Os estudantes entraram em cena pela primeira vez em 1971, quando os comerciantes desistiram.",
+    nl: "Gävle heeft eigenlijk twee bokken. Sinds 1986 bouwt de stad er elke kerst twee: de kerstbok van Gävle, betaald door de winkeliers van Söder, en een tweede bok van de natuurwetenschappelijke club van de Vasaschool. De scholieren sprongen al in 1971 voor het eerst bij, toen de winkeliers het opgaven."
+  },
+  {
+    en: "Swedish news calls it Lillbocken, the little goat. It has burned at least eight times, ended up in the river, been stolen with a lorry and been run over by a car. In the timeline above, it is the small goat in front.",
+    pt: "Nas notícias suecas chamam-lhe Lillbocken, o bode pequenino. Já ardeu pelo menos oito vezes, foi parar ao rio, foi roubado com um camião e atropelado por um carro. Na cronologia acima, é o bode pequeno à frente.",
+    nl: "Het Zweedse nieuws noemt hem Lillbocken, het bokje. Hij is al minstens acht keer verbrand, belandde in de rivier, werd met een vrachtwagen gestolen en door een auto overreden. In de tijdlijn hierboven is hij de kleine bok vooraan."
+  },
+  {
+    en: "The goat war",
+    pt: "A guerra dos bodes",
+    nl: "De bokkenoorlog"
+  },
+  {
+    en: "The students' goat made the Guinness Book of Records at 12.5 m, taking the record from the merchants. Stig Gavlén, who came up with the first goat in 1966, thought that was unfair: it wasn't as pretty as the merchants' goat, and its neck was far too long.",
+    pt: "O bode dos estudantes entrou no Livro do Guinness com 12,5 m e tirou o recorde aos comerciantes. Stig Gavlén, que teve a ideia do primeiro bode em 1966, achou isso injusto: não era tão bonito como o bode dos comerciantes e tinha o pescoço demasiado comprido.",
+    nl: "De bok van de scholieren kwam met 12,5 m in het Guinness Book of Records en pakte zo het record af van de winkeliers. Stig Gavlén, die in 1966 met het idee voor de eerste bok kwam, vond dat oneerlijk: hij was niet zo mooi als de bok van de winkeliers, en zijn nek was veel te lang."
+  },
+  {
+    en: "The goat war. The merchants built a huge goat to win the record back, and the students built a smaller one in protest. When the merchants' goat was measured, it fell short.",
+    pt: "A guerra dos bodes. Os comerciantes construíram um bode enorme para recuperar o recorde, e os estudantes construíram um mais pequeno em protesto. Quando mediram o bode dos comerciantes, ficou aquém.",
+    nl: "De bokkenoorlog. De winkeliers bouwden een enorme bok om het record terug te winnen, en de scholieren bouwden uit protest een kleinere. Toen de bok van de winkeliers werd opgemeten, bleek hij te kort."
+  },
+  {
+    en: "Until 1993",
+    pt: "Até 1993",
+    nl: "Tot 1993"
+  },
+  {
+    en: "Nobody tried for the record again, but the students put up a sign by their goat wishing a Merry Christmas to everyone except the Southern Merchants.",
+    pt: "Ninguém voltou a tentar o recorde, mas os estudantes puseram uma placa junto ao bode deles a desejar Feliz Natal a todos, exceto aos comerciantes de Söder.",
+    nl: "Niemand deed nog een poging, maar de scholieren zetten een bord bij hun bok dat iedereen een vrolijk kerstfeest wenste, behalve de winkeliers van Söder."
+  },
+  {
+    en: "The merchants tried again with a 10.5 m goat. The students' goat that year measured 14.9 m and went back into the Guinness Book. Visit Gävle says it was 16 m.",
+    pt: "Os comerciantes tentaram outra vez com um bode de 10,5 m. Nesse ano, o bode dos estudantes mediu 14,9 m e voltou ao Livro do Guinness. A Visit Gävle diz que tinha 16 m.",
+    nl: "De winkeliers probeerden het opnieuw met een bok van 10,5 m. De bok van de scholieren was dat jaar 14,9 m en kwam opnieuw in het Guinness Book. Volgens Visit Gävle was hij 16 m."
+  },
+  {
+    en: "Garðabær, Iceland",
+    pt: "Garðabær, Islândia",
+    nl: "Garðabær, IJsland"
+  },
+  {
+    en: "Its cousin in Iceland",
+    pt: "O primo da Islândia",
+    nl: "Zijn neef in IJsland"
+  },
+  {
+    en: "Since 2010, IKEA in Garðabær, just south of Reykjavík, has put up its own straw goat every October, inspired by the one in Gävle. Its luck has not been much better.",
+    pt: "Desde 2010, o IKEA de Garðabær, mesmo a sul de Reiquiavique, monta todos os outubros o seu próprio bode de palha, inspirado no de Gävle. A sorte dele não tem sido muito melhor.",
+    nl: "Sinds 2010 zet IKEA in Garðabær, net ten zuiden van Reykjavik, elk jaar in oktober een eigen strooien bok neer, geïnspireerd op die in Gävle. Veel meer geluk heeft hij niet gehad."
+  },
+  {
+    en: "<strong>Almost 7 m</strong> tall",
+    pt: "<strong>Quase 7 m</strong> de altura",
+    nl: "<strong>Bijna 7 m</strong> hoog"
+  },
+  {
+    en: "<strong>7 to 8 tonnes</strong> of straw",
+    pt: "<strong>7 a 8 toneladas</strong> de palha",
+    nl: "<strong>7 tot 8 ton</strong> stro"
+  },
+  {
+    en: "<strong>Electric fence</strong> since 2013",
+    pt: "<strong>Vedação elétrica</strong> desde 2013",
+    nl: "<strong>Elektrisch hek</strong> sinds 2013"
+  },
+  {
+    en: "<strong>Guards and cameras</strong> day and night",
+    pt: "<strong>Seguranças e câmaras</strong> dia e noite",
+    nl: "<strong>Bewakers en camera's</strong> dag en nacht"
+  },
+  {
+    en: "Its very first year. It lasted until 23 December, when vandals set it on fire.",
+    pt: "O primeiro ano de todos. Aguentou até 23 de dezembro, quando uns vândalos lhe pegaram fogo.",
+    nl: "Zijn allereerste jaar. Hij hield het vol tot 23 december, toen vandalen hem in brand staken."
+  },
+  {
+    en: "Blown over by heavy winds.",
+    pt: "Derrubado por ventos fortes.",
+    nl: "Omgeblazen door harde wind."
+  },
+  {
+    en: "Burned down by vandals.",
+    pt: "Queimado por vândalos.",
+    nl: "Door vandalen platgebrand."
+  },
+  {
+    en: "It got an electric fence, and the wind blew it over anyway.",
+    pt: "Ganhou uma vedação elétrica, e o vento derrubou-o na mesma.",
+    nl: "Hij kreeg een elektrisch hek, en de wind blies hem toch omver."
+  },
+  {
+    en: "Survived without a scratch.",
+    pt: "Sobreviveu sem um arranhão.",
+    nl: "Overleefde zonder een schrammetje."
+  },
+  {
+    en: "Burned on 26 October, before Advent even started, because of a faulty string of lights. The lights weren't IKEA's.",
+    pt: "Ardeu a 26 de outubro, antes de o Advento sequer começar, por causa de um fio de luzes avariado. As luzes não eram do IKEA.",
+    nl: "Verbrandde op 26 oktober, nog voor de advent begon, door een kapotte lichtslinger. De lampjes waren niet van IKEA."
+  },
+  {
+    en: "Set on fire in November by three drunk men, who were caught after a high-speed car chase. It wasn't rebuilt that Christmas.",
+    pt: "Incendiado em novembro por três homens bêbedos, apanhados depois de uma perseguição de carro a alta velocidade. Nesse Natal não foi reconstruído.",
+    nl: "In november in brand gestoken door drie dronken mannen, die na een wilde achtervolging werden gepakt. Die kerst werd hij niet herbouwd."
+  },
+  {
+    en: "Survived, with two security guards watching it around the clock.",
+    pt: "Sobreviveu, com dois seguranças a vigiá-lo 24 horas por dia.",
+    nl: "Overleefde, met twee bewakers die hem dag en nacht in de gaten hielden."
+  },
+  {
+    en: "Survived behind barbed wire, an electric fence and guards.",
+    pt: "Sobreviveu atrás de arame farpado, uma vedação elétrica e seguranças.",
+    nl: "Overleefde achter prikkeldraad, een elektrisch hek en bewakers."
+  },
+  {
+    en: "Survived, even after someone set up a Facebook event to burn it.",
+    pt: "Sobreviveu, mesmo depois de alguém criar um evento no Facebook para o queimar.",
+    nl: "Overleefde, zelfs nadat iemand een Facebook-evenement had aangemaakt om hem in brand te steken."
+  },
+  {
+    en: "Survived. Iceland Monitor says its fence, guards and cameras have kept it safe since 2016.",
+    pt: "Sobreviveu. O Iceland Monitor diz que a vedação, os seguranças e as câmaras o têm protegido desde 2016.",
+    nl: "Overleefde. Volgens Iceland Monitor houden het hek, de bewakers en de camera's hem sinds 2016 veilig."
+  },
+  {
+    en: "Survived. It went up on 9 October, earlier than ever.",
+    pt: "Sobreviveu. Foi montado a 9 de outubro, mais cedo do que nunca.",
+    nl: "Overleefde. Hij werd op 9 oktober neergezet, vroeger dan ooit."
+  },
+  {
+    en: "Went up in October, ten years after its last mishap. We'll see this year.",
+    pt: "Foi montado em outubro, dez anos depois do último percalço. Este ano logo se vê.",
+    nl: "Werd in oktober neergezet, tien jaar na zijn laatste ongeluk. We zien wel hoe het dit jaar gaat."
+  },
+  {
+    en: "Sources: Iceland Monitor's <a href=\"https://icelandmonitor.mbl.is/news/culture_and_living/2021/12/25/iceland_s_largest_goat_is_well_protected/\" target=\"_blank\" rel=\"noopener\">Iceland's Largest Goat Is Well Protected</a> (2021), The Reykjavík Grapevine (<a href=\"https://grapevine.is/news/2015/10/26/christmas-goat-self-immolates-video/\" target=\"_blank\" rel=\"noopener\">2015</a>, <a href=\"https://grapevine.is/news/2017/11/13/ikea-christmas-goat-under-247-guard/\" target=\"_blank\" rel=\"noopener\">2017</a>), <a href=\"https://www.mbl.is/frettir/innlent/2026/10/24/ikea_geitin_komin_upp_og_aratugur_fra_sidustu_hrakf/\" target=\"_blank\" rel=\"noopener\">mbl.is</a> (2026) and Wikipedia's <a href=\"https://en.wikipedia.org/wiki/G%C3%A4vle_goat#IKEA_goat_in_Iceland\" target=\"_blank\" rel=\"noopener\">Gävle goat</a> article. After 2016 there is no news of any mishap, and mbl.is counts ten years since the last one.",
+    pt: "Fontes: <a href=\"https://icelandmonitor.mbl.is/news/culture_and_living/2021/12/25/iceland_s_largest_goat_is_well_protected/\" target=\"_blank\" rel=\"noopener\">Iceland's Largest Goat Is Well Protected</a> do Iceland Monitor (2021), The Reykjavík Grapevine (<a href=\"https://grapevine.is/news/2015/10/26/christmas-goat-self-immolates-video/\" target=\"_blank\" rel=\"noopener\">2015</a>, <a href=\"https://grapevine.is/news/2017/11/13/ikea-christmas-goat-under-247-guard/\" target=\"_blank\" rel=\"noopener\">2017</a>), <a href=\"https://www.mbl.is/frettir/innlent/2026/10/24/ikea_geitin_komin_upp_og_aratugur_fra_sidustu_hrakf/\" target=\"_blank\" rel=\"noopener\">mbl.is</a> (2026) e o artigo <a href=\"https://en.wikipedia.org/wiki/G%C3%A4vle_goat#IKEA_goat_in_Iceland\" target=\"_blank\" rel=\"noopener\">Gävle goat</a> da Wikipédia. Depois de 2016 não há notícia de nenhum percalço, e o mbl.is conta dez anos desde o último.",
+    nl: "Bronnen: <a href=\"https://icelandmonitor.mbl.is/news/culture_and_living/2021/12/25/iceland_s_largest_goat_is_well_protected/\" target=\"_blank\" rel=\"noopener\">Iceland's Largest Goat Is Well Protected</a> van Iceland Monitor (2021), The Reykjavík Grapevine (<a href=\"https://grapevine.is/news/2015/10/26/christmas-goat-self-immolates-video/\" target=\"_blank\" rel=\"noopener\">2015</a>, <a href=\"https://grapevine.is/news/2017/11/13/ikea-christmas-goat-under-247-guard/\" target=\"_blank\" rel=\"noopener\">2017</a>), <a href=\"https://www.mbl.is/frettir/innlent/2026/10/24/ikea_geitin_komin_upp_og_aratugur_fra_sidustu_hrakf/\" target=\"_blank\" rel=\"noopener\">mbl.is</a> (2026) en het Wikipedia-artikel <a href=\"https://en.wikipedia.org/wiki/G%C3%A4vle_goat#IKEA_goat_in_Iceland\" target=\"_blank\" rel=\"noopener\">Gävle goat</a>. Na 2016 is er geen nieuws over ongelukken, en mbl.is telt tien jaar sinds het laatste."
+  },
+  {
+    en: "Madalena and her friend Inês standing under the belly of a big straw goat wrapped in red fabric, on a wet winter square",
+    pt: "A Madalena e a amiga Inês de pé debaixo da barriga de um grande bode de palha envolto em tecido vermelho, numa praça molhada de inverno",
+    nl: "Madalena en haar vriendin Inês onder de buik van een grote strooien bok in rode stof, op een nat winters plein"
+  },
+  {
+    en: "The students' goat on its own, with lights on its horns",
+    pt: "O bode dos estudantes sozinho, com luzes nos chifres",
+    nl: "De bok van de scholieren alleen, met lichtjes op zijn horens"
   }
 ]);

@@ -154,6 +154,21 @@ SiteI18n.add([
     nl: "Conclusie"
   },
   {
+    en: "Beyond work",
+    pt: "Para além do trabalho",
+    nl: "Naast het werk"
+  },
+  {
+    en: "Photos and fun facts",
+    pt: "Fotografias e curiosidades",
+    nl: "Foto's en weetjes"
+  },
+  {
+    en: "The Gävle Goat timeline",
+    pt: "Cronologia do Bode de Gävle",
+    nl: "Tijdlijn van de kerstbok van Gävle"
+  },
+  {
     en: "Close menu",
     pt: "Fechar menu",
     nl: "Menu sluiten"
