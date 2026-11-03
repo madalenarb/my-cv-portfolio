@@ -284,8 +284,8 @@ SiteI18n.add([
     nl: "Voorbeeld van gebouwcontouren geëxtraheerd uit luchtfoto's"
   },
   {
-    en: "IEEE BigData Cup Building Extraction - Portfolio Details",
-    pt: "Extração de edifícios na IEEE BigData Cup | Detalhes do projeto",
-    nl: "Gebouwextractie IEEE BigData Cup | Projectdetails"
+    en: "IEEE BigData Cup Building Extraction | Madalena Barros",
+    pt: "Extração de edifícios na IEEE BigData Cup | Madalena Barros",
+    nl: "Gebouwextractie IEEE BigData Cup | Madalena Barros"
   }
 ]);

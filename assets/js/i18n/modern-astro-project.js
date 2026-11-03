@@ -159,9 +159,9 @@ SiteI18n.add([
     nl: "Spreidingsdiagram van bovenaf van de waterstofwolken in de schijf van de Melkweg, met afstanden in kiloparsec"
   },
   {
-    en: "Mapping the Milky Way with SALSA - Portfolio Details",
-    pt: "Mapear a Via Láctea com o SALSA | Detalhes do projeto",
-    nl: "De Melkweg in kaart brengen met SALSA | Projectdetails"
+    en: "Mapping the Milky Way with SALSA | Madalena Barros",
+    pt: "Mapear a Via Láctea com o SALSA | Madalena Barros",
+    nl: "De Melkweg in kaart brengen met SALSA | Madalena Barros"
   },
   {
     en: "The directions I observed for the rotation curve, drawn from the Sun. Background image: NASA/JPL-Caltech/R.&nbsp;Hurt.",

@@ -84,8 +84,8 @@ SiteI18n.add([
     nl: "Projectdatum"
   },
   {
-    en: "Portfolio Details - Madalena Barros",
-    pt: "Detalhes do projeto | Madalena Barros",
-    nl: "Projectdetails | Madalena Barros"
+    en: "Word Mutations | Madalena Barros",
+    pt: "Word Mutations | Madalena Barros",
+    nl: "Word Mutations | Madalena Barros"
   }
 ]);

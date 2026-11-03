@@ -494,9 +494,9 @@ SiteI18n.add([
     nl: "GitHub-profiel"
   },
   {
-    en: "Portrait of Madalena Barros, smiling",
-    pt: "Retrato de Madalena Barros, a sorrir",
-    nl: "Portret van Madalena Barros, glimlachend"
+    en: "Portrait of Madalena Barros (Maria Madalena Reforço Osório de Barros), smiling",
+    pt: "Retrato de Madalena Barros (Maria Madalena Reforço Osório de Barros), a sorrir",
+    nl: "Portret van Madalena Barros (Maria Madalena Reforço Osório de Barros), glimlachend"
   },
   {
     en: "Tools",
@@ -619,9 +619,9 @@ SiteI18n.add([
     nl: "Madalena tussen tropische planten in een kas in Wenen"
   },
   {
-    en: "Madalena Barros | Electrical & Computer Engineer",
-    pt: "Madalena Barros | Engenheira Eletrotécnica e de Computadores",
-    nl: "Madalena Barros | Ingenieur elektro- & computertechniek"
+    en: "Madalena Barros (Maria Madalena Reforço Osório de Barros) | Engineer, HPC & AI",
+    pt: "Madalena Barros (Maria Madalena Reforço Osório de Barros) | Engenheira, HPC e IA",
+    nl: "Madalena Barros (Maria Madalena Reforço Osório de Barros) | Ingenieur, HPC en AI"
   },
   {
     en: "<b>Radio astronomy:</b> <a href=\"modern-astro-project.html\">Mapping the Milky Way with SALSA</a>, measuring the Galaxy's rotation curve with a radio telescope at Onsala Space Observatory",

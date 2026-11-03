@@ -159,8 +159,8 @@ SiteI18n.add([
     nl: "<i class=\"bi bi-download\"></i> Poster downloaden"
   },
   {
-    en: "DnDialogueGenerator - Portfolio Details",
-    pt: "DnDialogueGenerator | Detalhes do projeto",
-    nl: "DnDialogueGenerator | Projectdetails"
+    en: "DnDialogueGenerator | Madalena Barros",
+    pt: "DnDialogueGenerator | Madalena Barros",
+    nl: "DnDialogueGenerator | Madalena Barros"
   }
 ]);
