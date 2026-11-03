@@ -4200,3 +4200,56 @@ body:not(.dark-mode) .portfolio-details .portfolio-info ul strong {
 body:not(.dark-mode) .portfolio-details code {
   color: #c02a74;
 }
+
+/* Beyond work: the Gävle goat card opens its timeline page */
+.life .life-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #b3122e;
+  color: #fff;
+  font: 600 0.78rem/1 var(--nav-font);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.life .life-card-link:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
+@media (max-width: 575px) {
+  .life .life-badge {
+    top: 8px;
+    right: 8px;
+    padding: 4px 8px;
+    font-size: 0.7rem;
+  }
+}
+
+/* Lightbox fun facts */
+.glightbox-container .gslide-description {
+  background: #10182b;
+}
+
+.glightbox-container .gdesc-inner {
+  padding: 14px 18px;
+}
+
+.glightbox-container .gslide-title {
+  margin-bottom: 6px;
+  color: #ffffff;
+  font-family: var(--heading-font);
+  font-weight: 700;
+}
+
+.glightbox-container .gslide-desc {
+  color: #dfe6f2;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
