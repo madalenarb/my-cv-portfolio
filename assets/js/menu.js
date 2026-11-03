@@ -25,6 +25,12 @@
         </ul>
       </li>
       <li><a href="${base}#portfolio">Portfolio</a></li>
+      <li class="dropdown"><a href="${base}#life"><span>Beyond work</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <ul>
+          <li><a href="${base}#life">Photos and fun facts</a></li>
+          <li><a href="gavle-goat.html" class="${page === 'gavle-goat.html' ? 'active' : ''}">The Gävle Goat timeline</a></li>
+        </ul>
+      </li>
       <li><a href="${base}#contact">Contact</a></li>
       <li class="lang-switch">
         <div class="lang-switch-group" role="group" aria-label="Language">

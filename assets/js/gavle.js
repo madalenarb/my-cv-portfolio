@@ -36,13 +36,30 @@
 
   /* Timeline: hovering or focusing a year shows its story (CSS); a tap or click keeps it open */
   var years = Array.prototype.slice.call(document.querySelectorAll('.goat-year'));
+  var header = document.getElementById('header');
+  var sheet = window.matchMedia('(max-width: 575px)');
   var closeAll = function (except) {
     years.forEach(function (y) { if (y !== except) y.classList.remove('is-open'); });
   };
+  /* The story opens above the year; if that would go under the header or off screen, it opens below instead */
+  var place = function (year) {
+    var story = year.querySelector('.goat-story');
+    year.removeAttribute('data-pos');
+    if (!story || sheet.matches) return;
+    var shown = getComputedStyle(story).display !== 'none';
+    if (!shown) { story.style.visibility = 'hidden'; story.style.display = 'grid'; }
+    var height = story.offsetHeight;
+    if (!shown) { story.style.display = ''; story.style.visibility = ''; }
+    var limit = header ? Math.max(0, header.getBoundingClientRect().bottom) : 0;
+    if (year.getBoundingClientRect().top - height - 8 < limit + 4) year.setAttribute('data-pos', 'below');
+  };
   years.forEach(function (year) {
     var btn = year.querySelector('.goat-year-btn');
+    year.addEventListener('mouseenter', function () { place(year); });
+    btn.addEventListener('focus', function () { place(year); });
     btn.addEventListener('click', function (e) {
       e.stopPropagation();
+      place(year);
       var open = !year.classList.contains('is-open');
       closeAll(year);
       year.classList.toggle('is-open', open);
