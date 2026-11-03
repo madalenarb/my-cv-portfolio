@@ -101,10 +101,7 @@
           <!-- The document: cover, details, read and download -->
           <aside class="doc-aside" aria-labelledby="thesis-doc-heading">
             <h3 id="thesis-doc-heading" class="visually-hidden">About the thesis</h3>
-            <div class="doc-card">
-              <div class="doc-cover" aria-hidden="true">
-                <img src="assets/thesis/thesis-cover.webp" width="600" height="592" alt="" loading="lazy" decoding="async">
-              </div>
+            <div class="doc-card doc-card-text">
               <div class="doc-info">
                 <p class="doc-title">Accelerating Quantum Circuit Simulation with NVIDIA GPUs and tools editing</p>
                 <p class="doc-meta doc-author" lang="pt-PT" translate="no">Maria Madalena Reforço Osório de Barros</p>
@@ -155,14 +152,14 @@
 
             <div class="doc-block">
               <h3>Main findings</h3>
-              <p class="finding-lead">No backend is fastest everywhere. The leader depends on the circuit, the qubit count and the hardware.</p>
+              <p class="finding-lead">No backend is fastest everywhere. Which one comes out on top changes with the circuit, its size and the machine it runs on.</p>
               <dl class="result-list">
                 <div><dt>61&times;</dt><dd>Qiskit Aer on a full 128-thread node versus one thread, on the 30-qubit QFT, helped by gate fusion</dd></div>
-                <div><dt>53&times;</dt><dd>mpiQulacs on 64 nodes versus one, the fastest of the backends measured on 32 and 64 nodes</dd></div>
+                <div><dt>53&times;</dt><dd>faster for mpiQulacs on 64 nodes than on one; it was the quickest backend in the 32- and 64-node runs</dd></div>
                 <div><dt>3.2&times;</dt><dd>from gate fusion with AVX2 in Qulacs on one core (1.7&times; with scalar code), more than vectorisation alone</dd></div>
                 <div><dt>CUDA-Q</dt><dd>the fastest distributed backend within one node of four A100 GPUs, at every measured size</dd></div>
-                <div><dt>&lt;&nbsp;0.1&nbsp;s</dt><dd>for the Clifford circuit up to 60 qubits with the stabiliser backends of Qiskit Aer and Qibo</dd></div>
-                <div><dt>500</dt><dd>qubits with tensor networks for GHZ and a single-layer HEA, with sampled output</dd></div>
+                <div><dt>&lt;&nbsp;0.1&nbsp;s</dt><dd>to simulate the Clifford circuit at up to 60 qubits using the Qiskit Aer and Qibo stabiliser simulators</dd></div>
+                <div><dt>500</dt><dd>qubits reached for GHZ and one-layer HEA circuits using tensor networks and output sampling</dd></div>
               </dl>
             </div>
 

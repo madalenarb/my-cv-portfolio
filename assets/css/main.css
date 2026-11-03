@@ -3962,6 +3962,15 @@ body:not(.dark-mode) .doc-cover:hover {
     grid-column: 1 / -1;
   }
 
+  /* No cover image: the details take the whole card */
+  .doc-card.doc-card-text {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .doc-card.doc-card-text .doc-info {
+    grid-column: 1;
+  }
+
   .doc-actions {
     display: flex;
     flex-wrap: wrap;
