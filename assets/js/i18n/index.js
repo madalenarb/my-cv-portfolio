@@ -797,10 +797,5 @@ SiteI18n.add([
     en: "Timeline",
     pt: "Cronologia",
     nl: "Tijdlijn"
-  },
-  {
-    en: "Fun fact: Vienna grows more wine inside its city limits than any other capital, and has its own field blend, the Wiener Gemischter Satz.",
-    pt: "Curiosidade: Viena produz mais vinho dentro dos limites da cidade do que qualquer outra capital e tem o seu próprio lote de vinha, o Wiener Gemischter Satz.",
-    nl: "Leuk weetje: Wenen verbouwt binnen de stadsgrenzen meer wijn dan welke andere hoofdstad ook en heeft een eigen gemengde aanplant, de Wiener Gemischter Satz."
   }
 ]);
