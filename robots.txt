@@ -1,0 +1,8 @@
+# This site is shared by link only: every page carries "noindex",
+# Google Images is asked not to collect the photos, and the CV files stay out of search.
+# (Images stay readable for link previews on LinkedIn, WhatsApp and similar.)
+User-agent: Googlebot-Image
+Disallow: /
+
+User-agent: *
+Disallow: /assets/cv/
