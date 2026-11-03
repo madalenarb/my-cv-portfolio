@@ -349,9 +349,9 @@ SiteI18n.add([
     nl: "<b>Minor:</b> Hedendaagse natuurkunde (kwantummechanica; inleiding deeltjes- en kernfysica; astrofysica)"
   },
   {
-    en: "<b>Thesis:</b> <a href=\"assets/thesis/Madalena_Barros_MSc_Thesis_2026.pdf\" target=\"_blank\" rel=\"noopener\">Accelerating Quantum Circuit Simulation with NVIDIA GPUs</a>, benchmarking six simulators from one CPU thread to 64 nodes and 16 GPUs on <a href=\"https://rnca.fccn.pt/en/deucalion/\" target=\"_blank\" rel=\"noopener\">Deucalion</a>",
-    pt: "<b>Tese:</b> <a href=\"assets/thesis/Madalena_Barros_MSc_Thesis_2026.pdf\" target=\"_blank\" rel=\"noopener\">Aceleração da Simulação de Circuitos Quânticos com GPUs NVIDIA</a>, com a comparação de seis simuladores desde uma thread de CPU até 64 nós e 16 GPUs no <a href=\"https://rnca.fccn.pt/en/deucalion/\" target=\"_blank\" rel=\"noopener\">Deucalion</a>",
-    nl: "<b>Scriptie:</b> <a href=\"assets/thesis/Madalena_Barros_MSc_Thesis_2026.pdf\" target=\"_blank\" rel=\"noopener\">Accelerating Quantum Circuit Simulation with NVIDIA GPUs</a>, een benchmark van zes simulatoren van één CPU-thread tot 64 nodes en 16 GPU's op <a href=\"https://rnca.fccn.pt/en/deucalion/\" target=\"_blank\" rel=\"noopener\">Deucalion</a>"
+    en: "<b>Thesis:</b> Accelerating Quantum Circuit Simulation with NVIDIA GPUs, benchmarking six simulators from one CPU thread to 64 nodes and 16 GPUs on <a href=\"https://rnca.fccn.pt/en/deucalion/\" target=\"_blank\" rel=\"noopener\">Deucalion</a>",
+    pt: "<b>Tese:</b> Aceleração da Simulação de Circuitos Quânticos com GPUs NVIDIA, com a comparação de seis simuladores desde uma thread de CPU até 64 nós e 16 GPUs no <a href=\"https://rnca.fccn.pt/en/deucalion/\" target=\"_blank\" rel=\"noopener\">Deucalion</a>",
+    nl: "<b>Scriptie:</b> Accelerating Quantum Circuit Simulation with NVIDIA GPUs, een benchmark van zes simulatoren van één CPU-thread tot 64 nodes en 16 GPU's op <a href=\"https://rnca.fccn.pt/en/deucalion/\" target=\"_blank\" rel=\"noopener\">Deucalion</a>"
   },
   {
     en: "<b>Status:</b> thesis submitted in October 2026, defence pending",

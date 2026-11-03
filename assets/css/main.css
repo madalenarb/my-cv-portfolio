@@ -3879,7 +3879,7 @@ body:not(.dark-mode) .pdf-container a {
   height: auto;
 }
 
-.doc-cover:hover {
+a.doc-cover:hover {
   transform: translateY(-3px);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
 }

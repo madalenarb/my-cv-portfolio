@@ -19,9 +19,9 @@ SiteI18n.add([
     nl: "Scriptie"
   },
   {
-    en: "Read the thesis",
-    pt: "Ler a tese",
-    nl: "Lees de scriptie"
+    en: "About the thesis",
+    pt: "Sobre a tese",
+    nl: "Over de scriptie"
   },
   {
     en: "MSc thesis in Electrical and Computer Engineering, Instituto Superior Técnico, October 2026",
@@ -44,9 +44,9 @@ SiteI18n.add([
     nl: "<i class=\"bi bi-download\" aria-hidden=\"true\"></i> Pdf downloaden"
   },
   {
-    en: "PDF, 118 pages, 2.7 MB",
-    pt: "PDF, 118 páginas, 2,7 MB",
-    nl: "Pdf, 118 pagina's, 2,7 MB"
+    en: "The full text will be available after the defence.",
+    pt: "O texto completo fica disponível depois da defesa.",
+    nl: "De volledige tekst komt beschikbaar na de verdediging."
   },
   {
     en: "Published simulator comparisons often rank runtimes without saying under which conditions a backend does well. My thesis benchmarks six state-vector simulators on three circuit families, from a single CPU thread up to 64 nodes and 16 NVIDIA A100 GPUs on the EuroHPC supercomputer Deucalion, and uses performance models and profiling to explain the rankings.",
