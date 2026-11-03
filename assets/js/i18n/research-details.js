@@ -299,8 +299,8 @@ SiteI18n.add([
     nl: "Voorbeeld van het PIC2-rapport (pdf)"
   },
   {
-    en: "Master's thesis | Madalena Barros",
-    pt: "Tese de mestrado | Madalena Barros",
-    nl: "Masterscriptie | Madalena Barros"
+    en: "Accelerating Quantum Circuit Simulation, MSc thesis | Madalena Barros",
+    pt: "Aceleração da Simulação de Circuitos Quânticos, tese de mestrado | Madalena Barros",
+    nl: "Accelerating Quantum Circuit Simulation, masterscriptie | Madalena Barros"
   }
 ]);

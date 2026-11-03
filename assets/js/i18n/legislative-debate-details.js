@@ -314,8 +314,8 @@ SiteI18n.add([
     nl: "Frames van kandidaat André Ventura"
   },
   {
-    en: "Legislative Debate Video Analytics - Portfolio Details",
-    pt: "Análise de vídeo de debates legislativos | Detalhes do projeto",
-    nl: "Videoanalyse van verkiezingsdebatten | Projectdetails"
+    en: "Legislative Debate Video Analytics | Madalena Barros",
+    pt: "Análise de vídeo de debates legislativos | Madalena Barros",
+    nl: "Videoanalyse van verkiezingsdebatten | Madalena Barros"
   }
 ]);
