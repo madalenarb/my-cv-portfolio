@@ -659,6 +659,11 @@ SiteI18n.add([
     nl: "Projectdetails van De Melkweg in kaart"
   },
   {
+    en: "Phone:",
+    pt: "Telefone:",
+    nl: "Telefoon:"
+  },
+  {
     en: "Full name:",
     pt: "Nome completo:",
     nl: "Volledige naam:"
