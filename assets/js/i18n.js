@@ -5,8 +5,8 @@
  * (a heading, a paragraph, a list item, a button...) is looked up by its English content in the
  * dictionaries in assets/js/i18n/*.js and swapped for the translation. Text without a translation
  * stays in English, so editing the English never breaks the page; that block just shows in English
- * until its translation is updated. aria-label, alt, title, placeholder and data-title are
- * translated the same way.
+ * until its translation is updated. aria-label, alt, title, placeholder, data-title and
+ * data-description (lightbox captions) are translated the same way.
  *
  * Choice order: ?lang=pt|nl|en in the address, then the visitor's saved choice, then English.
  * Links can point somewhere else per language with data-href-pt / data-href-nl
@@ -18,7 +18,7 @@
   var LANGS = ['en', 'pt', 'nl'];
   var HTML_LANG = { en: 'en', pt: 'pt-PT', nl: 'nl' };
   var SKIP = { SCRIPT: 1, STYLE: 1, NOSCRIPT: 1, TEMPLATE: 1, SVG: 1, PRE: 1, CODE: 1, TEXTAREA: 1 };
-  var ATTRS = ['aria-label', 'alt', 'title', 'placeholder', 'data-title'];
+  var ATTRS = ['aria-label', 'alt', 'title', 'placeholder', 'data-title', 'data-description'];
 
   var letter;
   try { letter = new RegExp('\\p{L}', 'u'); } catch (e) { letter = /[A-Za-zÀ-ɏ]/; }

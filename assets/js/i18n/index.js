@@ -664,6 +664,16 @@ SiteI18n.add([
     nl: "Volledige naam:"
   },
   {
+    en: "Fun fact: King's Day was Queen's Day until 2013. When Willem-Alexander became king, it moved to his birthday, 27 April.",
+    pt: "Curiosidade: o Dia do Rei chamava-se Dia da Rainha até 2013. Quando Willem-Alexander se tornou rei, passou para o dia do seu aniversário, 27 de abril.",
+    nl: "Leuk weetje: Koningsdag was tot 2013 Koninginnedag. Toen Willem-Alexander koning werd, verhuisde de feestdag naar zijn verjaardag, 27 april."
+  },
+  {
+    en: "Fun fact: Björkliden is about 200 km north of the Arctic Circle. In midwinter the sun doesn't rise for weeks, and in summer it doesn't set.",
+    pt: "Curiosidade: Björkliden fica cerca de 200 km a norte do Círculo Polar Ártico. No pico do inverno, o sol não nasce durante semanas e, no verão, não se põe.",
+    nl: "Leuk weetje: Björkliden ligt zo'n 200 km boven de poolcirkel. Midden in de winter komt de zon wekenlang niet op en in de zomer gaat hij niet onder."
+  },
+  {
     en: "Husky sledding in Swedish Lapland",
     pt: "Trenó com huskies na Lapónia sueca",
     nl: "Huskysleeën in Zweeds Lapland"
@@ -677,6 +687,11 @@ SiteI18n.add([
     en: "Madalena in a fur-hooded winter jacket and beanie, petting two harnessed huskies in the snow",
     pt: "Madalena com um casaco de inverno com capuz de pelo e gorro, a fazer festas a dois huskies com arnês na neve",
     nl: "Madalena in een winterjas met bontkraag en een muts, die twee husky's in tuig aait in de sneeuw"
+  },
+  {
+    en: "Fun fact: huskies sleep curled up with their tail over their nose, which warms the air they breathe.",
+    pt: "Curiosidade: os huskies dormem enrolados, com a cauda sobre o focinho, o que aquece o ar que respiram.",
+    nl: "Leuk weetje: husky's slapen opgerold met hun staart over hun neus, zodat de lucht die ze inademen warmer is."
   },
   {
     en: "Northern lights in Swedish Lapland",
@@ -694,6 +709,11 @@ SiteI18n.add([
     nl: "Groen noorderlicht boven een besneeuwd landschap met een hutje en bergen"
   },
   {
+    en: "Fun fact: the green glow comes from oxygen about 100 to 250 km up. Higher up, oxygen glows red.",
+    pt: "Curiosidade: o brilho verde vem do oxigénio a cerca de 100 a 250 km de altitude. Mais acima, o oxigénio brilha a vermelho.",
+    nl: "Leuk weetje: het groene licht komt van zuurstof op zo'n 100 tot 250 km hoogte. Nog hoger gloeit zuurstof rood."
+  },
+  {
     en: "Nordic skiing with friends",
     pt: "Esqui nórdico com amigos",
     nl: "Langlaufen met vrienden"
@@ -707,6 +727,11 @@ SiteI18n.add([
     en: "Madalena with a group of friends holding cross-country skis at night",
     pt: "Madalena com um grupo de amigos, de esquis de fundo na mão, à noite",
     nl: "Madalena met een groep vrienden met langlaufski's in de hand, 's avonds"
+  },
+  {
+    en: "Fun fact: Sweden's Vasaloppet, held since 1922, is the oldest and longest cross-country ski race in the world: 90 km from Sälen to Mora.",
+    pt: "Curiosidade: a Vasaloppet, na Suécia, realiza-se desde 1922 e é a corrida de esqui de fundo mais antiga e mais longa do mundo: 90 km de Sälen a Mora.",
+    nl: "Leuk weetje: de Zweedse Vasaloppet, sinds 1922, is de oudste en langste langlaufwedstrijd ter wereld: 90 km van Sälen naar Mora."
   },
   {
     en: "Coins to keep the trolls away",
@@ -724,6 +749,11 @@ SiteI18n.add([
     nl: "Madalena lachend met een witte muts, met twee gouden munten omhoog voor een houten hut, 's avonds"
   },
   {
+    en: "Fun fact: in Scandinavian folklore, trolls swapped babies for their own changelings, so parents put scissors or a knife on the cradle. Trolls were said to fear iron.",
+    pt: "Curiosidade: no folclore escandinavo, os trolls trocavam os bebés pelos seus próprios filhos, por isso os pais punham uma tesoura ou uma faca no berço. Dizia-se que os trolls tinham medo do ferro.",
+    nl: "Leuk weetje: in de Scandinavische folklore ruilden trollen baby's om voor hun eigen wisselkinderen, dus legden ouders een schaar of mes op de wieg. Trollen zouden bang zijn voor ijzer."
+  },
+  {
     en: "Mapping the Milky Way at Onsala",
     pt: "A mapear a Via Láctea em Onsala",
     nl: "De Melkweg in kaart in Onsala"
@@ -739,6 +769,11 @@ SiteI18n.add([
     nl: "Een grote schotel van een radiotelescoop, 's nachts verlicht, bij Onsala Space Observatory"
   },
   {
+    en: "Fun fact: the 21 cm hydrogen line I measured there was predicted in 1944 by Dutch astronomer Hendrik van de Hulst and first detected in 1951.",
+    pt: "Curiosidade: a risca de 21 cm do hidrogénio que lá medi foi prevista em 1944 pelo astrónomo neerlandês Hendrik van de Hulst e detetada pela primeira vez em 1951.",
+    nl: "Leuk weetje: de 21 cm-lijn van waterstof die ik daar heb gemeten, werd in 1944 voorspeld door de Nederlandse astronoom Hendrik van de Hulst en in 1951 voor het eerst waargenomen."
+  },
+  {
     en: "The Gävle Goat in Sweden",
     pt: "O bode de Natal de Gävle, na Suécia",
     nl: "De kerstbok van Gävle, Zweden"
@@ -752,5 +787,15 @@ SiteI18n.add([
     en: "The Gävle Goat, a giant straw Yule goat with red ribbons, lit up at night behind a fence",
     pt: "O bode de Gävle, um bode de Natal gigante em palha com fitas vermelhas, iluminado à noite atrás de uma vedação",
     nl: "De kerstbok van Gävle, een reusachtige strooien bok met rode linten, 's nachts verlicht achter een hek"
+  },
+  {
+    en: "Timeline",
+    pt: "Cronologia",
+    nl: "Tijdlijn"
+  },
+  {
+    en: "Fun fact: Vienna grows more wine inside its city limits than any other capital, and has its own field blend, the Wiener Gemischter Satz.",
+    pt: "Curiosidade: Viena produz mais vinho dentro dos limites da cidade do que qualquer outra capital e tem o seu próprio lote de vinha, o Wiener Gemischter Satz.",
+    nl: "Leuk weetje: Wenen verbouwt binnen de stadsgrenzen meer wijn dan welke andere hoofdstad ook en heeft een eigen gemengde aanplant, de Wiener Gemischter Satz."
   }
 ]);
